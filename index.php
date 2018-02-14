@@ -4,7 +4,7 @@
 <section class="main-container">
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
-    <nav class="products">
+    <nav class="products"  id="h-scroll">
       <ul>
         <li>
           <a href="" title="">

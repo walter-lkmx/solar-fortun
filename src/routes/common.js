@@ -4,8 +4,14 @@ export default {
     console.log('common');
 
     // initial horizontal scroll
-    $(document).ready(function() {
-      $('.banner').hide();
+    jQuery(document).ready(function($) {
+
+    // $('body').addClass('lol')
+    $('#h-scroll').slimScroll({
+        axis: 'x'
+    });
+    console.log('listo');
+
     });
   },
   finalize() {
