@@ -51,8 +51,7 @@ module.exports = {
         test: /.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            {
+          use: [{
               loader: 'css-loader',
               options: {
                 importLoaders: 1,
@@ -78,6 +77,15 @@ module.exports = {
           ],
         }),
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192
+          }
+        }]
+      },
     ],
   },
   plugins: [
@@ -89,34 +97,33 @@ module.exports = {
     new AssetsPlugin({
       path: paths.appBuild,
       filename: 'assets.json',
+    }), !DEV &&
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        screw_ie8: true, // React doesn't support IE8
+        warnings: false,
+      },
+      mangle: {
+        screw_ie8: true,
+      },
+      output: {
+        comments: false,
+        screw_ie8: true,
+      },
+      sourceMap: true,
     }),
-    !DEV &&
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          screw_ie8: true, // React doesn't support IE8
-          warnings: false,
-        },
-        mangle: {
-          screw_ie8: true,
-        },
-        output: {
-          comments: false,
-          screw_ie8: true,
-        },
-        sourceMap: true,
-      }),
     DEV &&
-      new FriendlyErrorsPlugin({
-        clearConsole: false,
-      }),
+    new FriendlyErrorsPlugin({
+      clearConsole: false,
+    }),
     DEV &&
-      new BrowserSyncPlugin({
-        notify: false,
-        host: 'localhost',
-        port: 4000,
-        logLevel: 'silent',
-        files: ['./*.php'],
-        proxy: 'http://localhost:9009/',
-      }),
+    new BrowserSyncPlugin({
+      notify: false,
+      host: 'localhost',
+      port: 4000,
+      logLevel: 'silent',
+      files: ['./**/*.php'],
+      proxy: 'http://localhost:9009/',
+    }),
   ].filter(Boolean),
 };

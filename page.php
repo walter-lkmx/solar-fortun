@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php include('ui-layout/aside-main.php'); ?>
 
 	<main role="main" aria-label="Content">
 		<!-- section -->

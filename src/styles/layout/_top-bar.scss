@@ -1,0 +1,15 @@
+section.top-bar {
+  text-align: right;
+  padding: gratio(3);
+  ul {
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        margin-left: gratio(3);
+      }
+    }
+  }
+}

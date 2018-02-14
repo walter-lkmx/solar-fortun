@@ -1,4 +1,5 @@
 import 'jquery';
+import 'jquery-slimscroll';
 import './style.scss';
 
 import Router from './util/Router';

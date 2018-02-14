@@ -1,0 +1,58 @@
+// breakpoints
+$breakpoints: (
+    'small' : 320px,
+    'medium': 640px,
+    'large' : 920px,
+    'wide'  : 1200px,
+    'mega'  : 1400px,
+);
+
+// super z-index
+$z-index: (
+  'modal'      : 200,
+  'popover'    : 150,
+  'navigation' : 100,
+  'share-type' : 41,
+  'share'      : 40,
+  'click-catcher' : 10,
+  'underground' : 0
+);
+
+// proportions
+$goldenProportions: (
+    0 : rem(3px),
+    1 : rem(5px),
+    2 : rem(8px),
+    3 : rem(13px),
+    4 : rem(21px),
+    5 : rem(34px),
+    6 : rem(55px),
+    7 : rem(89px),
+    8 : rem(144px),
+    9 : rem(233px),
+    10 : rem(377px),
+    11 : rem(610px),
+    12 : rem(987px)
+  );
+
+$goldenFontProportions: (
+    0 : rem(9.27px),
+    1 : rem(15px),
+    2 : rem(24.27px),
+    3 : rem(39.27px),
+    4 : rem(63.54px),
+    5 : rem(102.81px)
+  );
+
+// brand color
+$colors: (
+  red    : hsla(345, 71%, 32%, 1),
+  red-bright    : hsla(345, 100%, 32%, 1),
+  purple    : hsla(323, 42%, 23%, 1),
+  brown-light    : hsla(347, 46%, 23%, 1),
+  brown-dark    : hsla(328, 20%, 17%, 1),
+  blue-berry    : hsla(226, 20%, 17%, 1),
+); 
+
+
+$colors-warm: #ED3528,#870626,#C5131C,#B53E24,#D84F5F,#F91106,#E8B70F,#D67227;

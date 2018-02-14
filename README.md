@@ -22,7 +22,7 @@
 
 ## Getting Started
 ```bash
-git clone git@github.com:jaredpalmer/presspack.git
+git clone git@github.com:walter-lkmx/solar-fortun.git
 yarn install
 composer install # if you want plugins ( not required )
 docker-compose up 

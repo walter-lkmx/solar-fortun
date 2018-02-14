@@ -1,0 +1,54 @@
+aside.main-menu {
+  // background: rgba(red, 0.05);
+  width: gratio(9);
+  padding: gratio(3);
+  display: inline-block;
+  vertical-align: top;
+  section.brand {
+    margin-bottom: gratio(5);
+    padding: 0 gratio(3);
+  }
+  nav {
+    ul {
+      li {
+        margin-bottom: gratio(3);
+        text-align: center;
+        position: relative;
+        img {
+          @include z-index(underground);
+          @include absolute-center(true, true);
+          opacity: 0;
+          position: absolute;
+          transition: 0.3s ease;
+        }
+        &:hover {
+          img {
+            top: gratio(4);
+            width: 140%;
+            display: block;
+            opacity: 0.9;
+          }
+        }
+        &.spacer {
+          margin-bottom: gratio(6);
+        }
+        a {
+          display: inline-block;
+          color: color(blue-berry);
+          text-decoration: none;
+          font-family: 'Playfair Display', serif;
+          font-size: gratio(4);
+          text-shadow: 0 1px 0 #fff;
+          position: relative;
+          span {
+            position: relative;
+            z-index: 1;
+          }
+          &:hover {
+            color: color(red-bright);
+          }
+        }
+      }
+    }
+  }
+}

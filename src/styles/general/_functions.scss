@@ -1,0 +1,62 @@
+// z-index
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+// px to rem
+$base-size: 16px;
+@function rem($size) {
+  $remSize: $size / $base-size;
+  @return #{$remSize}rem;
+}
+
+// get colors from variables sheet
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  } // if error
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// get colors from variables sheet
+
+// get goldenProportions from variables sheet
+@function gratio($key) {
+  @if map-has-key($goldenProportions, $key) {
+    @return map-get($goldenProportions, $key);
+  } // if error
+  @warn "Unknown `#{$key}` in $goldenProportions.";
+  @return null;
+}
+
+// get font goldenProportions from variables sheet
+@function fgratio($key) {
+  @if map-has-key($goldenFontProportions, $key) {
+    @return map-get($goldenFontProportions, $key);
+  } // if error
+  @warn "Unknown `#{$key}` in $goldenFontProportions.";
+  @return null;
+}
+
+// animation-delay
+@mixin animation-delay ($delay) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: $delay;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: $delay;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: $delay;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+}
+
+// animation speed
+@mixin animation-speed($speed) {
+    -webkit-animation-duration: $speed; /* Safari 4.0 - 8.0 */
+    animation-duration: $speed;
+}
