@@ -8,27 +8,27 @@
       <ul>
         <li>
           <a href="" title="">
-            <img src="<?php bloginfo('template_url'); ?>/img/bottles/noble-cru.png">
+            <img src="<?php bloginfo('template_url'); ?>/img/bottles/SF_Noble.png">
           </a>
         </li>
         <li>
           <a href="" title="">
-            <img src="<?php bloginfo('template_url'); ?>/img/bottles/o-positivo.png">
+            <img src="<?php bloginfo('template_url'); ?>/img/bottles/SF_OPositivo.png">
           </a>
         </li>
         <li>
           <a href="" title="">
-            <img src="<?php bloginfo('template_url'); ?>/img/bottles/confabulario.png">
+            <img src="<?php bloginfo('template_url'); ?>/img/bottles/SF_Confabulario.png">
           </a>
         </li>        
         <li class="slim">
           <a href="" title="">
-            <img src="<?php bloginfo('template_url'); ?>/img/bottles/vina-rosa.png">
+            <img src="<?php bloginfo('template_url'); ?>/img/bottles/SF_VinaRosa.png">
           </a>
         </li>
         <li class="slim">
           <a href="" title="">
-            <img src="<?php bloginfo('template_url'); ?>/img/bottles/elixir-cordis.png">
+            <img src="<?php bloginfo('template_url'); ?>/img/bottles/SF_Elixir.png">
           </a>
         </li>
       </ul>
