@@ -1,9 +1,8 @@
 import 'jquery';
-// import 'jquery-slimscroll';
+import 'jquery.nicescroll';
 import './style.scss';
 
 import Router from './util/Router';
-import slimscroll from './util/slimscroll';
 import common from './routes/common';
 import home from './routes/home';
 

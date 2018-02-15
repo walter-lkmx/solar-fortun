@@ -5,14 +5,20 @@ export default {
 
     // initial horizontal scroll
     jQuery(document).ready(function($) {
-
-    // $('body').addClass('lol')
-    $('#h-scroll').slimScroll({
-        axis: 'x'
+       $(function() {  
+    $("#h-scroll").niceScroll({
+      rtlmode: "auto", 
+      horizrailenabled: true,
+      oneaxismousemode: "auto",
+      scrollspeed: 10,
+      hwacceleration: true,
+      bouncescroll: true,
+      enablemousewheel: true,
+       smoothscroll: true,
     });
-    console.log('listo');
-
+});
     });
+    
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
