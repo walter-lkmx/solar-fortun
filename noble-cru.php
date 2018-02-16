@@ -21,7 +21,15 @@
           <button>Añadir al carrito</button>
         </div>
       </div>
-      <p class="text">Es nuestro vino Premium y demuestra claramente el por qué. Es sutil, armonioso y complejo. El elegante balance que muestra durante todas las etapas de su degustación hace clara la alta calidad de este producto. La acidez, frutalidad y especias, trabajan en conjunto para crear un vino de cuerpo medio sumamente armonioso lleno de expresión y personalidad que termina con un retrogusto fresco y balanceado y un final persistente y muy agradable.</p>
+      <div class="content">
+        <p>Es nuestro vino Premium y demuestra claramente el por qué. Es sutil, armonioso y complejo. El elegante balance que muestra durante todas las etapas de su degustación hace clara la alta calidad de este producto. La acidez, frutalidad y especias, trabajan en conjunto para crear un vino de cuerpo medio sumamente armonioso lleno de expresión y personalidad que termina con un retrogusto fresco y balanceado y un final persistente y muy agradable.</p>
+      </div>
+      <div class="pairing">
+        <p class="pairing-title">Maridaje</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-steak.svg"><p class="pair">Carnes rojas</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-prawn.svg"><p class="pair">Mariscos</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-cheese.svg"><p class="pair">Quesos</p>
+      </div>
   </section>
 </section>
 <?php get_footer(); ?>

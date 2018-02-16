@@ -21,7 +21,15 @@
           <button>Añadir al carrito</button>
         </div>
       </div>
-      <p class="text">Elixir del corazón, representa nuestra nueva etiqueta de vino Premium. Un vino fiel a sus características de monovarietal que expresa de principio a fin, y con gran elocuencia, todas las características de un Cabernet excelentemente logrado. Un vino que mantiene su elegancia y expresión en todas las etapas de la degustación, balancea su intensidad con una buena acidez y sus taninos firmes.<br>Su final muy largo y sedoso cierra la experiencia de una gran manera.<br>Como su nombre lo dice, tiene virtud para fortalecer el corazón.</p>
+      <div class="content">
+        <p>Elixir del corazón, representa nuestra nueva etiqueta de vino Premium. Un vino fiel a sus características de monovarietal que expresa de principio a fin, y con gran elocuencia, todas las características de un Cabernet excelentemente logrado. Un vino que mantiene su elegancia y expresión en todas las etapas de la degustación, balancea su intensidad con una buena acidez y sus taninos firmes.<br>Su final muy largo y sedoso cierra la experiencia de una gran manera.<br>Como su nombre lo dice, tiene virtud para fortalecer el corazón.</p>
+      </div>
+       <div class="pairing">
+        <p class="pairing-title">Maridaje</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-steak.svg"><p class="pair">Carnes rojas</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-prawn.svg"><p class="pair">Mariscos</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-cheese.svg"><p class="pair">Quesos</p>
+      </div>
   </section>
 </section>
 <?php get_footer(); ?>

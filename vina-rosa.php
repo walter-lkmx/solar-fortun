@@ -21,7 +21,15 @@
           <button>Añadir al carrito</button>
         </div>
       </div>
-      <p class="text">La Viña en Rosa, mezcla de elegancia y frescura, es un vino rosado elaborado 100% con uva Mourvedre. Un vino rosado hecho con toda la seriedad y compromiso de calidad de las líneas Premium de Solar Fortún que rompe esquemas con su perfil seco, frutal y altamente aromático que viene a enaltecer el concepto de vino rosado. De buena acidez, estructura en boca y gran permanencia.<br>La Viña en Rosa es un vino cordial, amable y expresivo.</p>
+      <div class="content">
+        <p>La Viña en Rosa, mezcla de elegancia y frescura, es un vino rosado elaborado 100% con uva Mourvedre. Un vino rosado hecho con toda la seriedad y compromiso de calidad de las líneas Premium de Solar Fortún que rompe esquemas con su perfil seco, frutal y altamente aromático que viene a enaltecer el concepto de vino rosado. De buena acidez, estructura en boca y gran permanencia.<br>La Viña en Rosa es un vino cordial, amable y expresivo.</p>
+      </div>
+       <div class="pairing">
+        <p class="pairing-title">Maridaje</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-steak.svg"><p class="pair">Carnes rojas</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-prawn.svg"><p class="pair">Mariscos</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/solar-cheese.svg"><p class="pair">Quesos</p>
+      </div>
   </section>
 </section>
 <?php get_footer(); ?>

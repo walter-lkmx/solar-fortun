@@ -20,6 +20,7 @@
 		opacity: 0.7;
 		//width: 15%;
 		left: 400px;
+		width: 180px;
 	}
 	.watercolor {
 		//height: auto;
@@ -71,17 +72,17 @@
 		margin-top: 10rem;
 	}
 	.price {
-		font-size: 24.27px;
-		margin-top: gratio(4);
+		font-size: 39.27px;
+		margin: gratio(4) 0;
 		span {
 			font-size: 15px;
 		}
 	}
-	.text {
+	.content {
 		width: 70%;
+		margin: 55px 0;
 	}
 	.shop {
-		margin: 10px 0 28px 0;
 		.quant {
 			display: inline-block;
 			p {
@@ -97,13 +98,31 @@
 		}
 		.buy {
 			display: inline-block;
-			margin-left: 50px;
+			margin-left: 16px;
 			button {
 				width: 200px;
 				padding: 10px;
 				background-color: color(red);
 				color: #fff;
 			}
+		}
+	}
+	.pairing {
+		margin: gratio(4) 0;
+		.pairing-title {
+			color: color(red);
+			font-size: 24.27px;
+			margin-bottom: 16px;
+		}
+		img {
+			width: 40px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.pair {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 34px 0 8px;
 		}
 	}
 }
