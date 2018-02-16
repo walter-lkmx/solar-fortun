@@ -1,0 +1,109 @@
+.wine-content {
+	width: 35%;
+	float: left;
+	//display: inline-block;
+	img {
+		
+		//left:10rem;
+	}
+	.bottle {
+		height: calc(130vh);
+		top: -10rem;
+		position: fixed;
+	}
+	.slim {
+		height: calc(143vh);
+	}
+	.seal {
+		//z-index: 1;
+		position: fixed;
+		opacity: 0.7;
+		//width: 15%;
+		left: 400px;
+	}
+	.watercolor {
+		//height: auto;
+		position: fixed;
+		//height: 100%;
+		width: auto;
+		z-index: -1;
+	}
+	.noblecru {
+		transform: rotate( 270deg );
+		top: 65%;
+		left: -80px;
+		width: 1000px;
+	}
+
+	.elixircordis {
+		height: 500px;
+		transform: rotate( 270deg );
+		top: 60%;
+		left: 10px;
+	}
+
+	.confabulario {
+		height: 700px;
+		top: 37%;
+		left: 100px;
+	}
+
+	.opositivo {
+		height: 700px;
+		transform: rotate( 90deg );
+		top: 80%;
+		left: -300px;
+	}
+
+	.vinarosa {
+		top: 50%;
+		left: 100px;
+	}
+}
+.info-content {
+	width: 65%;
+	//display: inline-block;
+	float: right;
+	position: relative;
+	h1 {
+		font-size: 63.54px;
+		color: color(red);
+		margin-top: 10rem;
+	}
+	.price {
+		font-size: 24.27px;
+		margin-top: gratio(4);
+		span {
+			font-size: 15px;
+		}
+	}
+	.text {
+		width: 70%;
+	}
+	.shop {
+		margin: 10px 0 28px 0;
+		.quant {
+			display: inline-block;
+			p {
+				display: inline-block;
+			}
+			input {
+				margin-left: 16px;
+				width: 50px;
+				padding: 7px;
+				border-color: color(red);
+				text-align: center;
+			}
+		}
+		.buy {
+			display: inline-block;
+			margin-left: 50px;
+			button {
+				width: 200px;
+				padding: 10px;
+				background-color: color(red);
+				color: #fff;
+			}
+		}
+	}
+}
