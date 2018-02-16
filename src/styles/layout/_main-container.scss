@@ -10,21 +10,18 @@ section.main-container {
 
       overflow-x: hidden;
     max-height: calc(100vh - 47px); // padding: gratio(3);
+      .slimScrollDiv {
+        height: 100% !important;
+      }
     nav.products {
       height: 100% !important;
-      width: 160%;
-
-      white-space: nowrap;
-      overflow-y: hidden;
-
-      overflow-x: hidden;
       ul {
         li {
           display: inline-block;
-          margin-right: gratio(5);
+          margin-right: gratio(6);
           a {
             img {
-              height: 107vh;
+              height: calc(100vh);
             }
           } // botellas delgadas
           &.slim {
