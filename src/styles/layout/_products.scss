@@ -21,6 +21,8 @@
 		//width: 15%;
 		left: 400px;
 		width: 180px;
+		-webkit-filter: saturate(150%) contrast(120%) brightness(90%);
+    	filter: saturate(150%) contrast(120%) brightness(90%);
 	}
 	.watercolor {
 		//height: auto;
@@ -68,7 +70,7 @@
 	position: relative;
 	h1 {
 		font-size: 63.54px;
-		color: color(red);
+		//color: color(red);
 		margin-top: 10rem;
 	}
 	.price {
@@ -92,7 +94,7 @@
 				margin-left: 16px;
 				width: 50px;
 				padding: 7px;
-				border-color: color(red);
+				//border-color: color(red);
 				text-align: center;
 			}
 		}
@@ -102,15 +104,15 @@
 			button {
 				width: 200px;
 				padding: 10px;
-				background-color: color(red);
-				color: #fff;
+				//background-color: color(red);
+				//color: #fff;
 			}
 		}
 	}
 	.pairing {
 		margin: gratio(4) 0;
 		.pairing-title {
-			color: color(red);
+			//color: color(red);
 			font-size: 24.27px;
 			margin-bottom: 16px;
 		}
