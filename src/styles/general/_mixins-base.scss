@@ -1,3 +1,9 @@
+// clip path bottles
+@mixin clipBottleFat() {
+  -webkit-clip-path: polygon(50% 0%, 66% 0, 67% 18%, 100% 33%, 100% 100%, 0 100%, 0 33%, 26% 18%, 27% 0);
+  clip-path: polygon(50% 0%, 66% 0, 67% 18%, 100% 33%, 100% 100%, 0 100%, 0 33%, 26% 18%, 27% 0);
+}
+
 // display inline-block
 @mixin inline-block($width, $align) {
   display: inline-block;
@@ -6,7 +12,7 @@
 }
 
 // circle with icon in middle
-@mixin clircle-with-icon($containerSize, $containerColor, $iconHeight) {
+@mixin circle-with-icon($containerSize, $containerColor, $iconHeight) {
   display: inline-block;
   width: $containerSize;
   height: $containerSize;
@@ -140,6 +146,7 @@
 @mixin boxShadow {
   box-shadow: 0 1px 2px rgba(0, 0, 0, .20);
 }
+
 @mixin boxShadowBig {
   box-shadow: 0 15px 35px rgba(64, 64, 79, .15), 0 5px 15px rgba(0, 0, 0, .07);
 }

@@ -14,8 +14,11 @@ $z-index: (
   'navigation' : 100,
   'share-type' : 41,
   'share'      : 40,
-  'click-catcher' : 10,
-  'underground' : 0
+  'click-catcher' : 30,
+  'second-level' : 20,
+  'first-level' : 10,
+  'underground' : 0,
+  'negative-underground' : -1,
 );
 
 // proportions
@@ -23,7 +26,7 @@ $goldenProportions: (
     0 : rem(3px),
     1 : rem(5px),
     2 : rem(8px),
-    3 : rem(13px),
+    3 : rem(16px),
     4 : rem(21px),
     5 : rem(34px),
     6 : rem(55px),
@@ -54,6 +57,11 @@ $colors: (
   wood    : hsla(31, 81%, 70%, 1),
   blueberry    : hsla(226, 20%, 17%, 1),
   white    : hsla(220, 10%, 94%, 1),
+  noble-cru: #ED3237,
+  confabulario: #0298DA,
+  elixir-cordis: #D2AB66,
+  vina-rosa: #F4784F,
+  o-positivo: #7C52A1,
 ); 
 
 

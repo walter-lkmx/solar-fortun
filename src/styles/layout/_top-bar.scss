@@ -3,12 +3,17 @@ section.top-bar {
   padding: gratio(3);
   ul {
     li {
-      display: inline-block;
+      @include inline-block(auto, middle);
       a {
         display: inline-block;
         text-decoration: none;
         color: black;
         margin-left: gratio(3);
+        &.cart {
+          img {
+            width: gratio(4);
+          }
+        }
       }
     }
   }

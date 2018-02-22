@@ -1,4 +1,8 @@
 <aside class="main-menu">
+  <img class="shadow" src="<?php bloginfo('template_url'); ?>/img/shadow-divider.png"> 
+  <!-- <div class="shadow">
+    
+  </div> -->
   <section class="brand">
     <img src="<?php bloginfo('template_url'); ?>/img/solar-logo-black.svg"> 
   </section>
