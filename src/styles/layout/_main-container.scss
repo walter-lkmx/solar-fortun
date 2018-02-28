@@ -31,6 +31,11 @@ section.main-container {
                 @include z-index(second-level);
               }
             }
+            // seal translate
+            img.seal {
+              opacity: 1;
+              transform: translateX(-8rem);
+            }
           }
           a {
             position: relative;
@@ -38,8 +43,8 @@ section.main-container {
             img {
               transition: 0.6s ease;
               height: calc(107vh);
-              &.slim  {
-                height: calc(100vh + 200px); 
+              &.slim {
+                height: calc(100vh + 200px);
               }
               position: relative;
               @include z-index(second-level);
@@ -55,6 +60,15 @@ section.main-container {
             section.title {
               @extend .fade-out-left;
             }
+          }
+          img.seal {
+            @include absolute-center(true, false);
+            @include z-index(first-level);
+            top: 0;
+            opacity: 0;
+            width: gratio(8);
+            transition: 1s ease;
+            transform: translateX(1rem);
           }
           section.title {
             @include absolute-center(true, false);
@@ -74,6 +88,9 @@ section.main-container {
               }
               &.confabulario {
                 background: color(confabulario);
+              }
+              &.vina-rosa {
+                background: color(vina-rosa);
               }
               &.elixir-cordis {
                 background: color(elixir-cordis);
@@ -108,7 +125,7 @@ section.main-container {
           .stain {
             @include z-index(negative-underground);
             position: relative;
-            transition: 1s ease;
+            transition: 4s ease;
             opacity: 0;
             transform: translateY(- gratio(0));
             img {
@@ -119,7 +136,7 @@ section.main-container {
               bottom: gratio(0);
               &.noble-cru {
                 left: -2.3rem;
-                transform: translateY(-144px);
+                transform: translateY(-100px);
               }
               &.positivo {
                 left: -3rem;
@@ -128,7 +145,12 @@ section.main-container {
               &.confabulario {
                 width: 150%;
                 left: -7rem;
-                transform: translateY(-233px);
+                transform: translateY(-200px);
+              }
+              &.vina-rosa {
+                width: 350px;
+                left: -4rem;
+                transform: translateY(-250px);
               }
               &.elixir {
                 width: 350px;

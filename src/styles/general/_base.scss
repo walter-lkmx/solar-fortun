@@ -3,8 +3,7 @@ body {
   font-weight: 400;
   line-height: 1.45;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  // background-color: color(grey-light);
+  font-weight: 400; // background-color: color(grey-light);
   // background-image: url("../img/_SolarFortun_Web_Back.png");
   background-image: url("../img/sf-background3.jpg");
   background-size: cover;
@@ -17,8 +16,23 @@ body {
   }
 }
 
+img {
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+}
 
-h1, h2, h3, h4 {
+
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.2;
   font-family: 'Playfair Display', serif;
 }
@@ -27,14 +41,15 @@ a {
   cursor: pointer;
 }
 
-::-moz-selection { /* Code for Firefox */
-    color: white;
-    background: color(brown-dark);
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: color(brown-dark);
 }
 
 ::selection {
-    color: white; 
-    background: color(brown-dark);
+  color: white;
+  background: color(brown-dark);
 }
 
 .ng-hide:not(.ng-hide-animate) {

@@ -1,0 +1,28 @@
+section.single-product {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 233px);
+  min-height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+  @include z-index(first-level);
+  section.content {
+    height: calc(100vh - 58px);
+    max-height: calc(100vh - 47px);
+    background: rgba(red, 0.2);
+    font-size: 0;
+    .image {
+      @include inline-block(20%, top);
+      position: absolute;
+      img {
+        position: absolute;
+        top: - gratio(8);
+        height: 150vh;
+      }
+    }
+    .product-details {
+      @include inline-block(80%, top);
+      font-size: gratio(3);
+    }
+  }
+}
