@@ -41,6 +41,9 @@ export default {
       'elixir-cordis': function() {
         return 29;
       },
+      'vina-rosa': function() {
+        return 43; 
+      },
       'botella-1': function() {
         return 8;
       },
@@ -99,7 +102,7 @@ export default {
         $.ajax(settings).done(function(response) {
           // console.log(response.description);
           console.log(response.name);
-          $('#price').html(response.price);
+          $('#price').html('$' + response.price + '.00');
           $('#description').html(response.description);
           $('#product-name').html(response.name);
         });
@@ -136,8 +139,9 @@ export default {
                   console.log('its done')
                 });
                 setTimeout(function() {
-                  window.location.href = 'http://' + window.location.host + "/carrito";
-                }, 2000);
+                   location.reload();
+                  // window.location.href = 'http://' + window.location.host + "/carrito";
+                }, 1000);
               }, 1000);
             })
             .keyup();
