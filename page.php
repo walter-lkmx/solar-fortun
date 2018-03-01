@@ -8,7 +8,7 @@
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <h1 id="product-name" style="font-size: 3rem;"></h1>
-      <button type="button" id="add-cart-custom">Agregr al carrito</button>
+      <button type="button" id="add-cart-custom">Agregar al carrito</button>
       <p id="image">
         <img src="" id="featImage">
       </p>
