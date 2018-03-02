@@ -8,16 +8,17 @@ section.single-product {
   @include z-index(first-level);
   section.content {
     height: calc(100vh - 58px);
-    max-height: calc(100vh - 47px);
-    // background: rgba(red, 0.2);
+    max-height: calc(100vh - 47px); // background: rgba(red, 0.2);
     font-size: 0;
     .image {
       @include inline-block(30%, top);
       position: relative;
       height: 100vh;
       img {
-        @include absolute-center(true, true);
-        width: 80%;
+        // @include absolute-center(false, false);
+        height: 120vh;
+        top: - gratio(8);
+        position: absolute;
       }
     }
     section.product-details {

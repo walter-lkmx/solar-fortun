@@ -5,7 +5,7 @@
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
     <section class="image">
-      <img src="" id="featImage">
+      <img src="<?php bloginfo('template_url'); ?>/" id="featImage">
     </section>
     <section class="product-details">
       <section class="title-price">

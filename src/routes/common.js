@@ -38,14 +38,38 @@ export default {
     var productPathName = pathArray[2];
 
     var PRODUCTS = {
+      'baya-baya': function() {
+        return 67;
+      },
+      'cabernet': function() {
+        return 69; 
+      },
+      'confabulario': function() {
+        return 66;
+      },
       'elixir-cordis': function() {
-        return 29;
+        return 63;
       },
-      'vina-rosa': function() {
-        return 43; 
+      'la-vina-en-rosa': function() {
+        return 62;
       },
-      'botella-1': function() {
-        return 8;
+      'mourvedre': function() {
+        return 72;
+      },
+      'noble-cru': function() {
+        return 64;
+      },
+      'o-positivo': function() {
+        return 65;
+      },
+      'petit-verdot': function() {
+        return 71;
+      },
+      'syrah': function() {
+        return 70;
+      },
+      'vino-blanco': function() {
+        return 68;
       },
       NOT_FOUND : 404,
       get: function(productName) {
@@ -112,8 +136,13 @@ export default {
           var metaData = product.images[0];
           var featImage = metaData.src;
           // document.getElementById('image').append(featImage);
-          document.getElementById("featImage").setAttribute("src", featImage);
+          // document.getElementById("featImage").setAttribute("src", featImage);
 
+          var pathIn = "<?php bloginfo('template_url'); ?>";
+          // bottle image
+          var metaData = product['meta_data'][3];
+          var bottleImage = metaData.value;
+          document.getElementById("featImage").src += bottleImage;
           // pairing
           var metaData = product['meta_data'][0];
           var pairing = metaData.value;
@@ -141,7 +170,7 @@ export default {
                 setTimeout(function() {
                    location.reload();
                   // window.location.href = 'http://' + window.location.host + "/carrito";
-                }, 1000);
+                }, 2000);
               }, 1000);
             })
             .keyup();
