@@ -37,7 +37,6 @@ $goldenProportions: (
     11 : rem(610px),
     12 : rem(987px)
   );
-
 $goldenFontProportions: (
     0 : rem(9.27px),
     1 : rem(15px),
@@ -57,12 +56,10 @@ $colors: (
   wood    : hsla(31, 81%, 70%, 1),
   blueberry    : hsla(226, 20%, 17%, 1),
   white    : hsla(220, 10%, 94%, 1),
-  noble-cru: #ED3237,
-  confabulario: #0298DA,
-  elixir-cordis: #D2AB66,
-  vina-rosa: #F4784F,
+  noble-cru: #ed3237,
+  confabulario: #0298da,
+  elixir-cordis: #d2ab66,
+  vina-rosa: #f4784f,
   o-positivo: hsla(335, 73%, 40%, 1),
-); 
-
-
-$colors-warm: #ED3528,#870626,#C5131C,#B53E24,#D84F5F,#F91106,#E8B70F,#D67227;
+);
+$colors-warm: #ed3528,#870626,#c5131c,#b53e24,#d84f5f,#f91106,#e8b70f,#d67227;

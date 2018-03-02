@@ -5,7 +5,9 @@
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
     <section class="image">
+      <img src="<?php bloginfo('template_url'); ?>/" id="featSeal">
       <img src="<?php bloginfo('template_url'); ?>/" id="featImage">
+      <img src="<?php bloginfo('template_url'); ?>/" id="featStain">
     </section>
     <section class="product-details">
       <section class="title-price">
@@ -17,9 +19,10 @@
         <button type="button" id="add-cart-custom">Agregar al carrito</button>
       </section>
       <section class="product-specs">
+        <p id="tasting-notes"></p>
+        <p id="technical-info"></p>
         <p id="description"></p>
         <p id="pairing"></p>
-        <p id="tasting-notes"></p>
         <p id="oenologist-comments"></p>
       </section>
     </section>

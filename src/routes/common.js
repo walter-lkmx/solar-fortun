@@ -16,6 +16,8 @@ export default {
           bouncescroll: true,
           enablemousewheel: true,
           smoothscroll: true,
+          cursordragontouch: true,
+          enablekeyboard: true,
         });
       });
       // add/remove class
@@ -39,37 +41,37 @@ export default {
 
     var PRODUCTS = {
       'baya-baya': function() {
-        return 67;
+        return 157;
       },
       'cabernet': function() {
-        return 69; 
+        return 159; 
       },
       'confabulario': function() {
-        return 66;
+        return 156;
       },
       'elixir-cordis': function() {
-        return 63;
+        return 153;
       },
       'la-vina-en-rosa': function() {
-        return 62;
+        return 152;
       },
       'mourvedre': function() {
-        return 72;
+        return 162;
       },
       'noble-cru': function() {
-        return 64;
+        return 154;
       },
       'o-positivo': function() {
-        return 65;
+        return 155;
       },
       'petit-verdot': function() {
-        return 71;
+        return 161;
       },
       'syrah': function() {
-        return 70;
+        return 160;
       },
       'vino-blanco': function() {
-        return 68;
+        return 158;
       },
       NOT_FOUND : 404,
       get: function(productName) {
@@ -139,18 +141,28 @@ export default {
           // document.getElementById("featImage").setAttribute("src", featImage);
 
           var pathIn = "<?php bloginfo('template_url'); ?>";
-          // bottle image
+          // seal image
+          var metaData = product['meta_data'][5];
+          var featSealImage = metaData.value;
+          document.getElementById("featSeal").src += featSealImage; // bottle image
           var metaData = product['meta_data'][3];
           var bottleImage = metaData.value;
-          document.getElementById("featImage").src += bottleImage;
+          document.getElementById("featImage").src += bottleImage; // stain image
+          var metaData = product['meta_data'][4];
+          var featStainImage = metaData.value;
+          document.getElementById("featStain").src += featStainImage;
           // pairing
           var metaData = product['meta_data'][0];
           var pairing = metaData.value;
           document.getElementById('pairing').append(pairing);
-          // tasting notes
+          // technical info notes
           var metaData = product['meta_data'][1];
-          var tasingNotes = metaData.value;
-          document.getElementById('tasting-notes').append(tasingNotes);
+          var technicalInfo = metaData.value;
+          document.getElementById('technical-info').append(technicalInfo);
+          // tasting notes
+          var metaData = product['meta_data'][6];
+          var tastingNotes = metaData.value;
+          document.getElementById('tasting-notes').append(tastingNotes);
           // oenologist commments
           var metaData = product['meta_data'][2];
           var oenologistCommments = metaData.value;
