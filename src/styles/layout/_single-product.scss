@@ -59,6 +59,28 @@ section.single-product {
           margin-bottom: gratio(4);
         }
       }
+      /*.see-more {
+        padding: gratio(3);
+        padding-left: gratio(6);
+        font-size: 0;
+        outline: 1px solid rgba(white, 1);
+        outline-offset: - gratio(2);
+        span {
+          @include inline-block(80%, middle);
+          color: white;
+          font-family: 'Playfair Display', serif;
+          font-size: 2.125rem;
+          text-align: center;
+          line-height: 1.2;
+        }
+        .img-container {
+          @include inline-block(15%, middle);
+          margin-left: gratio(2);
+          img {
+            width: gratio(4);
+          }
+        }
+      }*/
     }
   }
 }
