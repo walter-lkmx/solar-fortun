@@ -97,17 +97,33 @@ export default {
 
 
     // Woo API - Single product
+  //   var settings = {
+  //     "async": true,
+  //     "crossDomain": true,
+  //     "url": "http://localhost:4000/wp-json/wc/v2/products/" + productId,
+  //     "method": "GET",
+  //     "headers": {
+  //   "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTAwOSIsImlhdCI6MTUyMDAzMzg2NCwibmJmIjoxNTIwMDMzODY0LCJleHAiOjE1MjA2Mzg2NjQsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.KUK-Aq0Q5yXyE0P_H-FMes1RI403E-nDff_BE5Zs0aU",
+  //   "Cache-Control": "no-cache",
+  //   "Postman-Token": "bf2692da-f6a1-c050-71a5-373e55ab93ed"
+  // }
+  //   }
+
     var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "http://localhost:4000/wp-json/wc/v2/products/" + productId,
-      "method": "GET",
-      "headers": {
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTAwOSIsImlhdCI6MTUxOTQyNDA0OCwibmJmIjoxNTE5NDI0MDQ4LCJleHAiOjE1MjAwMjg4NDgsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.r2rnBopcsoEQr-SWhEbZBKPTb031-UeKnvtvRZQ78E0",
-        "Cache-Control": "no-cache",
-        "Postman-Token": "2486497e-6928-7e04-dbac-36e8aba2c7ce"
-      }
-    }
+  "async": true,
+  "crossDomain": true,
+  "url": "https://" + window.location.host + "/wp-json/wc/v2/products/" + productId,
+  "method": "GET",
+  "headers": {
+    "Authorization": "Basic Y2tfNDRlMDYyNmRiMDc3MzdiZTZhYjhlYzkwZGNlNWRhOTJjOGVjODU5MTpjc184ODM1YjdkMTRhZTc1ZmY5NTI4YzRhY2FjY2IwZWQxYjY0YWYzN2Mw",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "1ad8d218-20ae-c864-aa0c-d6b3ccce2330"
+  }
+}
+
+
+
+
 
     if (!String.prototype.format) {
       String.prototype.format = function(args) {
@@ -123,7 +139,26 @@ export default {
 
     // consulting API for product data
     if (productId != PRODUCTS.NOT_FOUND) {
+
       jQuery(document).ready(function($) {
+                // custo add to cart
+        $('#add-cart-custom').click(function(event) {
+          $("#product-quantity").keyup(function() {
+              var productQuantity = $(this).val();
+              console.log('Productos añadidos: ' + productQuantity)
+              $("p").text(productQuantity);
+              setTimeout(function() {
+                $.post('https://' + window.location.host + '/?add-to-cart=' + productId + '&quantity=' + productQuantity, function(data, status) {
+                  console.log('its done')
+                });
+                setTimeout(function() {
+                   location.reload();
+                  // window.location.href = 'http://' + window.location.host + "/carrito";
+                }, 2000);
+              }, 1000);
+            })
+            .keyup();
+        });
         // Get object first level data
         $.ajax(settings).done(function(response) {
           // console.log(response.description);
@@ -131,6 +166,8 @@ export default {
           $('#price').html('$' + response.price + '.00');
           $('#description').html(response.description);
           $('#product-name').html(response.name);
+          $('.presentation-card').addClass(response.slug);
+          $('.presentation-title').html(response.name);
         });
         // Get object deep data
         $.ajax(settings).done(function(product) {
@@ -144,10 +181,12 @@ export default {
           // seal image
           var metaData = product['meta_data'][5];
           var featSealImage = metaData.value;
-          document.getElementById("featSeal").src += featSealImage; // bottle image
+          document.getElementById("featSeal").src += featSealImage; 
+          // bottle image
           var metaData = product['meta_data'][3];
           var bottleImage = metaData.value;
-          document.getElementById("featImage").src += bottleImage; // stain image
+          document.getElementById("featImage").src += bottleImage; 
+          // stain image
           var metaData = product['meta_data'][4];
           var featStainImage = metaData.value;
           document.getElementById("featStain").src += featStainImage;
@@ -169,24 +208,6 @@ export default {
           document.getElementById('oenologist-comments').append(oenologistCommments);
         });
 
-        // custo add to cart
-        $('#add-cart-custom').click(function(event) {
-          $("#product-quantity").keyup(function() {
-              var productQuantity = $(this).val();
-              console.log('Productos añadidos: ' + productQuantity)
-              // $("p").text(productQuantity);
-              setTimeout(function() {
-                $.post('http://' + window.location.host + '/?add-to-cart=' + productId + '&quantity=' + productQuantity, function(data, status) {
-                  console.log('its done')
-                });
-                setTimeout(function() {
-                   location.reload();
-                  // window.location.href = 'http://' + window.location.host + "/carrito";
-                }, 2000);
-              }, 1000);
-            })
-            .keyup();
-        });
       });
     }
 

@@ -1,6 +1,9 @@
 <?php /* Template Name: Single product */ ?>
 <?php get_header(); ?>
 <?php include('ui-layout/aside-main.php'); ?>
+<!-- <section class="presentation-card">
+  <h1 class="presentation-title"></h1>
+</section> -->
 <section class="single-product">
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
