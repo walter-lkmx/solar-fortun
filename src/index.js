@@ -20,3 +20,4 @@ const routes = new Router({
 
 /** Load Events */
 jQuery(document).ready(() => routes.loadEvents());
+
