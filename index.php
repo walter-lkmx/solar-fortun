@@ -91,13 +91,10 @@
             <img class="elixir" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_Elixir_fondo.png">
           </div>
         </li>
-        <li class="product">
-          <a href="" title="">
-            <div class="see-more">
-              <span>Ver todos <br>los vinos</span>
-              <div class="img-container"></div>
-            </div>
-          </a>
+        <li class="product last">
+            <a class="see-more">
+              Ver todos <br>los vinos
+            </a>
         </li>
       </ul>
     </nav>

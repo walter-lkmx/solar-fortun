@@ -8,9 +8,9 @@ section.single-product {
   overflow-x: auto;
   @include z-index(first-level);
   section.content {
-    height: calc(100vh - 58px);
-    max-height: calc(100vh - 47px); // background: rgba(red, 0.2);
-    font-size: 0;
+    height: calc(100vh - 59px);
+    max-height: calc(100vh - 59px); // background: rgba(red, 0.2);
+    font-size: 0; // padding: gratio(3);
     .image {
       @include inline-block(30%, top);
       position: relative;
@@ -38,78 +38,159 @@ section.single-product {
     }
     section.product-details {
       @include inline-block(70%, top);
-      font-size: gratio(3);
-      width: gratio(11);
+      font-size: gratio(3); // width: gratio(11);
+      height: calc(100vh - 59px);
       section.title-price {
         margin-bottom: gratio(3);
         h1#product-name {
-          font-size: gratio(7);
-          margin-bottom: gratio(3);
-          margin-top: gratio(4); // color: color(blueberry);
+          font-size: gratio(7); // margin-bottom: gratio(3);
+          margin-top: gratio(4);
+          display: inline-block;
         }
         #price {
-          font-size: gratio(6);
+          font-size: gratio(5);
           color: color(red);
         }
       }
       section.add-cart {
-        background: color(blueberry);
-        outline: 1px solid rgba(white, 1);
-        outline-offset: - gratio(2);
-        padding: gratio(3);
-        display: inline-block;
-        margin-bottom: gratio(6);
+        font-size: 0;
+        margin-bottom: gratio(8);
+        span.qty {
+          @include inline-block(auto, top);
+          font-size: gratio(3);
+        }
+        input {
+          @include inline-block(auto, middle);
+          @include button(white, blueberry);
+          padding: 0;
+          outline: 1px solid rgba(black, 1);
+          outline-offset: - gratio(2);
+          text-align: center;
+          font-size: gratio(4);
+          width: gratio(7);
+          height: rem(55px);
+          margin-left: gratio(3);
+          &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-size: gratio(4);
+          }
+          &::-moz-placeholder {
+            /* Firefox 19+ */
+            font-size: gratio(4);
+          }
+          &:-ms-input-placeholder {
+            /* IE 10+ */
+            font-size: gratio(4);
+          }
+          &:-moz-placeholder {
+            /* Firefox 18- */
+            font-size: gratio(4);
+          }
+        }
         a {
-          color: white;
+          @include button(color(blueberry), white);
+          @include inline-block(auto, middle);
+          background: color(blueberry);
+          outline: 1px solid rgba(white, 1);
+          outline-offset: - gratio(2);
+          font-size: gratio(3);
+          text-shadow: none;
+          &:hover {
+            @include boxShadowBig();
+            transform: translateY(- gratio(0));
+          }
+          span {
+            // display: block;
+          }
+        }
+        img {
+          @include inline-block(25%, middle);
+          text-align: right;
+          width: gratio(4); // position: absolute;
+          // right: gratio(3);
         }
       }
       section.product-specs {
         margin-bottom: gratio(3);
-        p {
-          margin-bottom: gratio(4);
-        }
-      }
-      /*.see-more {
-        padding: gratio(3);
-        padding-left: gratio(6);
         font-size: 0;
-        outline: 1px solid rgba(white, 1);
-        outline-offset: - gratio(2);
-        span {
-          @include inline-block(80%, middle);
-          color: white;
-          font-family: 'Playfair Display', serif;
-          font-size: 2.125rem;
-          text-align: center;
-          line-height: 1.2;
-        }
-        .img-container {
-          @include inline-block(15%, middle);
-          margin-left: gratio(2);
-          img {
-            width: gratio(4);
+        section.general-info {
+          @include inline-block(80%, top);
+          margin-bottom: gratio(6);
+          .img-container {
+            @include inline-block(auto, top);
+            img {
+              width: gratio(6);
+              filter: contrast(120%) opacity(100%);
+            }
+          }
+          .content {
+            @include inline-block(80%, top);
+            padding-left: gratio(4);
+            h2 {
+              font-size: gratio(5);
+              margin-bottom: gratio(3);
+            }
+            p {
+              font-size: gratio(3);
+              ul {
+                li {
+                  list-style: initial;
+                  margin-left: gratio(3);
+                  margin-bottom: gratio(2);
+                  &::first-letter {
+                    text-transform: capitalize;
+                  }
+                }
+              }
+            }
           }
         }
-      }*/
+        section.info-tec {
+          @include inline-block(50%, top); // margin-top: gratio(6);
+          margin-bottom: gratio(6); // background: rgba(color(wood), 1);
+          border: 1px solid rgba(color(blueberry), 0.8);
+          outline: 1px solid rgba(color(blueberry), 1);
+          outline-offset: - gratio(2);
+          padding: gratio(5);
+          h2 {
+            font-size: gratio(4);
+            margin-bottom: gratio(3);
+            font-style: italic;
+          }
+          p {
+            font-size: gratio(3);
+            ul {
+              li {
+                list-style: initial;
+                margin-left: gratio(3);
+                margin-bottom: gratio(2);
+                &::first-letter {
+                  text-transform: capitalize;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
-// section.presentation-card {
-//   @include z-index(modal);
-//   position: fixed;
-//   width: 100vw;
-//   height: 100vh;
-//   top: 0;
-//   left: 0;
-//   overflow: hidden;
-//   text-align: center;
-//   display: none;
-//   &.confabulario {
-//     background: color(blueberry);
-//   }
-//   h1 {
-//     color: white;
-//     font-size: gratio(8);
-//     @include absolute-center(true, true);
-//   }
-// }
+
+section.presentation-card {
+  @include z-index(modal);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  text-align: center;
+  background: color(blueberry);
+  background-image: url("../img/sf-background3.jpg");
+  background-size: cover;
+  svg {
+    width: 70%;
+    height: 100%;
+    pointer-events: none;
+  }
+}

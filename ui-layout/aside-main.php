@@ -4,7 +4,7 @@
     
   </div> -->
   <section class="brand">
-    <img src="<?php bloginfo('template_url'); ?>/img/solar-logo-black.svg"> 
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/img/solar-logo-black.svg"></a> 
   </section>
   <nav>
     <ul>

@@ -20,6 +20,20 @@ export default {
           enablekeyboard: true,
         });
       });
+
+      // vertical scroll in single product
+      $(function() {
+        $("#v-scroll").niceScroll({
+          rtlmode: "auto",
+          scrollspeed: 5,
+          hwacceleration: true,
+          bouncescroll: true,
+          enablemousewheel: true,
+          smoothscroll: true,
+          cursordragontouch: true,
+          enablekeyboard: true,
+        });
+      });
       // add/remove class
       $(".product").hover(
         function() {
@@ -39,6 +53,7 @@ export default {
     var storePathName = pathArray[1];
     var productPathName = pathArray[2];
 
+    // get woo object
     var PRODUCTS = {
       'baya-baya': function() {
         return 157;
@@ -78,6 +93,11 @@ export default {
         return PRODUCTS[productPathName] ? PRODUCTS[productPathName]() : PRODUCTS.NOT_FOUND;
       }
     };
+
+    // name animations
+
+
+
     console.log(newURL);
     console.log('store:' + storePathName);
     console.log('product:' + productPathName);
@@ -162,9 +182,11 @@ export default {
         // Get object first level data
         $.ajax(settings).done(function(response) {
           // console.log(response.description);
-          console.log(response.name);
-          $('#price').html('$' + response.price + '.00');
-          $('#description').html(response.description);
+
+          console.log(response);
+          
+          $('#price').html(response.price_html);
+          // $('#description').html(response.description);
           $('#product-name').html(response.name);
           $('.presentation-card').addClass(response.slug);
           $('.presentation-title').html(response.name);
@@ -193,11 +215,20 @@ export default {
           // pairing
           var metaData = product['meta_data'][0];
           var pairing = metaData.value;
-          document.getElementById('pairing').append(pairing);
+          var pairingInfoSplit = pairing.split(',');
+          var pairingInfoJoin = "<ul><li>" + pairingInfoSplit.join("</li>,<li>") + "</li></ul>";
+          var pairingInfoRemoveCommma = pairingInfoJoin.replace(/,/g, ' ');
+          $('#pairing').html(pairingInfoRemoveCommma);
           // technical info notes
           var metaData = product['meta_data'][1];
           var technicalInfo = metaData.value;
-          document.getElementById('technical-info').append(technicalInfo);
+          var technicalInfoSplit = technicalInfo.split(',');
+          var technicalInfoJoin = "<ul><li>" + technicalInfoSplit.join("</li>,<li>") + "</li></ul>";
+          var technicalInfoRemoveCommma = technicalInfoJoin.replace(/,/g, ' ');
+          $('#technical-info').html(technicalInfoRemoveCommma);
+
+
+          // document.getElementById('technical-info').append(result);
           // tasting notes
           var metaData = product['meta_data'][6];
           var tastingNotes = metaData.value;

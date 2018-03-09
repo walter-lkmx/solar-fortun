@@ -17,6 +17,7 @@ section.main-container {
       overflow-y: hidden;
       overflow-x: hidden;
       ul {
+        position: relative;
         li.product {
           position: relative;
           display: inline-block;
@@ -24,6 +25,11 @@ section.main-container {
           margin-right: gratio(7);
           transform: translateY(30px);
           display: inline-block;
+          // see more wines
+          &.last {
+            @include absolute-center(false, true);
+            vertical-align: middle;
+          }
           // hover bottle & seal
           &:hover {
             a {
@@ -61,29 +67,16 @@ section.main-container {
               }
               position: relative;
             }
-            .see-more {
-              background-color: #232734;
-              padding: gratio(5);
-              font-size: 0;
+            &.see-more {
+              background-color: color(blueberry);
+              padding: gratio(4) gratio(6);
+              font-size: gratio(5);
+              font-family: 'Botera TFE';
               outline: 1px solid rgba(white, 1);
               outline-offset: - gratio(2);
-              @include absolute-center(true, true);
-              transform: translate(20%,250%);
-              span {
-                @include inline-block(100%, middle);
-                color: white;
-                font-family: 'Playfair Display', serif;
-                font-size: 2.125rem;
-                text-align: center;
-                line-height: 1.2;
-              }
-              .img-container {
-                @include inline-block(15%, middle);
-                margin-left: gratio(2);
-                img {
-                  width: gratio(4);
-                }
-              }
+              color: white;
+              display: inline-block;
+              vertical-align: middle;
             }
           }
           &.enter {
@@ -131,7 +124,7 @@ section.main-container {
                 background: color(elixir-cordis);
               }
             }
-            .add-cart, .see-more {
+            .add-cart {
               padding: gratio(3);
               padding-left: gratio(6);
               font-size: 0;
@@ -148,14 +141,6 @@ section.main-container {
                 img {
                   width: gratio(4);
                 }
-              }
-            }
-            .see-more {
-              span {
-                font-family: 'Playfair Display', serif;
-                font-size: 2.125rem;
-                text-align: center;
-                line-height: 1.2;
               }
             }
           } // botellas delgadas
