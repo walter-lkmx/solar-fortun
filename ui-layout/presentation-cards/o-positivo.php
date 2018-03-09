@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
-<svg width="141px" height="25px" viewBox="0 0 141 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" style="">
+<svg id="svg-canvas" width="141px" height="25px" viewBox="0 0 141 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" style="">
     <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
     <title>o-positivo</title>
     <desc>Created with Sketch.</desc>

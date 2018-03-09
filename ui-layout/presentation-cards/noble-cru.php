@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
-<svg width="145px" height="26px" viewBox="0 0 145 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" style="">
+<svg id="svg-canvas" width="145px" height="26px" viewBox="0 0 145 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" style="">
     <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
     <title>noble-cru</title>
     <desc>Created with Sketch.</desc>
