@@ -1,17 +1,17 @@
 <?php /* Template Name: Single product */ ?>
 <section class="presentation-card">
-<p>
-<?php 
-  $path = $_SERVER['REQUEST_URI'];
-  $tokens = explode('/', $path);
-  // echo $path;
-  $pathResult = $tokens[sizeof($tokens)-2];
-?>
-</p>
-<?php include('ui-layout/presentation-cards/' . $pathResult .'.php'); ?>
-
+  <p>
+    <?php 
+      $path = $_SERVER['REQUEST_URI'];
+      $tokens = explode('/', $path);
+      // echo $path;
+      $pathResult = $tokens[sizeof($tokens)-2];
+    ?>
+  </p>
+  <?php include('ui-layout/presentation-cards/' . $pathResult .'.php'); ?>
 </section>
 <?php get_header(); ?>
+<?php include('ui-layout/aside-main.php'); ?>
 <!-- 
   <h1 class="presentation-title"></h1>
  -->

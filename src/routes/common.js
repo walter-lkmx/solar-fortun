@@ -59,7 +59,7 @@ export default {
         return 157;
       },
       'cabernet': function() {
-        return 159; 
+        return 159;
       },
       'confabulario': function() {
         return 156;
@@ -88,7 +88,7 @@ export default {
       'vino-blanco': function() {
         return 158;
       },
-      NOT_FOUND : 404,
+      NOT_FOUND: 404,
       get: function(productName) {
         return PRODUCTS[productPathName] ? PRODUCTS[productPathName]() : PRODUCTS.NOT_FOUND;
       }
@@ -105,41 +105,55 @@ export default {
     var productId = PRODUCTS.get(productPathName);
     console.log(productId)
 
-    // // get product ID from url
-    // if (productPathName === 'elixir-cordis') {
-    //   productId = 29;
-    //   console.log('Product ID: ' + productId);
-    // } else {
-    //   console.log('non a product page');
-    // }
+    // resolve if current page is a vinos page =P
+    if (storePathName === 'vinos') {
+      document.onreadystatechange = function() {
+        var state = document.readyState
+        if (state == 'uninitialized') {
+          // document.getElementById('contents').style.visibility="hidden";
+          console.log('loading')
+        } else if (state == 'complete') {
+          setTimeout(function() {
+            console.log('cargado')
+            var element = document.getElementById("svg-canvas");
+            element.classList.add("start");
+            // document.getElementById('load').style.visibility="hidden";
+            // document.getElementById('contents').style.visibility="visible";
+          }, 500);
+        }
+      }
+      console.log('awesome! this is a vinos page');
+    } else {
+      console.log('not a vinos page =P');
+    }
 
 
 
 
     // Woo API - Single product
-  //   var settings = {
-  //     "async": true,
-  //     "crossDomain": true,
-  //     "url": "http://localhost:4000/wp-json/wc/v2/products/" + productId,
-  //     "method": "GET",
-  //     "headers": {
-  //   "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTAwOSIsImlhdCI6MTUyMDAzMzg2NCwibmJmIjoxNTIwMDMzODY0LCJleHAiOjE1MjA2Mzg2NjQsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.KUK-Aq0Q5yXyE0P_H-FMes1RI403E-nDff_BE5Zs0aU",
-  //   "Cache-Control": "no-cache",
-  //   "Postman-Token": "bf2692da-f6a1-c050-71a5-373e55ab93ed"
-  // }
-  //   }
+    //   var settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "http://localhost:4000/wp-json/wc/v2/products/" + productId,
+    //     "method": "GET",
+    //     "headers": {
+    //   "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTAwOSIsImlhdCI6MTUyMDAzMzg2NCwibmJmIjoxNTIwMDMzODY0LCJleHAiOjE1MjA2Mzg2NjQsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.KUK-Aq0Q5yXyE0P_H-FMes1RI403E-nDff_BE5Zs0aU",
+    //   "Cache-Control": "no-cache",
+    //   "Postman-Token": "bf2692da-f6a1-c050-71a5-373e55ab93ed"
+    // }
+    //   }
 
     var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://" + window.location.host + "/wp-json/wc/v2/products/" + productId,
-  "method": "GET",
-  "headers": {
-    "Authorization": "Basic Y2tfNDRlMDYyNmRiMDc3MzdiZTZhYjhlYzkwZGNlNWRhOTJjOGVjODU5MTpjc184ODM1YjdkMTRhZTc1ZmY5NTI4YzRhY2FjY2IwZWQxYjY0YWYzN2Mw",
-    "Cache-Control": "no-cache",
-    "Postman-Token": "1ad8d218-20ae-c864-aa0c-d6b3ccce2330"
-  }
-}
+      "async": true,
+      "crossDomain": true,
+      "url": "https://" + window.location.host + "/wp-json/wc/v2/products/" + productId,
+      "method": "GET",
+      "headers": {
+        "Authorization": "Basic Y2tfNDRlMDYyNmRiMDc3MzdiZTZhYjhlYzkwZGNlNWRhOTJjOGVjODU5MTpjc184ODM1YjdkMTRhZTc1ZmY5NTI4YzRhY2FjY2IwZWQxYjY0YWYzN2Mw",
+        "Cache-Control": "no-cache",
+        "Postman-Token": "1ad8d218-20ae-c864-aa0c-d6b3ccce2330"
+      }
+    }
 
 
 
@@ -161,7 +175,7 @@ export default {
     if (productId != PRODUCTS.NOT_FOUND) {
 
       jQuery(document).ready(function($) {
-                // custo add to cart
+        // custo add to cart
         $('#add-cart-custom').click(function(event) {
           $("#product-quantity").keyup(function() {
               var productQuantity = $(this).val();
@@ -172,7 +186,7 @@ export default {
                   console.log('its done')
                 });
                 setTimeout(function() {
-                   location.reload();
+                  location.reload();
                   // window.location.href = 'http://' + window.location.host + "/carrito";
                 }, 2000);
               }, 1000);
@@ -184,7 +198,7 @@ export default {
           // console.log(response.description);
 
           console.log(response);
-          
+
           $('#price').html(response.price_html);
           // $('#description').html(response.description);
           $('#product-name').html(response.name);
@@ -203,11 +217,11 @@ export default {
           // seal image
           var metaData = product['meta_data'][5];
           var featSealImage = metaData.value;
-          document.getElementById("featSeal").src += featSealImage; 
+          document.getElementById("featSeal").src += featSealImage;
           // bottle image
           var metaData = product['meta_data'][3];
           var bottleImage = metaData.value;
-          document.getElementById("featImage").src += bottleImage; 
+          document.getElementById("featImage").src += bottleImage;
           // stain image
           var metaData = product['meta_data'][4];
           var featStainImage = metaData.value;
