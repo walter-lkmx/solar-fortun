@@ -110,15 +110,12 @@ export default {
       document.onreadystatechange = function() {
         var state = document.readyState
         if (state == 'uninitialized') {
-          // document.getElementById('contents').style.visibility="hidden";
           console.log('loading')
         } else if (state == 'complete') {
           setTimeout(function() {
             console.log('cargado')
             var element = document.getElementById("svg-canvas");
             element.classList.add("start");
-            // document.getElementById('load').style.visibility="hidden";
-            // document.getElementById('contents').style.visibility="visible";
           }, 500);
         }
       }
