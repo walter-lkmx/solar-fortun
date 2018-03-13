@@ -24,26 +24,6 @@ aside.main-menu {
         margin-bottom: gratio(3);
         text-align: center;
         position: relative;
-        img {
-          @include z-index(underground);
-          opacity: 0;
-          position: absolute;
-          transition: 0.4s ease;
-          filter: contrast(130%);
-          margin-left: 0;
-          top: - 5px;
-          width: 120%;
-        }
-        &:hover {
-          img {
-            transform: translatex(-10px);
-            display: block;
-            opacity: 0.6;
-          }
-        }
-        &.spacer {
-          margin-bottom: gratio(6);
-        }
         a {
           display: inline-block;
           color: color(blueberry);
@@ -58,6 +38,27 @@ aside.main-menu {
           &:hover {
             text-shadow: none; // color: color(blue-berry);
           }
+          .stain {
+            @include z-index(underground);
+            position: absolute;
+            transition: 0.4s ease;
+            opacity: 0;
+            filter: contrast(130%);
+              margin-left: 0;
+              top: - 5px;
+              width: 120%;
+            transform: translateX(- gratio(0));
+          }
+          &:hover {
+            .stain {
+              display: block;
+              opacity: 0.6;
+              transform: translateX(-10px);
+            }
+          }
+        }
+        &.spacer {
+          margin-bottom: gratio(6);
         }
       }
     }
