@@ -40,6 +40,8 @@ section.single-product {
       @include inline-block(70%, top);
       font-size: gratio(3); // width: gratio(11);
       height: calc(100vh - 59px);
+      padding: gratio(3);
+      overflow-x: hidden;
       section.title-price {
         margin-bottom: gratio(3);
         h1#product-name {
@@ -54,7 +56,7 @@ section.single-product {
       }
       section.add-cart {
         font-size: 0;
-        margin-bottom: gratio(8);
+        margin-bottom: gratio(7);
         span.qty {
           @include inline-block(auto, top);
           font-size: gratio(3);
@@ -88,6 +90,7 @@ section.single-product {
           }
         }
         a {
+          @extend .ripple;
           @include button(color(blueberry), white);
           @include inline-block(auto, middle);
           background: color(blueberry);
@@ -111,20 +114,132 @@ section.single-product {
         }
       }
       section.product-specs {
-        margin-bottom: gratio(3);
+        margin-bottom: gratio(6);
         font-size: 0;
+        section.metrics {
+          margin-bottom: gratio(7);
+          position: relative;
+          img.ornament {
+            position: absolute;
+            &.big-grape {
+              width: 18.5625rem;
+              right: -5.4375rem;
+              top: -2.125rem;
+              transform: rotate(12deg);
+            }
+            &.leaf-4 {
+              width: 4.3125rem;
+              right: 13.4375rem;
+              top: 14.125rem;
+              transform: rotate(90deg);
+            }
+            &.leaf-5 {
+              width: 3.3125rem;
+              right: 7.4375rem;
+              top: 7.125rem; // transform: rotate(90deg);
+            }
+            &.herbs {
+              width: gratio(9);
+              right: 7.4375rem;
+              top: 7.125rem;
+            }
+          }
+          #intensity {
+            @include inline-block(50%, bottom);
+            height: rem(86px);
+            margin-bottom: gratio(5);
+            .img-container {
+              @include inline-block(gratio(6), bottom);
+              text-align: left;
+              img {
+                width: 90%;
+                height: auto;
+              }
+            }
+            .content {
+              @include inline-block(294px, bottom);
+              h3 {
+                font-size: gratio(4);
+                margin-bottom: gratio(3);
+              }
+              .bar {
+                height: gratio(3);
+                width: 100%;
+                background: color(intensity-gradients);
+                position: relative;
+                #intensityBarLevel {
+                  position: absolute;
+                  left: 0;
+                  width: 30%;
+                  display: block;
+                  border-right: 2px solid color(blueberry);
+                  height: gratio(5);
+                  transform: translateY(- gratio(2));
+                }
+              }
+            }
+          }
+          #type-grape {
+            // @include inline-block(auto, bottom);
+            height: gratio(7);
+            h2 {
+              font-size: gratio(4);
+              margin-bottom: gratio(3);
+            }
+            .grape {
+              @include inline-block(gratio(8), bottom);
+              margin-right: gratio(4);
+              font-size: 0;
+              .grape-img {
+                @include inline-block(gratio(6), bottom);
+                height: gratio(6);
+                background-size: contain;
+                background-repeat: no-repeat;
+                &.cavernet {
+                  background-image: url("../img/grapes/tinto2.svg");
+                }
+                &.sauvignon {
+                  background-image: url("../img/grapes/rosado3.svg");
+                }
+              }
+              .grape-specs {
+                @include inline-block(50%,
+                top);
+                height: 50px;
+                padding-left: gratio(1);
+                h3.grapeValue {
+                  font-size: gratio(5);
+                  line-height: 0.8;
+                }
+                span.grapeName {
+                  font-size: gratio(3);
+                }
+              }
+            }
+          }
+        }
         section.general-info {
-          @include inline-block(80%, top);
+          @include inline-block(80%,
+          top);
           margin-bottom: gratio(6);
+          position: relative;
           .img-container {
-            @include inline-block(auto, top);
+            @include inline-block(auto,
+            middle);
+            min-width: rem(34px);
+            position: relative;
             img {
-              width: gratio(6);
+              width: gratio(5);
               filter: contrast(120%) opacity(100%);
+              &.kindaBigger {
+                width: 2.5rem;
+                position: absolute;
+              }
             }
           }
           .content {
-            @include inline-block(80%, top);
+            @include inline-block(80%,
+            top);
             padding-left: gratio(4);
             h2 {
               font-size: gratio(5);
@@ -144,12 +259,34 @@ section.single-product {
               }
             }
           }
+          img.ornament {
+            position: absolute;
+            &.herbs {
+              width: 16.5625rem;
+              right: - gratio(9);
+              top: - gratio(7);
+              transform: rotate(-60deg);
+            }
+            &.meat-roll {
+              width: 19.5625rem;
+              right: -14.5625rem;
+              bottom: -5rem;
+              transform: rotate(43deg);
+            }
+            &.meat-table {
+              width: 19.5625rem;
+              left: 0;
+              bottom: -5rem;
+              transform: rotate(43deg);
+            }
+          }
         }
         section.info-tec {
-          @include inline-block(50%, top); // margin-top: gratio(6);
+          @include inline-block(50%,
+          top); // margin-top: gratio(6);
           margin-bottom: gratio(6); // background: rgba(color(wood), 1);
           border: 1px solid rgba(color(blueberry), 0.8);
-          outline: 1px solid rgba(color(blueberry), 1);
+          outline: 3px solid rgba(color(blueberry), 1);
           outline-offset: - gratio(2);
           padding: gratio(5);
           h2 {
@@ -184,13 +321,49 @@ section.presentation-card {
   top: 0;
   left: 0;
   overflow: hidden;
-  text-align: center;
-  background: color(blueberry);
+  text-align: center; // background: color(blueberry);
   background-image: url("../img/sf-background3.jpg");
   background-size: cover;
   svg {
     width: 70%;
     height: 100%;
     pointer-events: none;
+    path {
+      fill-opacity: 0;
+      transition: 4s ease;
+      transition-delay: 3s;
+    }
+    &.start {
+      path {
+        fill-opacity: 1; // -webkit-animation: color-change-2x 3.5s linear 3s forwards;
+        // animation: color-change-2x 3.5s linear 3s forwards;
+      }
+    }
   }
 }
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    fill-opacity: 0;
+
+    fill: transparent;
+  }
+  100% {
+    fill-opacity: 1;
+    fill: #232734;
+  }
+}
+
+@keyframes color-change-2x {
+  0% {
+    fill-opacity: 0;
+
+    fill: transparent;
+  }
+  100% {
+    fill-opacity: 1;
+    fill: #232734;
+  }
+}
+
+#to-delete {}

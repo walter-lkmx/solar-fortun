@@ -1,7 +1,28 @@
 export default {
   init() {
     // JavaScript to be fired on all pages
-    console.log('common');
+    function setCookie(c_name, value, exdays) {
+      var exdate = new Date();
+      exdate.setDate(exdate.getDate() + exdays);
+      var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+      document.cookie = c_name + "=" + c_value;
+    };
+
+    function getCookie(c_name) {
+      var i, x, y, ARRcookies = document.cookie.split(";");
+      for (i = 0; i < ARRcookies.length; i++) {
+        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+        x = x.replace(/^\s+|\s+$/g, "");
+        if (x == c_name) {
+          return unescape(y);
+        }
+      }
+    }
+
+
+
+
 
     // initial horizontal scroll
     jQuery(document).ready(function($) {
@@ -26,6 +47,7 @@ export default {
         $("#v-scroll").niceScroll({
           rtlmode: "auto",
           scrollspeed: 5,
+          horizrailenabled: false,
           hwacceleration: true,
           bouncescroll: true,
           enablemousewheel: true,
@@ -98,14 +120,15 @@ export default {
 
 
 
-    console.log(newURL);
-    console.log('store:' + storePathName);
-    console.log('product:' + productPathName);
+    // console.log(newURL);
+    // console.log('store:' + storePathName);
+    // console.log('product:' + productPathName);
 
     var productId = PRODUCTS.get(productPathName);
     console.log(productId)
 
     // resolve if current page is a vinos page =P
+    var svgCanvas = document.getElementById("svg-canvas");
     if (storePathName === 'vinos') {
       document.onreadystatechange = function() {
         var state = document.readyState
@@ -114,14 +137,34 @@ export default {
         } else if (state == 'complete') {
           setTimeout(function() {
             console.log('cargado')
-            var element = document.getElementById("svg-canvas");
-            element.classList.add("start");
+            svgCanvas.classList.add("start");
+            setTimeout(function() {
+              var svgCanvas = document.getElementById("leave-card");
+              svgCanvas.classList.add("fade-out-top");
+              setTimeout(function() {
+                svgCanvas.remove();
+              }, 700);
+            }, 6000);
           }, 500);
         }
       }
-      console.log('awesome! this is a vinos page');
+      // console.log('awesome! this is a vinos page');
     } else {
-      console.log('not a vinos page =P');
+      // console.log('not a vinos page =P');
+    }
+
+    // if tis wine was previously visited
+    if (getCookie('visited') && storePathName === 'vinos') {
+      // location.href = "redirecturl";
+      console.log('storePathName es VINOS y esta URL ya fue visitada antes');
+      setTimeout(function() {
+        var svgCanvas = document.getElementById("leave-card");
+        svgCanvas.remove();
+      }, 1500);
+    } else {
+      setCookie('visited', 1, 365);
+
+      console.log('primera vez que se visita esta URL, pero no es página de vinos');
     }
 
 
@@ -173,22 +216,30 @@ export default {
 
       jQuery(document).ready(function($) {
         // custo add to cart
+        var productQuantity = 1;
+        $("#product-quantity").keyup(function() {
+          productQuantity = $(this).val();
+          // $("p").text(productQuantity); 
+          // .keyup();
+        });
         $('#add-cart-custom').click(function(event) {
-          $("#product-quantity").keyup(function() {
-              var productQuantity = $(this).val();
-              console.log('Productos añadidos: ' + productQuantity)
-              $("p").text(productQuantity);
+          console.log('Productos añadidos: ' + productQuantity)
+          setTimeout(function() {
+            $.post('https://' + window.location.host + '/?add-to-cart=' + productId + '&quantity=' + productQuantity, function(data, status) {
+              console.log('its done');
+              $("#carrito").load(" #carrito");
               setTimeout(function() {
-                $.post('https://' + window.location.host + '/?add-to-cart=' + productId + '&quantity=' + productQuantity, function(data, status) {
-                  console.log('its done')
-                });
+                var clonnedBottle = document.getElementById("featImage");
+                var clone = clonnedBottle.cloneNode(true);
+                clone.className = "slide-out-fwd-tr";
+                clone.id = "to-delete";
+                document.getElementById("clone-container").appendChild(clone);
                 setTimeout(function() {
-                  location.reload();
-                  // window.location.href = 'http://' + window.location.host + "/carrito";
-                }, 2000);
-              }, 1000);
-            })
-            .keyup();
+                  document.getElementById("to-delete").remove();
+                }, 1000);
+              }, 500);
+            });
+          }, 500);
         });
         // Get object first level data
         $.ajax(settings).done(function(response) {
@@ -201,6 +252,27 @@ export default {
           $('#product-name').html(response.name);
           $('.presentation-card').addClass(response.slug);
           $('.presentation-title').html(response.name);
+          // console.log(response.attributes[0]);
+          // console.log(response.attributes[0].options);
+
+
+          // varietales template
+          var a = response.attributes;
+          var grapeTemplate = "";
+          a.forEach(function(entry) {
+            // console.log(entry.name);
+            // console.log(entry.options[0]);
+            grapeTemplate += "<div class=\"grape\">" + "<div class=\"grape-img " + entry.name + "\"></div>" + "<div class=\"grape-specs\"><h3 class=\"grapeValue\">" + entry.options[0] + "%" + "</h3>" + "<span class=\"grapeName\">" + entry.name + "</span></div>" + "</div>"
+          });
+          document.getElementById("type-grape").innerHTML = "<h2>Varietal</h2>" + grapeTemplate;
+
+          // var numberGrapes = $("#type-grape > div.grape").length;
+          // if (numberGrapes >= 2) {
+          //   $('#type-grape').addClass('wide');
+          // } else {
+          //   $('#type-grape').addClass('narrow');
+          // }
+
         });
         // Get object deep data
         $.ajax(settings).done(function(product) {
@@ -223,6 +295,13 @@ export default {
           var metaData = product['meta_data'][4];
           var featStainImage = metaData.value;
           document.getElementById("featStain").src += featStainImage;
+          // dominant flavors
+          var metaData = product['meta_data'][9];
+          var dominantFlavors = metaData.value;
+          var dominantFlavorsSplit = dominantFlavors.split(',');
+          var dominantFlavorsJoin = "<ul><li>" + dominantFlavorsSplit.join("</li>,<li>") + "</li></ul>";
+          var dominantFlavorsRemoveCommma = dominantFlavorsJoin.replace(/,/g, ' ');
+          $('#dominant-flavors').html(dominantFlavorsRemoveCommma);
           // pairing
           var metaData = product['meta_data'][0];
           var pairing = metaData.value;
@@ -241,13 +320,20 @@ export default {
 
           // document.getElementById('technical-info').append(result);
           // tasting notes
-          var metaData = product['meta_data'][6];
-          var tastingNotes = metaData.value;
-          document.getElementById('tasting-notes').append(tastingNotes);
+          // var metaData = product['meta_data'][6];
+          // var tastingNotes = metaData.value;
+          // document.getElementById('tasting-notes').append(tastingNotes);
           // oenologist commments
           var metaData = product['meta_data'][2];
           var oenologistCommments = metaData.value;
           document.getElementById('oenologist-comments').append(oenologistCommments);
+          // intensity specs
+          var metaData = product['meta_data'][7];
+          var intensity = metaData.value;
+          document.getElementById('intensityValue').append(intensity + ' ');
+          var barLine = document.getElementById('intensityBarLevel'); // line
+          barLine.style.width = intensity + '0%'; // value
+          // console.log(intensity + '0%');
         });
 
       });

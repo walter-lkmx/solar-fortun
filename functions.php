@@ -113,3 +113,29 @@ function add_slug_to_body_class($classes) {
 }
 
 
+
+// Ensure cart contents update when products are added to the cart via AJAX (place the following in functions.php).
+// Used in conjunction with https://gist.github.com/DanielSantoro/1d0dc206e242239624eb71b2636ab148
+// Compatible with WooCommerce 3.0+. Thanks to Alex for assisting with an update!
+ 
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+    global $woocommerce;
+
+    ob_start();
+
+    ?>
+    <a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+    <?php
+    $fragments['a.cart-customlocation'] = ob_get_clean();
+    return $fragments;
+}
+
+
+add_action( 'init', 'woocommerce_clear_cart_url' );
+function woocommerce_clear_cart_url() {
+    if ( isset( $_GET['clear-cart'] ) ) {
+        global $woocommerce;
+        $woocommerce->cart->empty_cart();
+    }
+}
+

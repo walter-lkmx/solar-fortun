@@ -61,5 +61,7 @@ $colors: (
   elixir-cordis: #d2ab66,
   vina-rosa: #f4784f,
   o-positivo: hsla(335, 73%, 40%, 1),
+  intensity-gradient: linear-gradient(to right, #FFD1B4,#FAAAAF,#ED889B,#EF5E90,#C54F8E,hsla(345, 100%, 32%, 1),#7B28A8,#671E87,#4B1963,#360D47),
+  intensity-gradients: linear-gradient(to right, #FFD1B4, #ED889B, #97193D, #5D2649, #272C3B)
 );
 $colors-warm: #ed3528,#870626,#c5131c,#b53e24,#d84f5f,#f91106,#e8b70f,#d67227;

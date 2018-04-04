@@ -59,7 +59,7 @@
         </li>
         <!-- viña en rosa -->
         <li class="product">
-          <a href="vinos/elixir-cordis" title="">
+          <a href="vinos/la-vina-en-rosa" title="">
             <img class="bottle-vina-rosa" src="<?php bloginfo('template_url'); ?>/img/bottles/vinaenrosa.png">
           </a>
           <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-vinarosa.png">
