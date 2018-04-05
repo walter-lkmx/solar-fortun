@@ -36,8 +36,8 @@
       <section class="product-specs">
         <section class="metrics">
           <img class="ornament big-grape" src="<?php bloginfo('template_url'); ?>/img/ornaments/grapes2.svg">
-          <img class="ornament leaf-4" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf4.svg">
-          <img class="ornament leaf-5" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf5.svg">
+          <img class="ornament leaf-4" data-jarallax-element="-89" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf4.svg">
+          <img class="ornament leaf-5" data-jarallax-element="34" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf5.svg">
           <section id="intensity">
             <div class="img-container">
               <img src="<?php bloginfo('template_url'); ?>/img/glass.svg">
@@ -62,6 +62,8 @@
             <h2>Comentarios del enólogo</h2>
             <p id="oenologist-comments"></p>
           </div>
+          <img class="ornament leaf-6" data-jarallax-element="-15" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf4.svg">
+          <img class="ornament leaf-7" data-jarallax-element="70" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf2.svg">
         </section>
         <section class="general-info">
           <div class="img-container">
@@ -96,7 +98,13 @@
           <div class="content">
             <h2>Maridaje</h2>
             <p id="pairing"></p>
-            <img class="ornament meat-roll" src="<?php bloginfo('template_url'); ?>/img/ornaments/meat-roll.svg">
+            <!-- <img class="ornament olive-branch" data-jarallax-element="-89" src="<?php bloginfo('template_url'); ?>/img/ornaments/olive-branch1.svg"> -->
+            <img class="ornament baby-tomatoes" data-jarallax-element="55" src="<?php bloginfo('template_url'); ?>/img/ornaments/baby-tomatoes.svg">
+            <img class="ornament crumbs2" src="<?php bloginfo('template_url'); ?>/img/ornaments/crumbs2.svg">
+            <img class="ornament crumbs3" src="<?php bloginfo('template_url'); ?>/img/ornaments/crumbs3.svg">
+            <img class="ornament lamb" src="<?php bloginfo('template_url'); ?>/img/ornaments/rib-eye.svg">
+            <img class="ornament cheese-slice" data-jarallax-element="-89" src="<?php bloginfo('template_url'); ?>/img/ornaments/cheese.svg">
+            <img class="ornament mushrooms-sliced" data-jarallax-element="-55" src="<?php bloginfo('template_url'); ?>/img/ornaments/mushrooms.svg">
           </div>
         </section>
       </section>

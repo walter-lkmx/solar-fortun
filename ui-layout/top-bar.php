@@ -1,4 +1,4 @@
-<section class="top-bar">
+<section class="top-bar" id="header">
   <nav>
     <ul>
       <li><a href="" title="">Mi cuenta</a></li>

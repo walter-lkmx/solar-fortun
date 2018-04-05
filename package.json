@@ -10,8 +10,10 @@
   "author": "jaredpalmer",
   "license": "MIT",
   "dependencies": {
+    "jarallax": "^1.10.3",
     "jquery": "^3.2.1",
-    "jquery.nicescroll": "^3.7.6"
+    "jquery.nicescroll": "^3.7.6",
+    "rellax": "^1.6.2"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",

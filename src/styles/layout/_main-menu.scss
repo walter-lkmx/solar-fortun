@@ -5,6 +5,16 @@ aside.main-menu {
   vertical-align: top;
   position: relative;
   // border-right: 1px solid;
+    &.sticky {
+    @include z-index(second-level);
+    width: gratio(9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    +.single-product {
+      left: gratio(9);
+    }
+  }
   img.shadow {
     display: none;
     @include z-index(second-level);

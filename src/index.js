@@ -1,10 +1,12 @@
 import 'jquery';
 import 'jquery.nicescroll';
+import 'jarallax';
 import './style.scss';
 
 import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
+import pageTemplateSingleProduct from './routes/page-template-single-product';
 
 /**
  * Populate Router instance with DOM routes 
@@ -15,6 +17,7 @@ const routes = new Router({
   common,
   /** Home page */
   home,
+  pageTemplateSingleProduct,
   /** About Us page, note the change from about-us to aboutUs. */
 });
 

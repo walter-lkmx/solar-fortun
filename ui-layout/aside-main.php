@@ -1,4 +1,4 @@
-<aside class="main-menu">
+<aside class="main-menu" id="main-menu">
   <img class="shadow" src="<?php bloginfo('template_url'); ?>/img/shadow-divider.png"> 
   <!-- <div class="shadow">
     
@@ -18,7 +18,7 @@
       </li>
       <li class="spacer">
         <a href="" title="">
-          <span>Romance</span>
+          <span class="jarallax" data-jarallax-element="-80">Romance</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>

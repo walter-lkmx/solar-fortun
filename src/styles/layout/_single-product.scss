@@ -2,19 +2,20 @@ section.single-product {
   display: inline-block;
   vertical-align: top;
   width: calc(100% - 233px);
-  min-height: 100vh;
+  height: auto;
   position: relative;
+  overflow-x: hidden;
   overflow-y: hidden;
-  overflow-x: auto;
   @include z-index(first-level);
   section.content {
-    height: calc(100vh - 59px);
-    max-height: calc(100vh - 59px); // background: rgba(red, 0.2);
+    // height: calc(100vh - 59px);
+    // max-height: calc(100vh - 59px); // background: rgba(red, 0.2);
     font-size: 0; // padding: gratio(3);
     .image {
       @include inline-block(30%, top);
       position: relative;
       height: 100vh;
+      z-index: 1;
       img {
         &#featSeal {
           @include z-index(first-level);
@@ -39,9 +40,10 @@ section.single-product {
     section.product-details {
       @include inline-block(70%, top);
       font-size: gratio(3); // width: gratio(11);
-      height: calc(100vh - 59px);
+      height: auto;
       padding: gratio(3);
       overflow-x: hidden;
+      overflow-y: hidden;
       section.title-price {
         margin-bottom: gratio(3);
         h1#product-name {
@@ -117,7 +119,7 @@ section.single-product {
         margin-bottom: gratio(6);
         font-size: 0;
         section.metrics {
-          margin-bottom: gratio(7);
+          margin-bottom: gratio(8);
           position: relative;
           img.ornament {
             position: absolute;
@@ -157,7 +159,7 @@ section.single-product {
               }
             }
             .content {
-              @include inline-block(294px, bottom);
+              @include inline-block(290px, bottom);
               h3 {
                 font-size: gratio(4);
                 margin-bottom: gratio(3);
@@ -261,23 +263,72 @@ section.single-product {
           }
           img.ornament {
             position: absolute;
+            &.leaf-6 {
+              width: 4.3125rem;
+              right: -6.5625rem;
+              top: 3.125rem;
+              transform: rotate(60deg);
+            }
+            &.leaf-7 {
+              width: 3.3125rem;
+              right: -0.5625rem;
+              top: 8.125rem;
+              transform: rotate(260deg);
+            }
             &.herbs {
               width: 16.5625rem;
               right: - gratio(9);
               top: - gratio(7);
               transform: rotate(-60deg);
             }
-            &.meat-roll {
+            &.baby-tomatoes {
+              width: 7.5625rem;
+              right: -2.5625rem;
+              top: -8rem;
+              transform: rotate(-39deg);
+            }
+            &.olive-branch {
+              width: 16.5625rem;
+              right: 4.4375rem;
+              top: -12rem;
+              transform: rotate(-79deg);
+            }
+            &.lamb {
               width: 19.5625rem;
-              right: -14.5625rem;
+              right: -15.5625rem;
               bottom: -5rem;
-              transform: rotate(43deg);
+              transform: rotate(-84deg);
+            }
+            &.mushrooms-sliced {
+              width: 5.5625rem;
+              right: -3.5625rem;
+              bottom: -5rem;
+              transform: rotate(-35deg);
+            }
+            &.cheese-slice {
+              width: 13.5625rem;
+              right: 1.4375rem;
+              bottom: 1rem;
+              transform: rotate(-5deg);
+            }
+            &.crumbs2 {
+              width: 3.5625rem;
+              right: 0.4375rem;
+              bottom: 0rem;
+            }
+            &.crumbs3 {
+              width: 3.5625rem;
+              right: -6.5625rem;
+              top: -11rem;
             }
             &.meat-table {
               width: 19.5625rem;
               left: 0;
               bottom: -5rem;
               transform: rotate(43deg);
+            }
+            &.peppermint {
+              right: -7rem;
             }
           }
         }
