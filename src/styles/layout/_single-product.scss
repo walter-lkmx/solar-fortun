@@ -54,6 +54,12 @@ section.single-product {
         #price {
           font-size: gratio(5);
           color: color(red);
+          small {
+            font-size: gratio(3);
+            display: inline-block;
+            vertical-align: super;
+            font-weight: 400;
+          }
         }
       }
       section.add-cart {
@@ -129,11 +135,10 @@ section.single-product {
               top: -2.125rem;
               transform: rotate(12deg);
             }
-            &.leaf-4 {
-              width: 4.3125rem;
+            &.leaf-8 {
+              width: 6.3125rem;
               right: 13.4375rem;
               top: 14.125rem;
-              transform: rotate(90deg);
             }
             &.leaf-5 {
               width: 3.3125rem;
@@ -197,10 +202,10 @@ section.single-product {
                 height: gratio(6);
                 background-size: contain;
                 background-repeat: no-repeat;
-                &.cavernet {
+                &.cabernet {
                   background-image: url("../img/grapes/tinto2.svg");
                 }
-                &.sauvignon {
+                &.tempranillo {
                   background-image: url("../img/grapes/rosado3.svg");
                 }
               }

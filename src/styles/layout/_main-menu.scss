@@ -11,7 +11,7 @@ aside.main-menu {
     position: fixed;
     left: 0;
     top: 0;
-    +.single-product {
+    +.single-product, +section.main-container {
       left: gratio(9);
     }
   }

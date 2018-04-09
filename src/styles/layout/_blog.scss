@@ -1,0 +1,62 @@
+.blog {
+  @include inline-block(90%, top);
+  h1.section-header {
+    font-size: gratio(6);
+    margin-top: gratio(4);
+    margin-bottom: gratio(7);
+  }
+  section.post {
+    margin-bottom: gratio(7);
+    padding-top: gratio(7);
+    font-size: 0;
+    position: relative;
+    border-top: 1px solid rgba(color(purple), 0.2);
+    &:nth-child(2) {
+      padding-top: 0;
+      border-top: 0;
+    }
+    .featured-image {
+      @include inline-block(50%, top);
+      height: gratio(9);
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+      img {
+        @include absolute-center(true, true);
+        width: auto;
+        height: 150%;
+      }
+    }
+    h1 {
+      display: inline-block;
+      width: 50%;
+      padding: gratio(4);
+      background: rgba(color(purple), 0.9);
+      position: absolute;
+      left: gratio(4);
+      bottom: - gratio(4);
+      a {
+        font-size: gratio(5);
+        text-decoration: none;
+        color: color(white);
+        text-shadow: none;
+      }
+    }
+    .content {
+      @include inline-block(50%, top);
+      padding-left: gratio(5);
+      section.excerpt {
+        font-size: gratio(3);
+        margin-bottom: gratio(3);
+      }
+      a.read-more {
+        display: inline-block;
+        font-size: gratio(4);
+        text-decoration: underline;
+        line-height: 1.2;
+        font-family: 'Botera TFE';
+        color: color(purple);
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@ export default {
     jarallaxVideo();
     jarallaxElement();
 
-    jarallax(document.querySelectorAll('.leaf-4'), {
+    jarallax(document.querySelectorAll('.leaf-8'), {
       speed: 0.8,
     });
 
@@ -249,7 +249,8 @@ export default {
 
           console.log(response);
 
-          $('#price').html(response.price_html);
+          $('#price').html(response.price_html + "<small>.00</small>");
+          console.log(response.price_html);
           // $('#description').html(response.description);
           $('#product-name').html(response.name);
           $('.presentation-card').addClass(response.slug);

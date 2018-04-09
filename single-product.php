@@ -36,8 +36,8 @@
       <section class="product-specs">
         <section class="metrics">
           <img class="ornament big-grape" src="<?php bloginfo('template_url'); ?>/img/ornaments/grapes2.svg">
-          <img class="ornament leaf-4" data-jarallax-element="-89" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf4.svg">
-          <img class="ornament leaf-5" data-jarallax-element="34" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf5.svg">
+          <img class="ornament leaf-8" data-jarallax-element="-69" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf8.svg">
+          <img class="ornament leaf-5" data-jarallax-element="24" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf5.svg">
           <section id="intensity">
             <div class="img-container">
               <img src="<?php bloginfo('template_url'); ?>/img/glass.svg">
