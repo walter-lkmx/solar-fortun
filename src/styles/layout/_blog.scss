@@ -12,8 +12,8 @@
     position: relative;
     border-top: 1px solid rgba(color(purple), 0.2);
     &:nth-child(2) {
-      padding-top: 0;
-      border-top: 0;
+      //padding-top: 0;
+      //border-top: 0;
     }
     .featured-image {
       @include inline-block(50%, top);
@@ -58,5 +58,111 @@
         color: color(purple);
       }
     }
+  }
+  section.single {
+    font-size: 0;
+    position: relative;
+    &:nth-child(2) {
+    }
+    .featured-image {
+      @include inline-block(33%, top);
+      height: 50rem;
+      overflow: hidden;
+      text-align: center;
+      position: fixed;
+      img {
+        @include absolute-center(true, true);
+        left: 100% !important;
+        width: auto;
+        height: 100%;
+      }
+    }
+    .content {
+      @include inline-block(66%, top);
+      padding-left: gratio(8);
+      float: right;
+      h1.section-header {
+        font-size: gratio(6);
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 0.9;
+      }
+      h4 {
+        font-size: gratio(3);
+        margin-bottom: gratio(5);
+      }
+      p {
+        font-size: gratio(3);
+        margin-bottom: gratio(4);
+      }
+      div.tag-list {
+        margin: gratio(3) 0 0 0;
+        padding: gratio(1) 0;
+        font-size: gratio(3);
+        p.label-tags {
+          font-size: gratio(3);
+          display: inline-block;
+          margin: 0;
+          padding-left: gratio(1);
+          a {
+            text-decoration: none;
+            color: color(red);
+            &:after {
+              content: ", ";
+            }
+          }
+          &:last-child {
+            a {
+              &:after {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+      div.category-list {
+        margin: gratio(3) 0 0 0;
+        padding: gratio(1) 0;
+        font-size: gratio(3);
+        p {
+          padding: 0;
+          margin: 0;
+          display: inline-block;
+        }
+        ul.post-categories {
+          display: inline;
+          li {
+            display: inline;
+            padding-left: gratio(1);
+            a {
+            text-decoration: none;
+            color: color(red);
+            &:after {
+              content: ", ";
+            }
+          }
+          &:last-child {
+            a {
+              &:after {
+                content: "";
+              }
+            }
+          }
+          }
+        }
+      }
+      a.read-more {
+        display: inline-block;
+        font-size: gratio(4);
+        text-decoration: underline;
+        line-height: 1.2;
+        font-family: 'Botera TFE';
+        color: color(purple);
+      }
+    }
+  }
+  section.pagination {
+    font-size: gratio(4);
+    padding: gratio(6) 0;
   }
 }

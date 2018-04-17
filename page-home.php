@@ -92,7 +92,7 @@
           </div>
         </li>
         <li class="product last">
-            <a class="see-more">
+            <a class="see-more" href="/vinos">
               Ver todos <br>los vinos
             </a>
         </li>

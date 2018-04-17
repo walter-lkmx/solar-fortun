@@ -25,7 +25,7 @@
         </a>
       </li>
       <li>
-        <a href="" title="">
+        <a href="/noticias" title="">
           <span>Noticias</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">

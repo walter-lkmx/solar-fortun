@@ -1,4 +1,4 @@
-section.main-container {
+section.wines-container {
   display: inline-block;
   vertical-align: top;
   width: calc(100% - 233px);
@@ -10,6 +10,11 @@ section.main-container {
     white-space: nowrap;
     // overflow-y: hidden; // overflow-x: hidden;
     max-height: calc(100vh - 47px); // padding: gratio(3);
+    h3.wines-header {
+      font-size: gratio(5);
+      //margin-top: gratio(4);
+      //margin-bottom: gratio(7);
+    }
     nav.products {
       height: 100% !important;
       width: 180%;
@@ -18,7 +23,7 @@ section.main-container {
       overflow-x: hidden;
       ul {
         position: relative;
-        li.product {
+        li.all-product {
           position: relative;
           display: inline-block;
           vertical-align: top;
@@ -31,7 +36,7 @@ section.main-container {
             vertical-align: middle;
           }
           // hover bottle & seal
-          &:hover {
+          /*&:hover {
             a {
               img {
                 transform: translateY(-30px);
@@ -43,7 +48,7 @@ section.main-container {
               opacity: 1;
               transform: translateX(-7rem);
             }
-          }
+          }*/
           &:last-child {
 
           }
@@ -54,16 +59,20 @@ section.main-container {
               transition: 0.6s ease;
               @include z-index(second-level);
               &.bottle-mixtures {
-                @include clipBottleMixtures();
-                height: calc(100vh);
+                //@include clipBottleMixtures();
+                height: calc(50vh);
               }
-              &.bottle-vina-rosa {
-                @include clipBottleVinaRosa();
-                height: calc(100vh);
+              &.bottle-linea-joven {
+                //@include clipBottleVinaRosa();
+                height: calc(50vh);
               }
               &.bottle-elixir-cordis {
-                @include clipBottleElixirCordis();
-                height: calc(100vh + 80px);
+                //@include clipBottleElixirCordis();
+                height: calc(50vh);
+              }
+              &.bottle-monovarietal {
+                //@include clipBottleVinaRosa();
+                height: calc(50vh);
               }
               position: relative;
             }
@@ -77,10 +86,15 @@ section.main-container {
               color: white;
               display: inline-block;
               vertical-align: middle;
-              text-decoration: none;
             }
           }
-          &.enter {
+          p {
+            font-size: gratio(4);
+            text-align: center;
+            //margin-top: gratio(4);
+            //margin-bottom: gratio(7);
+          }
+          /*&.enter {
             section.title {
               @extend .fade-in-left;
             }
@@ -89,7 +103,7 @@ section.main-container {
             section.title {
               @extend .fade-out-left;
             }
-          }
+          }*/
           img.seal {
             @include absolute-center(true, false);
             @include z-index(first-level);

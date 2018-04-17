@@ -27,6 +27,9 @@ aside.main-menu {
   section.brand {
     margin-bottom: gratio(5);
     padding: 0 gratio(3);
+    @include respond-to(small wide) {
+      width: 50%;
+    }
   }
   nav {
     ul {
@@ -71,6 +74,9 @@ aside.main-menu {
           margin-bottom: gratio(6);
         }
       }
+    }
+    @include respond-to(small wide) {
+      background-color: #ff0;
     }
   }
 }
