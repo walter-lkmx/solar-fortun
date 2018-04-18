@@ -58,8 +58,19 @@
     background: $color;
     margin-top: gratio(3);
     display: block;
-    height: rem(2px);
-    width: gratio(5);
+    height: rem(1px);
+    width: gratio(6);
+    content: "";
+  }
+}
+
+@mixin before-line($color) {
+  &:before {
+    background: $color;
+    margin-bottom: gratio(3);
+    display: block;
+    height: rem(1px);
+    width: gratio(6);
     content: "";
   }
 }

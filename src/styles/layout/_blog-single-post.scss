@@ -1,0 +1,121 @@
+body.single-post {
+  section.single {
+    font-size: 0;
+    position: relative;
+    &:nth-child(2) {
+    }
+    .featured-image {
+      @include inline-block(gratio(10), top);
+      @include z-index(first-level);
+      height: 100vh;
+      top: 0;
+      overflow: hidden;
+      position: fixed;
+      img {
+        @include absolute-center(true, true);
+        width: auto;
+        height: 100%;
+      }
+    }
+    .content {
+      @include inline-block(gratio(11), top);
+      margin-left: gratio(10);
+      padding-left: gratio(5);
+      padding-right: gratio(8);
+      position: relative;
+      section.title {
+        h1 {
+          @include before-line(color(blueberry));
+          @include after-line(color(blueberry));
+          font-size: gratio(6);
+          line-height: 1.2;
+          color: color(blueberry);
+          text-shadow: none;
+          display: inline-block;
+          margin: gratio(5) 0 gratio(6) 0;
+        }
+      }
+      .text {
+        margin-bottom: gratio(8);
+        p {
+          font-size: gratio(3);
+          margin-bottom: gratio(4);
+          &.paragraph-img {
+            z-index: 11;
+            position: relative;
+            margin-left: - gratio(6);            
+            img {
+              @include boxShadowBig();
+              height: 120% !important;
+              width: auto;
+            }
+          }
+        }
+      }
+      .tag-list {
+        margin: gratio(3) 0 0 0;
+        padding: gratio(1) 0;
+        font-size: gratio(3);
+        p.label-tags {
+          font-size: gratio(3);
+          display: inline-block;
+          margin: 0;
+          padding-left: gratio(1);
+          a {
+            text-decoration: none;
+            color: color(red);
+            &:after {
+              content: ", ";
+            }
+          }
+          &:last-child {
+            a {
+              &:after {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+      div.category-list {
+        margin: gratio(3) 0 0 0;
+        padding: gratio(1) 0;
+        font-size: gratio(3);
+        p {
+          padding: 0;
+          margin: 0;
+          display: inline-block;
+        }
+        ul.post-categories {
+          display: inline;
+          li {
+            display: inline;
+            padding-left: gratio(1);
+            a {
+              text-decoration: none;
+              color: color(red);
+              &:after {
+                content: ", ";
+              }
+            }
+            &:last-child {
+              a {
+                &:after {
+                  content: "";
+                }
+              }
+            }
+          }
+        }
+      }
+      a.read-more {
+        display: inline-block;
+        font-size: gratio(4);
+        text-decoration: underline;
+        line-height: 1.2;
+        font-family: "Botera TFE";
+        color: color(purple);
+      }
+    }
+  }
+}
