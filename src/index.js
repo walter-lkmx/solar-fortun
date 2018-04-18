@@ -1,6 +1,5 @@
 import 'jquery';
 import 'jquery.nicescroll';
-import 'jarallax';
 import './style.scss';
 
 import Router from './util/Router';

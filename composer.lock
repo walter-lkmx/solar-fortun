@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "021d265e47d6875bfc1a1c6e313842ad",
+    "content-hash": "30ccebef616feee55a1c3e6609005b46",
     "packages": [
         {
             "name": "composer/installers",
@@ -173,15 +173,15 @@
         },
         {
             "name": "wpackagist-plugin/conekta-payment-gateway",
-            "version": "3.0.2",
+            "version": "3.0.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/conekta-payment-gateway/",
-                "reference": "tags/3.0.2"
+                "reference": "tags/3.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/conekta-payment-gateway.3.0.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/conekta-payment-gateway.3.0.4.zip",
                 "reference": null,
                 "shasum": null
             },

@@ -1,8 +1,8 @@
-import {
-  jarallax,
-  jarallaxElement,
-  jarallaxVideo
-} from 'jarallax';
+// import {
+//   jarallax,
+//   jarallaxElement,
+//   jarallaxVideo
+// } from 'jarallax';
 
 export default {
   init() {
@@ -12,40 +12,40 @@ export default {
 
     // parallax stuff
 
-    jarallaxVideo();
-    jarallaxElement();
+    // jarallaxVideo();
+    // jarallaxElement();
 
-    jarallax(document.querySelectorAll('.leaf-8'), {
-      speed: 0.8,
-    });
+    // jarallax(document.querySelectorAll('.leaf-8'), {
+    //   speed: 0.8,
+    // });
 
-    jarallax(document.querySelectorAll('.leaf-5'), {
-      speed: 0.6,
-    });
+    // jarallax(document.querySelectorAll('.leaf-5'), {
+    //   speed: 0.6,
+    // });
 
-    jarallax(document.querySelectorAll('.leaf-6'), {
-      speed: -1.0,
-    });
+    // jarallax(document.querySelectorAll('.leaf-6'), {
+    //   speed: -1.0,
+    // });
 
-    jarallax(document.querySelectorAll('.leaf-7'), {
-      speed: 0.6,
-    });
+    // jarallax(document.querySelectorAll('.leaf-7'), {
+    //   speed: 0.6,
+    // });
 
-    jarallax(document.querySelectorAll('.baby-tomatoes'), {
-      speed: 1,
-    });
+    // jarallax(document.querySelectorAll('.baby-tomatoes'), {
+    //   speed: 1,
+    // });
 
-    jarallax(document.querySelectorAll('.cheese-slice'), {
-      speed: 1,
-    });
+    // jarallax(document.querySelectorAll('.cheese-slice'), {
+    //   speed: 1,
+    // });
 
-    jarallax(document.querySelectorAll('.mushrooms-sliced'), {
-      speed: 0.5,
-    });
+    // jarallax(document.querySelectorAll('.mushrooms-sliced'), {
+    //   speed: 0.5,
+    // });
 
-    jarallax(document.querySelectorAll('.peppermint'), {
-      speed: 0.7,
-    });
+    // jarallax(document.querySelectorAll('.peppermint'), {
+    //   speed: 0.7,
+    // });
 
     // jarallax(document.querySelectorAll('.olive-branch'), {
     //   speed: 2,
