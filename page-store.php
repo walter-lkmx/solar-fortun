@@ -11,6 +11,7 @@
 
   <?php the_content(); ?>
   
+  <div id="demo"></div>
 
   <?php edit_post_link(); ?>
 
