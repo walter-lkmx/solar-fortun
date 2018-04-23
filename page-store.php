@@ -1,37 +1,26 @@
-<?php /* Template Name: Home */ ?>
-<?php get_header(); ?>
-<?php include('ui-layout/aside-main.php'); ?>
+<?php /* Template Name: Home */?>
+<?php get_header();?>
+<?php include 'ui-layout/aside-main.php';?>
 <section class="main-container">
-  <?php include('ui-layout/top-bar.php'); ?>
-  <section class="content" >
-  <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-<!-- article -->
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-  <?php the_content(); ?>
-  
-  <div id="demo"></div>
-
-  <?php edit_post_link(); ?>
-
-</article>
-<!-- /article -->
-
-<?php endwhile; ?>
-
-<?php else: ?>
-
-<!-- article -->
-<article>
-
-  <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-</article>
-<!-- /article -->
-
-<?php endif; ?>
-
+  <?php include 'ui-layout/top-bar.php';?>
+  <section class="content">
+    <h1 class="section-header">Vinos Solar Fortún</h1>
+    <section class="category-block">
+      <h1>Premium</h1>
+        <div class="catalogs" id="topTierCatalog"></div>
+    </section>
+    <section class="category-block">
+      <h1>Mezclas</h1>
+        <div class="catalogs" id="mixturesCatalog"></div>
+    </section>
+    <section class="category-block">
+      <h1>Vino Joven</h1>
+      <div class="catalogs" id="youngWineCatalog"></div>
+    </section>
+    <section class="category-block">
+      <h1><span>Mono~</span>varietales</h1>
+      <div class="catalogs" id="monovarietalsCatalog"></div>
+    </section>
   </section>
 </section>
-<?php get_footer(); ?>
+<?php get_footer();?>

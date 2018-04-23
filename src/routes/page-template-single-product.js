@@ -80,7 +80,7 @@ export default {
     // get woo object
     var PRODUCTS = {
       'baya-baya': function() {
-        return 157;
+        return 288;
       },
       'cabernet': function() {
         return 159;
@@ -92,7 +92,7 @@ export default {
         return 153;
       },
       'la-vina-en-rosa': function() {
-        return 152;
+        return 290;
       },
       'mourvedre': function() {
         return 162;
@@ -287,33 +287,33 @@ export default {
 
           var pathIn = "<?php bloginfo('template_url'); ?>";
           // seal image
-          var metaData = product['meta_data'][5];
+          var metaData = product['meta_data'][6];
           var featSealImage = metaData.value;
           document.getElementById("featSeal").src += featSealImage;
           // bottle image
-          var metaData = product['meta_data'][3];
+          var metaData = product['meta_data'][4];
           var bottleImage = metaData.value;
           document.getElementById("featImage").src += bottleImage;
           // stain image
-          var metaData = product['meta_data'][4];
+          var metaData = product['meta_data'][5];
           var featStainImage = metaData.value;
           document.getElementById("featStain").src += featStainImage;
           // dominant flavors
-          var metaData = product['meta_data'][9];
+          var metaData = product['meta_data'][1];
           var dominantFlavors = metaData.value;
           var dominantFlavorsSplit = dominantFlavors.split(',');
           var dominantFlavorsJoin = "<ul><li>" + dominantFlavorsSplit.join("</li>,<li>") + "</li></ul>";
           var dominantFlavorsRemoveCommma = dominantFlavorsJoin.replace(/,/g, ' ');
           $('#dominant-flavors').html(dominantFlavorsRemoveCommma);
           // pairing
-          var metaData = product['meta_data'][0];
-          var pairing = metaData.value;
-          var pairingInfoSplit = pairing.split(',');
-          var pairingInfoJoin = "<ul><li>" + pairingInfoSplit.join("</li>,<li>") + "</li></ul>";
-          var pairingInfoRemoveCommma = pairingInfoJoin.replace(/,/g, ' ');
-          $('#pairing').html(pairingInfoRemoveCommma);
+          // var metaData = product['meta_data'][0];
+          // var pairing = metaData.value;
+          // var pairingInfoSplit = pairing.split(',');
+          // var pairingInfoJoin = "<ul><li>" + pairingInfoSplit.join("</li>,<li>") + "</li></ul>";
+          // var pairingInfoRemoveCommma = pairingInfoJoin.replace(/,/g, ' ');
+          // $('#pairing').html(pairingInfoRemoveCommma);
           // technical info notes
-          var metaData = product['meta_data'][1];
+          var metaData = product['meta_data'][0];
           var technicalInfo = metaData.value;
           var technicalInfoSplit = technicalInfo.split(',');
           var technicalInfoJoin = "<ul><li>" + technicalInfoSplit.join("</li>,<li>") + "</li></ul>";
@@ -331,7 +331,7 @@ export default {
           var oenologistCommments = metaData.value;
           document.getElementById('oenologist-comments').append(oenologistCommments);
           // intensity specs
-          var metaData = product['meta_data'][7];
+          var metaData = product['meta_data'][3];
           var intensity = metaData.value;
           document.getElementById('intensityValue').append(intensity + ' ');
           var barLine = document.getElementById('intensityBarLevel'); // line

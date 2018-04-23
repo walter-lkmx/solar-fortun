@@ -15,8 +15,8 @@
           <section class="title">
             <h1 class="confabulario">Confa~<br>bulario</h1>
             <div class="add-cart">
-              <span>Agregar al carrito</span>
-              <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div>
+              <span>Ver detalles</span>
+              <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
             </div>
           </section>
           <div class="stain">
@@ -32,8 +32,8 @@
           <section class="title">
             <h1 class="o-positivo">O Positivo</h1>
             <div class="add-cart">
-              <span>Agregar al carrito</span>
-              <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div>
+              <span>Ver detalles</span>
+              <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
             </div>
           </section>
           <div class="stain">
@@ -49,8 +49,8 @@
           <section class="title">
             <h1 class="noble-cru">Noble Cru</h1>
             <div class="add-cart">
-              <span>Agregar al carrito</span>
-              <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div>
+              <span>Ver detalles</span>
+              <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
             </div>
           </section>
           <div class="stain">
@@ -66,8 +66,8 @@
           <section class="title">
             <h1 class="vina-rosa">La Viña<br> en Rosa</h1>
             <div class="add-cart">
-              <span>Agregar al carrito</span>
-              <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div>
+              <span>Ver detalles</span>
+              <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
             </div>
           </section>
           <div class="stain">
@@ -83,8 +83,8 @@
           <section class="title">
             <h1 class="elixir-cordis">Elixir<br> Cordis</h1>
             <div class="add-cart">
-              <span>Agregar al carrito</span>
-              <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div>
+              <span>Ver detalles</span>
+              <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
             </div>
           </section>
           <div class="stain">

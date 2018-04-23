@@ -1,7 +1,9 @@
 .blog {
   @include inline-block(90%, top);
   h1.section-header {
-    font-size: gratio(6);
+    @include before-line(color(blueberry));
+    @include after-line(color(blueberry));
+    font-size: gratio(5);
     margin-top: gratio(4);
     margin-bottom: gratio(7);
   }

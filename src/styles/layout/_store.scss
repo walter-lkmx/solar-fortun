@@ -1,0 +1,79 @@
+body.page-template-page-store {
+  section.main-container {
+    section.content {
+      font-size: gratio(3);
+      white-space: normal;
+      h1.section-header {
+        @include before-line(color(blueberry));
+        @include after-line(color(blueberry));
+        font-size: gratio(5);
+        margin-top: gratio(4);
+        margin-bottom: gratio(7);
+      }
+      .category-block {
+        margin-bottom: gratio(7);
+        h1 {
+          @include inline-block(gratio(7), top);
+          font-size: gratio(5);
+          color: rgba(color(wood), 0.7);
+          span {
+            display: blocK;
+          }
+        }
+        .catalogs {
+          @include inline-block(85%, top);
+          font-size: 0;
+          padding-left: gratio(6);
+          .wine {
+            @include inline-block(33.33%, middle);
+            font-size: 0;
+            margin-bottom: gratio(5);
+            .img-container {
+              @include inline-block(25%, top);
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+            .wine-specs {
+              @include inline-block(75%, top);
+              font-size: gratio(3);
+              padding-left: gratio(2);
+              h2.wine-name {
+                font-size: gratio(5);
+                margin-bottom: gratio(1);
+              }
+              .wine-price {
+                font-size: gratio(4);
+                color: color(red);
+                display: block;
+                margin-bottom: gratio(3);
+              }
+              a.wine-details {
+                @extend .ripple;
+                @include button(color(blueberry), white);
+                background: color(blueberry);
+                outline: 1px solid rgba(white, 1);
+                outline-offset: - gratio(2);
+                font-size: gratio(3);
+                text-shadow: none;
+                text-decoration: none;
+                opacity: 0;
+                transition: 0.4s ease;
+                &:hover {
+                  @include boxShadowBig();
+                  transform: translateY(- gratio(0));
+                }
+              }
+            }
+            &:hover {
+              a.wine-details {
+                opacity: 1;;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

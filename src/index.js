@@ -5,7 +5,7 @@ import './style.scss';
 import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
-import pageTemplateSingleProduct from './routes/page-template-single-product';
+import singleProduct from './routes/page-template-single-product';
 import pageTemplatePageStore from './routes/page-template-page-store';
 import singlePost from './routes/single-post';
 
@@ -18,7 +18,7 @@ const routes = new Router({
   common,
   /** Home page */
   home,
-  pageTemplateSingleProduct,
+  singleProduct,
   pageTemplatePageStore,
   singlePost,
   /** About Us page, note the change from about-us to aboutUs. */
