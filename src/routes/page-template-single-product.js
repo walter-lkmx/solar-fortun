@@ -80,34 +80,34 @@ export default {
     // get woo object
     var PRODUCTS = {
       'baya-baya': function() {
-        return 288;
+        return 317;
       },
       'cabernet': function() {
-        return 159;
+        return 323;
       },
       'confabulario': function() {
-        return 156;
+        return 320;
       },
       'elixir-cordis': function() {
-        return 153;
+        return 319;
       },
       'la-vina-en-rosa': function() {
-        return 290;
+        return 318;
       },
       'mourvedre': function() {
-        return 162;
+        return 325;
       },
       'noble-cru': function() {
-        return 154;
+        return 322;
       },
       'o-positivo': function() {
-        return 155;
+        return 321;
       },
       'petit-verdot': function() {
-        return 161;
+        return 324;
       },
       'syrah': function() {
-        return 160;
+        return 326;
       },
       'vino-blanco': function() {
         return 158;

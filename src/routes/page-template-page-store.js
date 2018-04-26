@@ -76,7 +76,7 @@ export default {
         for (index = 0; index < a.length; index++) {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
-          var wineBottle = a[index].meta_data[3].value;
+          var wineBottle = a[index].meta_data[4].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
@@ -94,7 +94,7 @@ export default {
         for (index = 0; index < a.length; index++) {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
-          var wineBottle = a[index].meta_data[3].value;
+          var wineBottle = a[index].meta_data[4].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
@@ -112,7 +112,7 @@ export default {
         for (index = 0; index < a.length; index++) {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
-          var wineBottle = a[index].meta_data[3].value;
+          var wineBottle = a[index].meta_data[4].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
@@ -131,7 +131,7 @@ export default {
         for (index = 0; index < a.length; index++) {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
-          var wineBottle = a[index].meta_data[3].value;
+          var wineBottle = a[index].meta_data[4].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
