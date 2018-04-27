@@ -203,10 +203,19 @@ section.single-product {
                 background-size: contain;
                 background-repeat: no-repeat;
                 &.cabernet {
+                  background-image: url("../img/grapes/tinto1.svg");
+                }
+                &.mourvedre {
                   background-image: url("../img/grapes/tinto2.svg");
                 }
+                &.petit-verdot {
+                  background-image: url("../img/grapes/tinto3.svg");
+                }
+                &.syrah {
+                  background-image: url("../img/grapes/rosado1.svg");
+                }
                 &.tempranillo {
-                  background-image: url("../img/grapes/rosado3.svg");
+                  background-image: url("../img/grapes/rosado2.svg");
                 }
               }
               .grape-specs {
