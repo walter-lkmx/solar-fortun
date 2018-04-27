@@ -70,32 +70,7 @@ section.single-product {
           font-size: fgratio(1);
         }
         input {
-          @include inline-block(auto, middle);
-          @include button(white, blueberry);
-          padding: 0;
-          outline: 1px solid rgba(black, 1);
-          outline-offset: - gratio(2);
-          text-align: center;
-          font-size: gratio(4);
-          width: gratio(7);
-          height: rem(55px);
-          margin-left: gratio(3);
-          &::-webkit-input-placeholder {
-            /* Chrome/Opera/Safari */
-            font-size: gratio(4);
-          }
-          &::-moz-placeholder {
-            /* Firefox 19+ */
-            font-size: gratio(4);
-          }
-          &:-ms-input-placeholder {
-            /* IE 10+ */
-            font-size: gratio(4);
-          }
-          &:-moz-placeholder {
-            /* Firefox 18- */
-            font-size: gratio(4);
-          }
+          @include specialInputSolar();
         }
         a {
           @extend .ripple;

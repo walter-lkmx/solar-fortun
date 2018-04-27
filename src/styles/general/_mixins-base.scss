@@ -1,201 +1,222 @@
-
+// special input solar
+@mixin specialInputSolar() {
+  @include inline-block(auto, middle);
+  @include button(white, blueberry);
+  padding: 0;
+  outline: 1px solid rgba(black, 1);
+  outline-offset: - gratio(2);
+  text-align: center;
+  font-size: gratio(4);
+  width: gratio(7);
+  height: rem(55px);
+  margin-left: gratio(3);
+  &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      font-size: gratio(4);
+  }
+  &::-moz-placeholder {
+      /* Firefox 19+ */
+      font-size: gratio(4);
+  }
+  &:-ms-input-placeholder {
+      /* IE 10+ */
+      font-size: gratio(4);
+  }
+  &:-moz-placeholder {
+      /* Firefox 18- */
+      font-size: gratio(4);
+  }
+}
 
 // clip path bottles
 @mixin clipBottleMixtures() {
-  -webkit-clip-path: polygon(34% 0, 66% 0, 67% 20%, 73% 35%, 88% 46%, 94% 57%, 94% 99%, 48% 99%, 5% 99%, 5% 56%, 12% 46%, 26% 35%, 32% 20%);
-  clip-path: polygon(34% 0, 66% 0, 67% 20%, 73% 35%, 88% 46%, 94% 57%, 94% 99%, 48% 99%, 5% 99%, 5% 56%, 12% 46%, 26% 35%, 32% 20%);
+    -webkit-clip-path: polygon(34% 0, 66% 0, 67% 20%, 73% 35%, 88% 46%, 94% 57%, 94% 99%, 48% 99%, 5% 99%, 5% 56%, 12% 46%, 26% 35%, 32% 20%);
+    clip-path: polygon(34% 0, 66% 0, 67% 20%, 73% 35%, 88% 46%, 94% 57%, 94% 99%, 48% 99%, 5% 99%, 5% 56%, 12% 46%, 26% 35%, 32% 20%);
 }
 
 @mixin clipBottleVinaRosa() {
-  -webkit-clip-path: polygon(29% 1%, 71% 1%, 71% 27%, 84% 31%, 93% 35%, 93% 52%, 93% 99%, 49% 99%, 7% 99%, 7% 51%, 7% 35%, 16% 31%, 29% 27%);
-  clip-path: polygon(29% 1%, 71% 1%, 71% 27%, 84% 31%, 93% 35%, 93% 52%, 93% 99%, 49% 99%, 7% 99%, 7% 51%, 7% 35%, 16% 31%, 29% 27%);
+    -webkit-clip-path: polygon(29% 1%, 71% 1%, 71% 27%, 84% 31%, 93% 35%, 93% 52%, 93% 99%, 49% 99%, 7% 99%, 7% 51%, 7% 35%, 16% 31%, 29% 27%);
+    clip-path: polygon(29% 1%, 71% 1%, 71% 27%, 84% 31%, 93% 35%, 93% 52%, 93% 99%, 49% 99%, 7% 99%, 7% 51%, 7% 35%, 16% 31%, 29% 27%);
 }
 
 @mixin clipBottleElixirCordis() {
-  -webkit-clip-path: polygon(31% 1%, 69% 1%, 70% 29%, 86% 33%, 97% 38%, 97% 44%, 95% 98%, 49% 98%, 5% 98%, 3% 44%, 3% 38%, 13% 33%, 29% 29%);
-  clip-path: polygon(31% 1%, 69% 1%, 70% 29%, 86% 33%, 97% 38%, 97% 44%, 95% 98%, 49% 98%, 5% 98%, 3% 44%, 3% 38%, 13% 33%, 29% 29%);
+    -webkit-clip-path: polygon(31% 1%, 69% 1%, 70% 29%, 86% 33%, 97% 38%, 97% 44%, 95% 98%, 49% 98%, 5% 98%, 3% 44%, 3% 38%, 13% 33%, 29% 29%);
+    clip-path: polygon(31% 1%, 69% 1%, 70% 29%, 86% 33%, 97% 38%, 97% 44%, 95% 98%, 49% 98%, 5% 98%, 3% 44%, 3% 38%, 13% 33%, 29% 29%);
 }
 
 @mixin clipBottleMonovarietales() {
-  -webkit-clip-path: polygon(30% 1%, 70% 1%, 70% 26%, 80% 29%, 91% 34%, 92% 43%, 92% 98%, 49% 98%, 9% 98%, 8% 43%, 10% 33%, 20% 29%, 30% 26%);
-  clip-path: polygon(30% 1%, 70% 1%, 70% 26%, 80% 29%, 91% 34%, 92% 43%, 92% 98%, 49% 98%, 9% 98%, 8% 43%, 10% 33%, 20% 29%, 30% 26%);
+    -webkit-clip-path: polygon(30% 1%, 70% 1%, 70% 26%, 80% 29%, 91% 34%, 92% 43%, 92% 98%, 49% 98%, 9% 98%, 8% 43%, 10% 33%, 20% 29%, 30% 26%);
+    clip-path: polygon(30% 1%, 70% 1%, 70% 26%, 80% 29%, 91% 34%, 92% 43%, 92% 98%, 49% 98%, 9% 98%, 8% 43%, 10% 33%, 20% 29%, 30% 26%);
 }
 
 // display inline-block
 @mixin inline-block($width, $align) {
-  display: inline-block;
-  width: $width;
-  vertical-align: $align;
+    display: inline-block;
+    width: $width;
+    vertical-align: $align;
 }
 
 // circle with icon in middle
 @mixin circle-with-icon($containerSize, $containerColor, $iconHeight) {
-  display: inline-block;
-  width: $containerSize;
-  height: $containerSize;
-  border-radius: 50%;
-  background: $containerColor;
-  position: relative;
-  img {
-    height: $iconHeight;
-    display: block;
-    margin: 0 auto;
-    @include centerer-absolute(true,
-    true);
-  }
+    display: inline-block;
+    width: $containerSize;
+    height: $containerSize;
+    border-radius: 50%;
+    background: $containerColor;
+    position: relative;
+    img {
+        height: $iconHeight;
+        display: block;
+        margin: 0 auto;
+        @include centerer-absolute(true, true);
+    }
 }
 
 // title bold
 @mixin title-bold($size) {
-  // font-family: 'Open Sans', sans-serif;
-  font-size: $size;
-  font-weight: 700;
+    // font-family: 'Open Sans', sans-serif;
+    font-size: $size;
+    font-weight: 700;
 }
 
 // after line
 @mixin after-line($color) {
-  &:after {
-    background: $color;
-    margin-top: gratio(3);
-    display: block;
-    height: rem(1px);
-    width: gratio(6);
-    content: "";
-  }
+    &:after {
+        background: $color;
+        margin-top: gratio(3);
+        display: block;
+        height: rem(1px);
+        width: gratio(6);
+        content: "";
+    }
 }
 
 @mixin before-line($color) {
-  &:before {
-    background: $color;
-    margin-bottom: gratio(3);
-    display: block;
-    height: rem(1px);
-    width: gratio(6);
-    content: "";
-  }
+    &:before {
+        background: $color;
+        margin-bottom: gratio(3);
+        display: block;
+        height: rem(1px);
+        width: gratio(6);
+        content: "";
+    }
 }
 
 // z-index
 @mixin z-index($key) {
-  z-index: z-index($key);
+    z-index: z-index($key);
 }
 
 // css triangles
 @mixin triangle-before($dir, $size, $color) {
-
-  width: 0;
-  height: 0;
-  content: ".";
-  color: transparent;
-  position: absolute;
-  top: - $size;
-  right: $size;
-
-  @if $dir==top {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
-    border-bottom: $size solid $color;
-  }
-  @else if $dir==bottom {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
-    border-top: $size solid $color;
-  }
-  @else if $dir==left {
-    border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
-    border-right: $size solid $color;
-  }
-  @else if $dir==right {
-    border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
-    border-left: $size solid $color;
-  }
+    width: 0;
+    height: 0;
+    content: ".";
+    color: transparent;
+    position: absolute;
+    top: - $size;
+    right: $size;
+    @if $dir==top {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    }
+    @else if $dir==bottom {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    }
+    @else if $dir==left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    }
+    @else if $dir==right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    }
 }
-
 
 // tuncate text
 @mixin truncate($truncation-boundary) {
-  max-width: $truncation-boundary;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 // defaul links
 @mixin default-link {
-  text-decoration: none;
-  color: color(grey-dark);
-  &:hover {
     text-decoration: none;
-  }
+    color: color(grey-dark);
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 // center containers for all your needs
 @mixin container($size) {
-  max-width: $size;
-  width: $size;
-  margin: 0 auto;
+    max-width: $size;
+    width: $size;
+    margin: 0 auto;
 }
 
 // standar page container with breakpoints
 @mixin page-container() {
-  padding: 0 gratio(5);
-  font-size: 0;
-  @include respond-to(small wide) {
-    @include container(100%);
-  }
-  @include respond-to(wide mega) {
-    @include container(100%);
-  }
-  @include respond-to(mega) {
-    @include container(1200px);
-  }
+    padding: 0 gratio(5);
+    font-size: 0;
+    @include respond-to(small wide) {
+        @include container(100%);
+    }
+    @include respond-to(wide mega) {
+        @include container(100%);
+    }
+    @include respond-to(mega) {
+        @include container(1200px);
+    }
 }
 
 // buttons
 @mixin button($backColor, $textColor) {
-  background-color: $backColor;
-  color: $textColor;
-  padding: gratio(3) gratio(4);
-  border: 0;
-  display: inline-block; // border-radius: 3px;
-  transition: .1s ease;
-  &:hover {
-    background-color: darken($backColor, 5%);
-  }
+    background-color: $backColor;
+    color: $textColor;
+    padding: gratio(3) gratio(4);
+    border: 0;
+    display: inline-block; // border-radius: 3px;
+    transition: .1s ease;
+    &:hover {
+        background-color: darken($backColor, 5%);
+    }
 }
 
 // text shadow
 @mixin textShadow {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .20);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .20);
 }
 
 @mixin boxShadow {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .20);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .20);
 }
 
 @mixin boxShadowBig {
-  box-shadow: 0 15px 35px rgba(64, 64, 79, .15), 0 5px 15px rgba(0, 0, 0, .07);
+    box-shadow: 0 15px 35px rgba(64, 64, 79, .15), 0 5px 15px rgba(0, 0, 0, .07);
 }
 
 // centering mixin
 @mixin absolute-center($horizontal: true, $vertical: true) {
-  position: absolute;
-  @if ($horizontal and $vertical) {
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-  }
-  @else if ($horizontal) {
-    left: 50%;
-
-    transform: translate(-50%, 0);
-  }
-  @else if ($vertical) {
-    top: 50%;
-
-    transform: translate(0, -50%);
-  }
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 }

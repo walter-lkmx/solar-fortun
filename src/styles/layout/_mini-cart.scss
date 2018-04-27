@@ -1,8 +1,75 @@
 section.mini-cart {
   @include z-index(modal);
-  position: absolute;
-  top: 0;
-  right: 0;
-  overflow: hidden;
+  @include boxShadowBig();
+  background-color: rgba(white, 0.95);
+  width: gratio(11);
+  padding: gratio(3);
+  position: fixed;
+  // overflow: hidden;
   font-size: fgratio(1);
+  top: rem(53px);
+  right: gratio(3);
+  h1.cart-title {
+    font-size: fgratio(3);
+    margin-bottom: gratio(5);
+  }
+  table {
+    width: 100%;
+    thead {
+    }
+    tbody {
+      tr {
+        td {
+          padding-bottom: gratio(4);
+          &.product-thumbnail {
+            text-align: left;
+            width: 30%;
+            position: relative;
+            .rotator {
+              text-align: left;
+              width: gratio(6);
+              height: rem(55px);
+              transform: rotate(90deg);
+              position: absolute;
+              img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                bottom: - gratio(5);
+              }
+            }
+          }
+          &.product-name {
+            a {
+              font-size: fgratio(2);
+              color: color(blueberry);
+              text-decoration: none;
+              font-family: 'Botera TFE';
+              line-height: 1.2;
+            }
+          }
+          &.product-price {
+            span {
+              font-size: fgratio(2);
+              color: color(red);
+              &.cu {
+                font-size: 0.8rem;
+              }
+            }
+          }
+          &.product-quantity {
+            .screen-reader-text {
+              display: none;
+            }
+            input {
+              @include specialInputSolar();
+            }
+          }
+        }
+      }
+    }
+    .info-tools {
+      display: block;
+    }
+  }
 }
