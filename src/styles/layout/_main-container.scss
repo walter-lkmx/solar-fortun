@@ -70,7 +70,7 @@ section.main-container {
             &.see-more {
               background-color: color(blueberry);
               padding: gratio(4) gratio(6);
-              font-size: gratio(5);
+              font-size: fgratio(3);
               font-family: 'Botera TFE';
               outline: 1px solid rgba(white, 1);
               outline-offset: - gratio(2);
@@ -108,7 +108,7 @@ section.main-container {
             h1 {
               padding: gratio(4) gratio(5);
               padding-left: gratio(6);
-              font-size: gratio(5);
+              font-size: fgratio(3);
               &.noble-cru {
                 background: color(noble-cru);
               }
@@ -134,7 +134,7 @@ section.main-container {
               span {
                 @include inline-block(80%, middle);
                 color: white;
-                font-size: gratio(3);
+                font-size: fgratio(1);
               }
               .img-container {
                 @include inline-block(15%, middle);

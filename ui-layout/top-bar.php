@@ -9,3 +9,4 @@
     </ul>
   </nav>
 </section>
+<?php include('mini-cart.php'); ?>

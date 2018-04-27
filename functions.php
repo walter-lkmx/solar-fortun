@@ -149,3 +149,12 @@ $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 $excerpt = $excerpt.'...';
 return $excerpt;
 }
+
+// Woocommerce - disable CSS from plugin
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+// Woocommerce - no cropping images
+add_theme_support( 'woocommerce', array(
+  'thumbnail_image_width' => 150,
+  'single_image_width' => 322,
+  ) );

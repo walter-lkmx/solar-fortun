@@ -131,12 +131,14 @@ export default {
 
     // resolve if current page is a vinos page =P
     var svgCanvas = document.getElementById("svg-canvas");
+    var theBody = document.getElementsByTagName('body')[0];
     if (storePathName === 'vinos') {
       document.onreadystatechange = function() {
         var state = document.readyState
         if (state == 'uninitialized') {
           console.log('loading')
         } else if (state == 'complete') {
+          theBody.classList.add("OVERFLOW");
           setTimeout(function() {
             console.log('cargado')
             svgCanvas.classList.add("start");
@@ -145,6 +147,7 @@ export default {
               svgCanvas.classList.add("fade-out-top");
               setTimeout(function() {
                 svgCanvas.remove();
+                theBody.classList.remove("OVERFLOW"); 
               }, 700);
             }, 6000);
           }, 500);
@@ -161,8 +164,9 @@ export default {
       console.log('storePathName es VINOS y esta URL ya fue visitada antes');
       setTimeout(function() {
         var svgCanvas = document.getElementById("leave-card");
+        theBody.classList.remove("OVERFLOW"); 
         svgCanvas.remove();
-      }, 1500);
+      }, 1000);
     } else {
       setCookie('visited', 1, 365);
 

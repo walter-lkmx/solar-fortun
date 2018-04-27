@@ -1,12 +1,12 @@
 body.page-template-page-store {
   section.main-container {
     section.content {
-      font-size: gratio(3);
+      font-size: fgratio(1);
       white-space: normal;
       h1.section-header {
         @include before-line(color(blueberry));
         @include after-line(color(blueberry));
-        font-size: gratio(5);
+        font-size: fgratio(3);
         margin-top: gratio(4);
         margin-bottom: gratio(7);
       }
@@ -14,7 +14,7 @@ body.page-template-page-store {
         margin-bottom: gratio(7);
         h1 {
           @include inline-block(gratio(7), top);
-          font-size: gratio(5);
+          font-size: fgratio(3);
           color: rgba(color(wood), 0.7);
           span {
             display: blocK;
@@ -37,10 +37,10 @@ body.page-template-page-store {
             }
             .wine-specs {
               @include inline-block(75%, top);
-              font-size: gratio(3);
+              font-size: fgratio(1);
               padding-left: gratio(2);
               h2.wine-name {
-                font-size: gratio(5);
+                font-size: fgratio(3);
                 margin-bottom: gratio(1);
               }
               .wine-price {
@@ -55,7 +55,7 @@ body.page-template-page-store {
                 background: color(blueberry);
                 outline: 1px solid rgba(white, 1);
                 outline-offset: - gratio(2);
-                font-size: gratio(3);
+                font-size: fgratio(1);
                 text-shadow: none;
                 text-decoration: none;
                 opacity: 0;

@@ -54,6 +54,20 @@
             <h2>Notas de cata</h2>
           </section>
         </section>
+        <section class="info-tec">
+          <h2>[información·técnica]</h2>
+          <p id="technical-info"></p>
+        </section>
+        <section class="general-info">
+          <div class="img-container">
+            <img class="kindaBigger" src="<?php bloginfo('template_url'); ?>/img/holding-glass.svg">
+          </div>
+          <div class="content">
+            <h2>Notas dominantes</h2>
+            <p id="dominant-flavors"></p>
+             <img class="ornament herbs" src="<?php bloginfo('template_url'); ?>/img/ornaments/herbs.svg">
+          </div>
+        </section>
         <section class="general-info">
           <div class="img-container">
             <img src="<?php bloginfo('template_url'); ?>/img/comment-line.svg">
@@ -65,20 +79,8 @@
           <img class="ornament leaf-6" data-jarallax-element="-15" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf4.svg">
           <img class="ornament leaf-7" data-jarallax-element="70" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf2.svg">
         </section>
-        <section class="general-info">
-          <div class="img-container">
-            <img class="kindaBigger" src="<?php bloginfo('template_url'); ?>/img/holding-glass.svg">
-          </div>
-          <div class="content">
-            <h2>Sabores dominantes</h2>
-            <p id="dominant-flavors"></p>
-             <img class="ornament herbs" src="<?php bloginfo('template_url'); ?>/img/ornaments/herbs.svg">
-          </div>
-        </section>
-        <section class="info-tec">
-          <h2>[información·técnica]</h2>
-          <p id="technical-info"></p>
-        </section>
+        
+        
         <!-- <section class="general-info">
           <p id="description"></p>
         </section> -->

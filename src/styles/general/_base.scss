@@ -15,6 +15,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  &.OVERFLOW {
+    overflow: hidden;
+  }
   &.home {
     overflow: hidden;
   }
@@ -67,25 +70,25 @@ a {
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: color(blueberry);
-  font-size: gratio(3);
+  font-size: fgratio(1);
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: color(blueberry);
-  font-size: gratio(3);
+  font-size: fgratio(1);
 }
 
 :-ms-input-placeholder {
   /* IE 10+ */
   color: color(blueberry);
-  font-size: gratio(3);
+  font-size: fgratio(1);
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
   color: color(blueberry);
-  font-size: gratio(3);
+  font-size: fgratio(1);
 }
 
 input::-webkit-outer-spin-button,

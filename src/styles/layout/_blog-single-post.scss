@@ -27,7 +27,7 @@ body.single-post {
         h1 {
           @include before-line(color(blueberry));
           @include after-line(color(blueberry));
-          font-size: gratio(6);
+          font-size: fgratio(4);
           line-height: 1.2;
           color: color(blueberry);
           text-shadow: none;
@@ -38,7 +38,7 @@ body.single-post {
       .text {
         margin-bottom: gratio(8);
         p {
-          font-size: gratio(3);
+          font-size: fgratio(1);
           margin-bottom: gratio(4);
           &.paragraph-img {
             z-index: 11;
@@ -55,9 +55,9 @@ body.single-post {
       .tag-list {
         margin: gratio(3) 0 0 0;
         padding: gratio(1) 0;
-        font-size: gratio(3);
+        font-size: fgratio(1);
         p.label-tags {
-          font-size: gratio(3);
+          font-size: fgratio(1);
           display: inline-block;
           margin: 0;
           padding-left: gratio(1);
@@ -80,7 +80,7 @@ body.single-post {
       div.category-list {
         margin: gratio(3) 0 0 0;
         padding: gratio(1) 0;
-        font-size: gratio(3);
+        font-size: fgratio(1);
         p {
           padding: 0;
           margin: 0;

@@ -1,0 +1,8 @@
+section.mini-cart {
+  @include z-index(modal);
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  font-size: fgratio(1);
+}

@@ -39,7 +39,7 @@ section.single-product {
     }
     section.product-details {
       @include inline-block(70%, top);
-      font-size: gratio(3); // width: gratio(11);
+      font-size: fgratio(1); // width: gratio(11);
       height: auto;
       padding: gratio(3);
       overflow-x: hidden;
@@ -47,15 +47,15 @@ section.single-product {
       section.title-price {
         margin-bottom: gratio(3);
         h1#product-name {
-          font-size: gratio(7); // margin-bottom: gratio(3);
+          font-size: fgratio(5); // margin-bottom: gratio(3);
           margin-top: gratio(4);
           display: inline-block;
         }
         #price {
-          font-size: gratio(5);
+          font-size: fgratio(3);
           color: color(red);
           small {
-            font-size: gratio(3);
+            font-size: fgratio(1);
             display: inline-block;
             vertical-align: super;
             font-weight: 400;
@@ -67,7 +67,7 @@ section.single-product {
         margin-bottom: gratio(7);
         span.qty {
           @include inline-block(auto, top);
-          font-size: gratio(3);
+          font-size: fgratio(1);
         }
         input {
           @include inline-block(auto, middle);
@@ -104,7 +104,7 @@ section.single-product {
           background: color(blueberry);
           outline: 1px solid rgba(white, 1);
           outline-offset: - gratio(2);
-          font-size: gratio(3);
+          font-size: fgratio(1);
           text-shadow: none;
           &:hover {
             @include boxShadowBig();
@@ -125,7 +125,7 @@ section.single-product {
         margin-bottom: gratio(6);
         font-size: 0;
         section.metrics {
-          margin-bottom: gratio(8);
+          margin-bottom: gratio(7);
           position: relative;
           img.ornament {
             position: absolute;
@@ -188,14 +188,16 @@ section.single-product {
           }
           #type-grape {
             // @include inline-block(auto, bottom);
-            height: gratio(7);
+            // height: gratio(7);
+            width: 70%;
             h2 {
               font-size: gratio(4);
               margin-bottom: gratio(3);
             }
             .grape {
-              @include inline-block(gratio(8), bottom);
+              @include inline-block(35%, bottom);
               margin-right: gratio(4);
+              margin-bottom: gratio(5);
               font-size: 0;
               .grape-img {
                 @include inline-block(gratio(6), bottom);
@@ -208,7 +210,7 @@ section.single-product {
                 &.mourvedre {
                   background-image: url("../img/grapes/tinto2.svg");
                 }
-                &.petit-verdot {
+                &.petit {
                   background-image: url("../img/grapes/tinto3.svg");
                 }
                 &.syrah {
@@ -219,16 +221,16 @@ section.single-product {
                 }
               }
               .grape-specs {
-                @include inline-block(50%,
+                @include inline-block(60%,
                 top);
                 height: 50px;
                 padding-left: gratio(1);
                 h3.grapeValue {
-                  font-size: gratio(5);
+                  font-size: fgratio(3);
                   line-height: 0.8;
                 }
                 span.grapeName {
-                  font-size: gratio(3);
+                  font-size: fgratio(1);
                 }
               }
             }
@@ -258,11 +260,11 @@ section.single-product {
             top);
             padding-left: gratio(4);
             h2 {
-              font-size: gratio(5);
+              font-size: fgratio(3);
               margin-bottom: gratio(3);
             }
             p {
-              font-size: gratio(3);
+              font-size: fgratio(1);
               ul {
                 li {
                   list-style: initial;
@@ -360,7 +362,7 @@ section.single-product {
             font-style: italic;
           }
           p {
-            font-size: gratio(3);
+            font-size: fgratio(1);
             ul {
               li {
                 list-style: initial;
