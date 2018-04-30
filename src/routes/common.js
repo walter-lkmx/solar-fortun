@@ -82,7 +82,36 @@ export default {
           $(this).removeClass("enter");
         }
       );
+      
+      // controlling cart widget
+      var miniCart = document.getElementById("mini-cart");
+      var fallback = document.getElementById("clickFallback");
+      $("#mini-cart-trigger, #carrito").click(
+        function() {
+          miniCart.classList.add("fade-in-top");
+          fallback.classList.add("fade-in-top");
+          miniCart.classList.remove("fade-out-top");
+          fallback.classList.remove("fade-out-top");
+          fallback.style.display = "block";
+          setTimeout(function() {
+            miniCart.style.display = "initial";
+            fallback.style.display = "initial";
+          }, 500);
+        }
+      );
+      $("#clickFallback").click(
+        function() {
+          miniCart.classList.add("fade-out-top");
+          fallback.classList.add("fade-out-top");
+          setTimeout(function() {
+            miniCart.style.display = "none";
+            fallback.style.display = "none";
+          }, 1000);
+        }
+      );
+      $("li#carrito > a").removeAttr("href");
     });
+
 
 
 

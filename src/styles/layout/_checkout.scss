@@ -1,0 +1,20 @@
+body.checkout {
+  section.content {
+    font-size: fgratio(1);
+    white-space: inherit;
+    form {
+      .col-1 {
+        @include inline-block(50%, top);
+        p {
+          display: inline-block;
+          label {
+            display: block;
+          }
+          input {
+            @include specialInputVariable(auto, fgratio(1));
+          }
+        }
+      }
+    }
+  }
+}

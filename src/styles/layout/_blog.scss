@@ -30,13 +30,19 @@
       }
     }
     h1 {
+      @include button(rgba(color(purple), 0.9), white);
       display: inline-block;
       width: 50%;
       padding: gratio(4);
-      background: rgba(color(purple), 0.9);
+      outline: 1px solid rgba(white, 1);
+      outline-offset: - gratio(2);
       position: absolute;
       left: gratio(4);
       bottom: - gratio(4);
+      &:hover {
+        @include boxShadowBig();
+        transform: translateY(- gratio(0));
+      }
       a {
         font-size: fgratio(3);
         text-decoration: none;
@@ -65,7 +71,9 @@
     }
   }
   section.pagination {
-    font-size: gratio(4);
-    padding: gratio(6) 0;
+    margin-bottom: gratio(5);
+    a {
+      @include buttonSolarWhite();
+    }
   }
 }

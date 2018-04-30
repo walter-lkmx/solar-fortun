@@ -73,18 +73,7 @@ section.single-product {
           @include specialInputSolar();
         }
         a {
-          @extend .ripple;
-          @include button(color(blueberry), white);
-          @include inline-block(auto, middle);
-          background: color(blueberry);
-          outline: 1px solid rgba(white, 1);
-          outline-offset: - gratio(2);
-          font-size: fgratio(1);
-          text-shadow: none;
-          &:hover {
-            @include boxShadowBig();
-            transform: translateY(- gratio(0));
-          }
+          @include buttonSolar();
           span {
             // display: block;
           }

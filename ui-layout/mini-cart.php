@@ -24,8 +24,8 @@ wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-
-<section class="mini-cart"><form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<div id="clickFallback"></div>
+<section id="mini-cart" class="mini-cart"><form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
   <h1 class="cart-title">Carrito de compras</h1>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
@@ -140,9 +140,19 @@ do_action( 'woocommerce_before_cart' ); ?>
     </tbody>
 	</table>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
-  <div class="info-tools"><button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
-        <h2><?php _e( 'Subtotal', 'woocommerce' ); ?></h2>
-    <span class="subtotal"><?php wc_cart_totals_subtotal_html(); ?></span></div>
+  <div class="info-tools">
+    <ul>
+      <li class="refresh">
+      <button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+        <!-- <button type="submit" form="form1" value="Submit">Submit</button> -->
+      </li>
+      <li class="subtotal">
+      <h2><?php _e( 'Subtotal', 'woocommerce' ); ?></h2>
+      <span class="subtotal"><?php wc_cart_totals_subtotal_html(); ?></span><small>.00</small>
+      </li>
+      <li class="checkout"><a href="/checkout">Pasar a caja</a></li>
+    </ul>
+  </div>
 </form>
 
 <!-- <div class="cart-collaterals">
