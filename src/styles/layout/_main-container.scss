@@ -150,7 +150,6 @@ section.main-container {
               // height: calc(100vh + 200px); // margin-bottom: - gratio(9);
             }
           }
-
           .stain {
             @include z-index(negative-underground);
             position: relative;
@@ -204,4 +203,7 @@ section.main-container {
       }
     }
   }
+  /*@include respond-to(small) {
+      display: none;
+  }*/
 }

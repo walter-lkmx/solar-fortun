@@ -1,4 +1,22 @@
 body.single-post {
+  h1 {
+    font-size: fgratio(4);
+  }
+  h2 {
+    font-size: fgratio(3);
+  }
+  h3 {
+    font-size: fgratio(2);
+  }
+  h4 {
+    font-size: fgratio(1);
+  }
+  h5 {
+    font-size: fgratio(0);
+  }
+  h6 {
+    font-size: rem(8px);
+  }
   section.single {
     font-size: 0;
     position: relative;
@@ -27,7 +45,6 @@ body.single-post {
         h1 {
           @include before-line(color(blueberry));
           @include after-line(color(blueberry));
-          font-size: fgratio(4);
           line-height: 1.2;
           color: color(blueberry);
           text-shadow: none;
@@ -49,6 +66,25 @@ body.single-post {
               height: 120% !important;
               width: auto;
             }
+          }
+        }
+        ol, ul {
+          font-size: fgratio(1) !important;
+          margin: 0 0 gratio(5) gratio(5);
+          li {
+            margin-bottom: gratio(4);
+          }
+        }
+        ul {
+          list-style-type: disc;
+          li {
+
+          }
+        }
+        ol {
+          list-style-type: decimal;
+          li {
+
           }
         }
       }

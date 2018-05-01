@@ -75,8 +75,8 @@ aside.main-menu {
         }
       }
     }
-    @include respond-to(small wide) {
-      background-color: #ff0;
-    }
+    /*@include respond-to(small wide) {
+      display: none;
+    }*/
   }
 }
