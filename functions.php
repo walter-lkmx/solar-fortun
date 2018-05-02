@@ -144,7 +144,7 @@ $excerpt = get_the_content();
 $excerpt = preg_replace(" ([.*?])",'',$excerpt);
 $excerpt = strip_shortcodes($excerpt);
 $excerpt = strip_tags($excerpt);
-$excerpt = substr($excerpt, 0, 350);
+$excerpt = substr($excerpt, 0, 500);
 $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 $excerpt = $excerpt.'...';
 return $excerpt;

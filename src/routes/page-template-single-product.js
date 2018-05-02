@@ -163,8 +163,8 @@ export default {
       // location.href = "redirecturl";
       console.log('storePathName es VINOS y esta URL ya fue visitada antes');
       setTimeout(function() {
-        var svgCanvas = document.getElementById("leave-card");
         theBody.classList.remove("OVERFLOW"); 
+        var svgCanvas = document.getElementById("leave-card");
         svgCanvas.remove();
       }, 1000);
     } else {

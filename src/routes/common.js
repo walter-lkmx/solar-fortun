@@ -1,6 +1,14 @@
 export default {
   init() {
 
+    // get path name
+    var cartRedirect = window.location.protocol + "//" + window.location.host + "/" + 'carrito';
+
+    // if (cartRedirect) {
+    //   window.location.replace("https://98788515.ngrok.io");
+    // } else {
+
+    // }
 
     window.onscroll = function() { headerScroll() };
     var header = document.getElementById("header");

@@ -16,14 +16,14 @@
         </div>
       </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="" title="">
           <span class="jarallax" data-jarallax-element="-80">Romance</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
         </a>
-      </li>
+      </li> -->
       <li class="spacer">
         <a href="/noticias" title="">
           <span>Noticias</span>

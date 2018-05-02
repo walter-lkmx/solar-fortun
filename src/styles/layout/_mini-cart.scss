@@ -20,12 +20,18 @@ section.mini-cart {
   font-size: fgratio(1);
   top: rem(53px);
   right: gratio(3);
+  outline: 1px solid rgba(color(blueberry), 1);
+  outline-offset: - gratio(2);
   &.enter {
     @extend .fade-in-top
   }
   h1.cart-title {
     font-size: fgratio(3);
     margin-bottom: gratio(5);
+  }
+  h2.nothing-here {
+    font-size: fgratio(2);
+    color: rgba(color(blueberry), 0.5);
   }
   table {
     width: 100%;
@@ -108,6 +114,10 @@ section.mini-cart {
           // padding-right: gratio(3);
           h2 {
             display: inline-block;
+            font-size: fgratio(1);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            padding-right: gratio(1);
           }
           span {
             font-size: fgratio(2);

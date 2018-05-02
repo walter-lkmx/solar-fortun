@@ -86,6 +86,9 @@ body.checkout {
             }
             input {
               @include specialInputVariable(100%, fgratio(1));
+              &#createaccount {
+                width: auto;
+              }
             }
             &#billing_country_field,
             &#shipping_country_field {

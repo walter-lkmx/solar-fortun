@@ -1,0 +1,111 @@
+body.woocommerce-order-received {
+  section.content {
+    font-size: fgratio(1);
+    // background-image: url("../img/grapes.jpg");
+    // background-size: contain;
+    // background-attachment: fixed;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    .woocommerce-order {
+      p.woocommerce-thankyou-order-received {
+        display: none;
+      }
+      section.methodInstructions {
+        margin-bottom: gratio(4);
+        padding: gratio(3);
+        background-color: rgba(color(brown-light), 0.1);
+        font-size: fgratio(1);
+        p{
+          &:nth-child(3) {
+            font-size: 0.8rem;
+            margin-bottom: gratio(4);
+            font-style: italic;
+          }
+        }
+      }
+      ul.order_details {
+        margin-bottom: gratio(3);
+        // padding: gratio(3);
+        // background-color: rgba(color(brown-light), 0.1);
+        li {
+          font-size: 0.8rem;
+          display: inline-block;
+          vertical-align: top;
+          padding-right: gratio(4);
+          margin-bottom: gratio(4);
+          &:last-child {
+            margin-bottom: 0;
+          }
+          strong {
+            font-size: fgratio(1);
+            display: block;
+          }
+        }
+      }
+      section.woocommerce-order-details {
+        padding-top: gratio(4);
+        h2 {
+          font-size: fgratio(2);
+        }
+        table {
+          width: 70%;
+          margin-bottom: gratio(6);
+          border-collapse: separate;
+          border-spacing: gratio(3);
+          position: relative;
+          thead {
+            text-align: left;
+            border-bottom: 1px solid rgba(color(purple), 0.5);
+            &:after {
+              content: "-";
+              display: block;
+              line-height: gratio(3);
+              color: transparent;
+              background-color: rgba(color(purple), 0.2);
+              height: 1px;
+              position: absolute;
+              width: 100%;
+            }
+          }
+          tbody {
+            &:after {
+              content: "-";
+              display: block;
+              line-height: gratio(3);
+              color: transparent;
+              background-color: rgba(color(purple), 0.2);
+              height: 1px;
+              position: absolute;
+              width: 100%;
+            }
+          }
+          tfoot {
+            tr {
+              &.order-total {
+                font-size: fgratio(2);
+              }
+              &.shipping {
+                td {
+                  span.woocommerce-Price-amount {
+                    display: block;
+                    color: color(red);
+                  }
+                }
+              }
+              th {
+                text-align: right;
+                padding-right: gratio(3);
+              }
+              td {
+                strong {
+                  font-weight: 400 !important;
+                  color: color(red);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
