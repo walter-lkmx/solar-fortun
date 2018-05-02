@@ -54,6 +54,9 @@ body.single-post {
       }
       .text {
         margin-bottom: gratio(8);
+        h1, h2, h3, h4 {
+          margin-bottom: gratio(2);
+        }
         p {
           font-size: fgratio(1);
           margin-bottom: gratio(4);
@@ -70,9 +73,9 @@ body.single-post {
         }
         ol, ul {
           font-size: fgratio(1) !important;
-          margin: 0 0 gratio(5) gratio(5);
+          margin: 0 0 gratio(4) gratio(5);
           li {
-            margin-bottom: gratio(4);
+            margin-bottom: gratio(2);
           }
         }
         ul {

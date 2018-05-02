@@ -55,6 +55,9 @@ body.page-template {
       }
       .text {
         margin-bottom: gratio(8);
+        h1, h2, h3, h4 {
+          margin-bottom: gratio(2);
+        }
         p {
           font-size: fgratio(1);
           margin-bottom: gratio(4);
