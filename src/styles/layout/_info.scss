@@ -1,4 +1,4 @@
-body.single-post {
+body.page-template {
   h1 {
     font-size: fgratio(4);
   }
@@ -41,6 +41,7 @@ body.single-post {
       padding-left: gratio(5);
       padding-right: gratio(8);
       position: relative;
+      white-space: normal;
       section.title {
         h1 {
           @include before-line(color(blueberry));
@@ -72,7 +73,7 @@ body.single-post {
           font-size: fgratio(1) !important;
           margin: 0 0 gratio(5) gratio(5);
           li {
-            margin-bottom: gratio(4);
+            margin-bottom: gratio(1);
           }
         }
         ul {
@@ -87,70 +88,6 @@ body.single-post {
 
           }
         }
-      }
-      .tag-list {
-        margin: gratio(3) 0 0 0;
-        padding: gratio(1) 0;
-        font-size: fgratio(1);
-        p.label-tags {
-          font-size: fgratio(1);
-          display: inline-block;
-          margin: 0;
-          padding-left: gratio(1);
-          a {
-            text-decoration: none;
-            color: color(red);
-            &:after {
-              content: ", ";
-            }
-          }
-          &:last-child {
-            a {
-              &:after {
-                content: "";
-              }
-            }
-          }
-        }
-      }
-      div.category-list {
-        margin: gratio(3) 0 0 0;
-        padding: gratio(1) 0;
-        font-size: fgratio(1);
-        p {
-          padding: 0;
-          margin: 0;
-          display: inline-block;
-        }
-        ul.post-categories {
-          display: inline;
-          li {
-            display: inline;
-            padding-left: gratio(1);
-            a {
-              text-decoration: none;
-              color: color(red);
-              &:after {
-                content: ", ";
-              }
-            }
-            &:last-child {
-              a {
-                &:after {
-                  content: "";
-                }
-              }
-            }
-          }
-        }
-      }
-      a.read-more {
-        display: inline-block;
-        font-size: gratio(4);
-        text-decoration: underline;
-        line-height: 1.2;
-        font-family: "Botera TFE";
-        color: color(purple);
       }
     }
   }

@@ -12,12 +12,13 @@ body.page-template-page-store {
       }
       .category-block {
         margin-bottom: gratio(7);
+        position: relative;
         h1 {
           @include inline-block(gratio(7), top);
           font-size: fgratio(3);
           color: rgba(color(wood), 0.7);
           span {
-            display: blocK;
+            display: block;
           }
         }
         .catalogs {
@@ -73,7 +74,104 @@ body.page-template-page-store {
             }
           }
         }
+        img.temporary {
+          position: relative;
+          top: -13rem;
+          width: 6rem;
+          left: 8rem;
+        }
+        img.ornament {
+          position: absolute;
+          z-index: -10;
+          &.branch-4 {
+            width: 10.5625rem;
+            right: 8.2375rem;
+            top: 15.425rem;
+            transform: rotate(12deg);
+          }
+          &.grapes {
+            width: 26.3125rem;
+            right: 0;
+            top: -4.875rem;
+          }
+          &.leaf-2 {
+            width: 6.5625rem;
+            right: 37.5625rem;
+            top: 12.125rem;
+            transform: rotate(-60deg);
+          }
+          &.leaf-6 {
+            width: 7.5625rem;
+            right: 47.4375rem;
+            top: 7.125rem;
+            transform: rotate(135deg);
+          }
+          &.leaf-7 {
+            width: 6.3125rem;
+            right: 23.4375rem;
+            top: 15.875rem;
+            transform: rotate(135deg);
+          }
+          &.olives-1 {
+            width: 22.5625rem;
+            right: 5.5625rem;
+            top: -4.125rem;
+            transform: rotate(20deg);
+          }
+          &.olives-2 {
+            width: 17.5625rem;
+            right: 59.4375rem;
+            top: 4.875rem;
+            transform: scaleX(-1) scaleY(-1) rotate(-90deg);
+          }
+          &.olives-3 {
+            width: 18.5625rem;
+            right: 10.4375rem;
+            top: 11.125rem;
+            transform: rotate(-60deg);
+          }
+          &.olives-4 {
+            width: 8.5625rem;
+            right: 70.4375rem;
+            top: -12.125rem;
+            transform: rotate(0deg);
+          }
+          &.olives-5 {
+            width: 11.5625rem;
+            right: 31.4375rem;
+            top: 17.125rem;
+            transform: rotate(50deg);
+          }
+          &.mint {
+            width: 7.3125rem;
+            right: 34.4375rem;
+            top: -8.875rem; // transform: rotate(90deg);
+            transform: rotate(45deg);
+          }
+          &.peppermint {
+            width: 13.3125rem;
+            right: 46rem;
+            top: 4.875rem; // transform: rotate(90deg);
+            transform: scaleY(-1);
+          }
+          &.rosemary {
+            width: 11.5625rem;
+            right: 8.4375rem;
+            top: -0.125rem;
+            transform: scaleY(-1) rotate(-105deg);
+          }
+          &.lavender {
+            width: 20.5625rem;
+            right: 60rem;
+            top: 13.125rem;
+            transform: rotate(65deg);
+          }
+        }
       }
+    }
+    section.sidebar {
+      margin-top: 0;
+      position: relative;
     }
   }
 }
