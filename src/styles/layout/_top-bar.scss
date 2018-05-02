@@ -13,7 +13,11 @@ section.top-bar {
           color: black;
           margin-left: gratio(3);
           font-size: fgratio(1);
+          pointer-events: none;
+          cursor: pointer;
           &.cart {
+            pointer-events: none;
+            cursor: pointer;
             img {
               width: gratio(4);
             }

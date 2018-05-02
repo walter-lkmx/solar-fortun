@@ -131,13 +131,14 @@ export default {
 
     // resolve if current page is a vinos page =P
     var svgCanvas = document.getElementById("svg-canvas");
+    var presentationCard = document.getElementById("leave-card");
     var theBody = document.getElementsByTagName('body')[0];
     if (storePathName === 'vinos') {
       document.onreadystatechange = function() {
         var state = document.readyState
         if (state == 'uninitialized') {
           console.log('loading')
-        } else if (state == 'complete') {
+        } else if (state == 'complete' && !getCookie('visited')) {
           theBody.classList.add("OVERFLOW");
           setTimeout(function() {
             console.log('cargado')
@@ -151,6 +152,8 @@ export default {
               }, 700);
             }, 6000);
           }, 500);
+        } else {
+          presentationCard.remove();
         }
       }
       // console.log('awesome! this is a vinos page');
@@ -159,19 +162,16 @@ export default {
     }
 
     // if tis wine was previously visited
-    if (getCookie('visited') && storePathName === 'vinos') {
-      // location.href = "redirecturl";
-      console.log('storePathName es VINOS y esta URL ya fue visitada antes');
-      setTimeout(function() {
+    setTimeout(function() {
+      if (getCookie('visited') && storePathName === 'vinos') {
+        console.log('storePathName es VINOS y esta URL ya fue visitada antes');
         theBody.classList.remove("OVERFLOW"); 
-        var svgCanvas = document.getElementById("leave-card");
-        svgCanvas.remove();
-      }, 1000);
-    } else {
-      setCookie('visited', 1, 365);
-
-      console.log('primera vez que se visita esta URL, pero no es página de vinos');
-    }
+      } else {
+        setCookie('visited', 1, 365);
+  
+        console.log('primera vez que se visita esta URL, pero no es página de vinos');
+      }
+    }, 1000);
 
 
 
