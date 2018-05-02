@@ -8,6 +8,7 @@ import home from './routes/home';
 import singleProduct from './routes/page-template-single-product';
 import pageTemplatePageStore from './routes/page-template-page-store';
 import singlePost from './routes/single-post';
+import woocommerceCheckout from './routes/checkout';
 
 /**
  * Populate Router instance with DOM routes 
@@ -21,6 +22,7 @@ const routes = new Router({
   singleProduct,
   pageTemplatePageStore,
   singlePost,
+  woocommerceCheckout,
   /** About Us page, note the change from about-us to aboutUs. */
 });
 

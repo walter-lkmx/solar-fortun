@@ -52,6 +52,14 @@ h4 {
   font-family: 'Botera TFE';
 }
 
+h1.section-header {
+  @include before-line(color(blueberry));
+  @include after-line(color(blueberry));
+  font-size: fgratio(3);
+  margin-top: gratio(4);
+  margin-bottom: gratio(7);
+}
+
 a {
   cursor: pointer;
 }

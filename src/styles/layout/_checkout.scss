@@ -2,19 +2,233 @@ body.checkout {
   section.content {
     font-size: fgratio(1);
     white-space: inherit;
-    form {
-      .col-1 {
-        @include inline-block(50%, top);
-        p {
-          display: inline-block;
-          label {
-            display: block;
+    @include inline-block(50%, top);
+    font-size: 0;
+    article {
+      .woocommerce-info {
+        margin-bottom: gratio(3);
+        padding: gratio(3);
+        background-color: rgba(color(brown-light), 0.1);
+        font-size: fgratio(1);
+        a {
+          margin-top: gratio(1);
+          color: color(brown-light);
+          text-decoration: none;
+          display: block;
+          &:hover {
+            text-decoration: underline;
           }
-          input {
-            @include specialInputVariable(auto, fgratio(1));
+        }
+      }
+      .woocommerce-error {
+        margin-bottom: gratio(3);
+        padding: gratio(3);
+        background-color: rgba(color(red-bright), 1);
+        font-size: fgratio(1);
+        color: color(white);
+        text-shadow: none;
+      }
+      .checkout_coupon,
+      .woocommerce-form-login {
+        margin-top: - gratio(3);
+        margin-bottom: gratio(3);
+        padding: gratio(3);
+        background-color: rgba(color(brown-light), 0.05);
+        p {
+          margin-bottom: gratio(3);
+          &.form-row-last {
+            margin-bottom: 0;
+          }
+          button {
+            @include buttonSolarWhite();
+          }
+        }
+        label {
+          display: block;
+          margin-bottom: gratio(2);
+        }
+        input {
+          @include specialInputVariable(auto, fgratio(1));
+          margin-bottom: gratio(2);
+        }
+        a {
+          margin-top: gratio(1);
+          color: color(brown-light);
+          text-decoration: none;
+          display: block;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      form {
+        font-size: fgratio(1);
+        margin-top: gratio(6);
+        display: block;
+        padding-bottom: gratio(7);
+        h3 {
+          font-size: fgratio(2);
+          margin-bottom: gratio(5);
+        }
+        .col-1,
+        .col-2 {
+          margin-bottom: gratio(6);
+          p {
+            @include inline-block(50%, top);
+            display: inline-block;
+            margin-bottom: gratio(4);
+            label {
+              display: block;
+              padding-left: gratio(2);
+              abbr {
+                color: color(red-bright);
+              }
+            }
+            input {
+              @include specialInputVariable(100%, fgratio(1));
+            }
+            &#billing_country_field,
+            &#shipping_country_field {
+              display: block;
+              width: 100%;
+              strong {
+                @include specialInputVariable(100%, fgratio(1));
+                padding: gratio(3);
+                background-color: rgba(color(brown-light), 0.05);
+                text-shadow: none;
+                &:hover {
+                  background-color: rgba(color(brown-light), 0.1);
+                }
+              }
+            }
+            &#billing_company_field,
+            &#shipping_company_field {
+              width: 100%;
+            }
+            &#billing_state_field,
+            &#shipping_state_field {
+              .select2-selection {
+                @include specialInputVariable(100%, fgratio(1));
+                #select2-billing_state-container,
+                #select2-shipping_state-container {
+                  padding: 0;
+                  padding-top: rem(15px);
+                }
+                .select2-selection__arrow {
+                  top: rem(13px);
+                  right: rem(13px);
+                }
+              }
+            }
+            &#order_comments_field {
+              width: 100%;
+              textarea {
+                @include specialInputVariable(100%, fgratio(1));
+                padding: gratio(3);
+                min-height: gratio(7);
+              }
+            }
+          }
+        }
+        #order_review {
+          table {
+            width: 50%;
+            margin-bottom: gratio(6);
+            border-collapse: separate;
+            border-spacing: gratio(3);
+            position: relative;
+            thead {
+              text-align: left;
+              border-bottom: 1px solid rgba(color(purple), 0.5);
+              &:after {
+                content: "-";
+                display: block;
+                line-height: gratio(3);
+                color: transparent;
+                background-color: rgba(color(purple), 0.2);
+                height: 1px;
+                position: absolute;
+                width: 100%;
+              }
+            }
+            tbody {
+              &:after {
+                content: "-";
+                display: block;
+                line-height: gratio(3);
+                color: transparent;
+                background-color: rgba(color(purple), 0.2);
+                height: 1px;
+                position: absolute;
+                width: 100%;
+              }
+            }
+            tfoot {
+              tr {
+                &.order-total {
+                  font-size: fgratio(2);
+                }
+                &.shipping {
+                  td {
+                    span.woocommerce-Price-amount {
+                      display: block;
+                      color: color(red);
+                    }
+                  }
+                }
+                th {
+                  // text-align: right;
+                }
+                td {
+                  strong {
+                    font-weight: 400 !important;
+                    color: color(red);
+                  }
+                }
+              }
+            }
+          }
+          #payment {
+            &:before {
+              font-size: fgratio(2);
+              margin-top: gratio(4);
+              margin-bottom: gratio(5);
+              display: block;
+              content: "Elige un método de pago";
+              line-height: 1.2;
+              font-family: 'Botera TFE';
+            }
+            ul {
+              li {
+                margin-bottom: gratio(4);
+                display: block;
+                label {
+                  margin-bottom: gratio(3);
+                  display: inline-block;
+                  padding-left: gratio(0);
+                  img {
+                    height: gratio(4);
+                    display: inline-block;
+                    vertical-align: middle;
+                  }
+                }
+                .payment_box {
+                  margin-bottom: gratio(3);
+                  padding: gratio(3);
+                  background-color: rgba(color(brown-light), 0.1);
+                  font-size: fgratio(1);
+                }
+              }
+            }
+            button {
+              @include buttonSolar();
+            }
           }
         }
       }
     }
+  }
+  .select2-dropdown {
+    font-size: fgratio(1);
   }
 }
