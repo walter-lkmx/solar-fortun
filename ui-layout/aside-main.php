@@ -9,7 +9,7 @@
   <nav>
     <ul>
       <li>
-        <a href="" title="">
+        <a href="/vinos" title="">
         <span>Tienda</span>
         <div class="stain">
           <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
