@@ -11,9 +11,23 @@ export default {
     var checkoutBase = pathArray[1];
     var checkoutThanks = pathArray[2];
 
+    // no "pasar a caja" button
+    var disableTopBar = document.getElementById("top-bar-controls");
+    disableTopBar.classList.add('disabled');
+    
+    var disableMiniCartTools = document.getElementById("mini-cart");
+    disableMiniCartTools.classList.add('disabled');
+    
+    var enablingCheckoutMenu = document.getElementById("checkout-menu");
+    enablingCheckoutMenu.classList.add('enabled');
+    
     // Checkout view
     if (checkoutBase === "checkout" && checkoutThanks == 0) {
       console.log("aun no has pagado");
+
+      var disablePrimaryMenu = document.getElementById("primary-menu");
+      disablePrimaryMenu.classList.add('disabled');
+      
       // all this only to insert an H1
       var wooContainter = document.getElementById("post-122");
       var h1Title = document.createElement("h1");

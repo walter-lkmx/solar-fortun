@@ -7,7 +7,10 @@
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/img/solar-logo-black.svg"></a> 
   </section>
   <nav>
-    <ul>
+    <ul id="checkout-menu">
+      <li><a href="/vinos"><img src="<?php bloginfo('template_url'); ?>/img/icons8-left_4.svg">Regresar</a></li>
+    </ul>
+    <ul id="primary-menu">
       <li>
         <a href="/vinos" title="">
         <span>Tienda</span>

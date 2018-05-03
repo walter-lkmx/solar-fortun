@@ -32,7 +32,20 @@ aside.main-menu {
     }
   }
   nav {
-    ul {
+    ul#checkout-menu {
+      display: none;
+      &.enabled {
+        display: block;
+      }
+      img {
+        @include inline-block(gratio(3), unset);
+        margin-right: gratio(1);
+      }
+    }
+    ul#primary-menu, ul#checkout-menu {
+      &.disabled {
+        display: none;
+      }
       li {
         margin-bottom: gratio(3);
         text-align: center;

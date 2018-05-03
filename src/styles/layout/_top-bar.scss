@@ -5,6 +5,13 @@ section.top-bar {
     background: rgba(#f4eadf, 0);
     transition: 1s ease;
     ul {
+      &.disabled {
+        li {
+          &:first-child {
+            display: none;
+          }
+        }
+      }
       li {
         @include inline-block(auto, middle);
         a {

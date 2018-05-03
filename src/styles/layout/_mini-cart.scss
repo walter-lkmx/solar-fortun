@@ -25,6 +25,14 @@ section.mini-cart {
   &.enter {
     @extend .fade-in-top
   }
+  &.disabled {
+    .info-tools {
+      .checkout {
+        pointer-events: none;
+        opacity: 0.1;
+      }
+    }
+  }  
   h1.cart-title {
     font-size: fgratio(3);
     margin-bottom: gratio(5);
