@@ -220,6 +220,37 @@ body.checkout {
                   padding: gratio(3);
                   background-color: rgba(color(brown-light), 0.1);
                   font-size: fgratio(1);
+                  font-size: 0;
+                  &.payment_method_conektaoxxopay {
+                    font-size: fgratio(1);
+                  }
+                  p {
+                    font-size: fgratio(1);
+                  }
+                  &.payment_method_conektacard {
+                    .form-row {
+                      display: inline-block;
+                      vertical-align: top;
+                    }
+                    label {
+                      display: block;
+                      margin-bottom: gratio(2);
+                      font-size: fgratio(1);
+                    }
+                    input, select {
+                      @include specialInputVariable(auto, fgratio(1));
+                      margin-bottom: gratio(4);
+                      font-size: fgratio(1);
+                      &#card_expiration {
+                        width: gratio(9);
+                        padding-left: gratio(4);
+                        padding-right: gratio(4);
+                      }
+                      &#card_expiration_yr {
+                        width: gratio(7);
+                      }
+                    }
+                  }
                 }
               }
             }

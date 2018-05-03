@@ -15,32 +15,10 @@ body.page-template-page-store {
         position: relative;
         h1 {
           @include inline-block(gratio(7), top);
-          font-size: fgratio(3);
-          color: rgba(color(blueberry), 0.7);
+          font-size: fgratio(2);
+          color: rgba(color(purple), 1);
           span {
             display: block;
-          }
-        }
-        .stain {
-          img {
-            width: gratio(9);
-            position: absolute;
-            z-index: -10;
-            top: -2.5rem;
-            left: -2rem;
-            opacity: 0.7;
-
-          }
-        }
-        .stain2 {
-          img {
-            width: gratio(9);
-            position: absolute;
-            z-index: -10;
-            top: -1.5rem;
-            left: -2rem;
-            opacity: 0.7;
-
           }
         }
         .catalogs {
@@ -51,11 +29,35 @@ body.page-template-page-store {
             @include inline-block(33.33%, middle);
             font-size: 0;
             margin-bottom: gratio(5);
+            &:hover {
+              .img-container {
+                img {
+                  &.wineWatercolor {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
             .img-container {
               @include inline-block(25%, top);
+              position: relative;
               img {
-                width: 100%;
-                height: auto;
+                &.wineBottle {
+                  width: 100%;
+                  height: auto;
+                  position: relative;
+                  z-index: 2;
+                }
+                &.wineWatercolor {
+                  position: absolute;
+                  width: rem(120px);
+                  height: auto;
+                  bottom: 0;
+                  left: rem(-36px);
+                  z-index: 1;
+                  opacity: 0;
+                  transition: .2s ease;
+                }
               }
             }
             .wine-specs {
@@ -82,7 +84,7 @@ body.page-template-page-store {
                 text-shadow: none;
                 text-decoration: none;
                 opacity: 0;
-                transition: 0.4s ease;
+                transition: 0.2s ease;
                 &:hover {
                   @include boxShadowBig();
                   transform: translateY(- gratio(0));

@@ -77,10 +77,11 @@ export default {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
+          var wineWatercolor = a[index].meta_data[5].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
-          catalogTemplate += "<div class=\"wine " + wineLink + "\">" + "<div class=\"img-container\">" + "<img src=\"" + templateDir + "/" + wineBottle + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
+          catalogTemplate += "<div class=\"wine\">" + "<div class=\"img-container\">" + "<img class=\"wineBottle\" src=\"" + templateDir + "/" + wineBottle + "\">" + "<img class=\"wineWatercolor\" src=\"" + templateDir + "/" + wineWatercolor + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
         }
         document.getElementById("topTierCatalog").innerHTML = catalogTemplate;
       });
@@ -95,10 +96,11 @@ export default {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
+          var wineWatercolor = a[index].meta_data[5].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
-          catalogTemplate += "<div class=\"wine\">" + "<div class=\"img-container\">" + "<img src=\"" + templateDir + "/" + wineBottle + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
+          catalogTemplate += "<div class=\"wine\">" + "<div class=\"img-container\">" + "<img class=\"wineBottle\" src=\"" + templateDir + "/" + wineBottle + "\">" + "<img class=\"wineWatercolor\" src=\"" + templateDir + "/" + wineWatercolor + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
         }
         document.getElementById("mixturesCatalog").innerHTML = catalogTemplate;
       });
@@ -108,17 +110,18 @@ export default {
         
         var index;
         var a = response;
-        var catalogWineTemplate = "";
+        var catalogTemplate = "";
         for (index = 0; index < a.length; index++) {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
+          var wineWatercolor = a[index].meta_data[5].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
-          catalogWineTemplate += "<div class=\"wine\">" + "<div class=\"img-container\">" + "<img src=\"" + templateDir + "/" + wineBottle + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
+          catalogTemplate += "<div class=\"wine\">" + "<div class=\"img-container\">" + "<img class=\"wineBottle\" src=\"" + templateDir + "/" + wineBottle + "\">" + "<img class=\"wineWatercolor\" src=\"" + templateDir + "/" + wineWatercolor + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
         }
-        document.getElementById("youngWineCatalog").innerHTML = catalogWineTemplate;
+        document.getElementById("youngWineCatalog").innerHTML = catalogTemplate;
       });
 
       // monovarietals
@@ -132,10 +135,11 @@ export default {
           console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
+          var wineWatercolor = a[index].meta_data[5].value;
           var winePrice = a[index].price_html;
           var wineLink = a[index].slug;
 
-          catalogTemplate += "<div class=\"wine\">" + "<div class=\"img-container\">" + "<img src=\"" + templateDir + "/" + wineBottle + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
+          catalogTemplate += "<div class=\"wine\">" + "<div class=\"img-container\">" + "<img class=\"wineBottle\" src=\"" + templateDir + "/" + wineBottle + "\">" + "<img class=\"wineWatercolor\" src=\"" + templateDir + "/" + wineWatercolor + "\"></div>" + "<div class=\"wine-specs\"><h2 class=\"wine-name\">" + wineName + "</h2>" + "<span class=\"wine-price\">" + winePrice + "</span>" + "<a class=\"wine-details\" href=\"/vinos/" + wineLink + "\">" + "Ver detalles" + "</a>" + "</div>" +  "</div>";
         }
         document.getElementById("monovarietalsCatalog").innerHTML = catalogTemplate;
       });
