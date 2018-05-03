@@ -166,6 +166,29 @@ body.page-template-page-store {
             top: 23.125rem;
             transform: rotate(50deg);
           }
+          &.branch-1 {
+            width: 4.3125rem;
+            right: 2rem;
+            top: 6.875rem; // transform: rotate(90deg);
+            transform: rotate(45deg);
+          }
+          &.branch-2 {
+            width: 4.5625rem;
+            right: 52.4375rem;
+            top: 8.125rem;
+          }
+          &.branch-3 {
+            width: 5.3125rem;
+            right: 14rem;
+            top: 2.125rem; // transform: rotate(90deg);
+            transform: rotate(45deg);
+          }
+          &.olive-branch4 {
+            width: 5.3125rem;
+            right: 50rem;
+            top: 10.875rem; // transform: rotate(90deg);
+          }
+          /*
           &.mint {
             width: 7.3125rem;
             right: 2rem;
@@ -178,7 +201,7 @@ body.page-template-page-store {
             top: 10.875rem; // transform: rotate(90deg);
             transform: scaleY(-1);
           }
-          /*&.rosemary {
+          &.rosemary {
             width: 8.5625rem;
             right: 8.4375rem;
             top: 6.125rem;

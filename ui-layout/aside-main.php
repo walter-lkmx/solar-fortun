@@ -68,14 +68,6 @@
         </a>
       </li>
       <li>
-        <a href="/ubicacion" title="">
-          <span>Ubicación</span>
-          <div class="stain">
-            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
-          </div>
-        </a>
-      </li>
-      <li>
         <a href="/contacto" title="">
           <span>Contacto</span>
           <div class="stain">

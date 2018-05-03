@@ -13,7 +13,16 @@
           <h1><?php the_title() ?></h1> 
         </section>
         <div class="text">
-          <h3>Oficina</h3>
+          <h3>Viñedo</h3>
+          <p>Cañada de Guadalupe en el poblado de Fracisco Zarco.</p>
+
+          <h3>Vinícola</h3>
+          <p>Actualmente vinificamos en Vinícola Tierra Santa, donde compartimos espacios de forma temporal. Próximamente abriremos nuevas instalaciones en el Sauzal de Rodríguez, frente al mar.</p>
+
+          <h3>Dirección Fiscal</h3>
+          <p>Vinícola Solar Fortún S de RL de CV ,Colinas de  Montemar 342, Colinas del Mar.<br>Ensenada, Baja California 22760.</p>
+
+          <h3>Horario de Oficina</h3>
           <p>Lunes a viernes: 10 am - 2 pm<br>
           (646) 174-7674</p>
 
