@@ -29,11 +29,23 @@ body.page-template-page-store {
             @include inline-block(33.33%, middle);
             font-size: 0;
             margin-bottom: gratio(5);
+            // &:hover {
+            //   .img-container {
+            //     img {
+            //       &.wineWatercolor {
+            //         opacity: 1;
+            //       }
+            //     }
+            //   }
+            // }
             &:hover {
               .img-container {
-                img {
-                  &.wineWatercolor {
-                    opacity: 1;
+                .imgWatercolor-container {
+                  display: block;
+                  opacity: 1;
+                  transform: translateY(- gratio(4));
+                  img {
+                    // bottom: gratio(7);
                   }
                 }
               }
@@ -48,15 +60,43 @@ body.page-template-page-store {
                   position: relative;
                   z-index: 2;
                 }
-                &.wineWatercolor {
+              }
+              .imgWatercolor-container {
+                @include z-index(negative-underground);
+                position: relative;
+                transition: 3s ease;
+                opacity: 0;
+                transform: translateY(- gratio(0));
+                .wineWatercolor {
                   position: absolute;
                   width: rem(120px);
                   height: auto;
                   bottom: 0;
                   left: rem(-36px);
-                  z-index: 1;
-                  opacity: 0;
-                  transition: .2s ease;
+                  transition: 4s ease;
+                  transform: translateY(- gratio(0));
+                  &.elixir {
+                    width: rem(140px);
+                  }
+                  &.noble {
+                    width: rem(100px);
+                    left: rem(-18px);
+                  }
+                  &.positivo {
+                    width: rem(90px);
+                    left: rem(-12px);
+                  }
+                  &.positivo {
+                    width: rem(90px);
+                    left: rem(-12px);
+                  }
+                  &.confabulario {
+                    width: rem(150px);
+                    left: rem(-57px);
+                  }
+                  &.rosa {
+                    left: rem(-26px);
+                  }
                 }
               }
             }
@@ -64,6 +104,8 @@ body.page-template-page-store {
               @include inline-block(75%, top);
               font-size: fgratio(1);
               padding-left: gratio(2);
+              position: relative;
+              z-index: 2;
               h2.wine-name {
                 font-size: fgratio(3);
                 margin-bottom: gratio(1);
@@ -136,24 +178,6 @@ body.page-template-page-store {
             top: 21.875rem;
             transform: rotate(135deg);
           }
-          /*&.olives-1 {
-            width: 22.5625rem;
-            right: 5.5625rem;
-            top: 2.125rem;
-            transform: rotate(20deg);
-          }
-          &.olives-2 {
-            width: 17.5625rem;
-            right: 59.4375rem;
-            top: 10.875rem;
-            transform: scaleX(-1) scaleY(-1) rotate(-90deg);
-          }
-          &.olives-3 {
-            width: 18.5625rem;
-            right: 10.4375rem;
-            top: 17.125rem;
-            transform: rotate(-60deg);
-          }*/
           &.olives-4 {
             width: 7.5625rem;
             right: 70.4375rem;
