@@ -118,10 +118,31 @@ export default {
         }
       );
       $("li#carrito > a").removeAttr("href");
+
+
+      // var mobileMenuTrigger = document.getElementsByTagName('mobile-menu-trigger');
+      var mobileMenu = document.getElementById('main-menu');
+      var theBodyMenu = document.getElementsByTagName('body')[0];
+      $("#mobile-menu-trigger").click(
+        function() {
+          mobileMenu.classList.add("fade-in-top");
+          theBodyMenu.classList.add("OVERFLOW");
+          mobileMenu.classList.remove("fade-out-top");
+        }
+      );
+      $("#mobile-menu-close").click(
+        function() {
+          mobileMenu.classList.add("fade-out-top");
+          mobileMenu.classList.remove("fade-in-top");
+          theBodyMenu.classList.remove("OVERFLOW");
+        }
+      );
     });
+    
 
-
-
+    // var theBody = document.getElementsByTagName('body')[0];
+    // theBody.classList.add("OVERFLOW");
+    
 
   },
   finalize() {

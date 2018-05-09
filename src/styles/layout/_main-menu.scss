@@ -1,18 +1,37 @@
 aside.main-menu {
-  width: gratio(9);
   padding: gratio(3);
   display: inline-block;
   vertical-align: top;
   position: relative;
-  // border-right: 1px solid;
-    &.sticky {
+  @include respond-to(small large) {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/sf-background3.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  @include respond-to(large mega) {
+    width: gratio(9);
+  }
+  @include respond-to(mega) {
+    width: gratio(9);
+  } // border-right: 1px solid;
+  &.fade-in-top {
+    display: block;
+  }
+  &.sticky {
     @include z-index(second-level);
     width: gratio(9);
     position: fixed;
     left: 0;
     top: 0;
-    +.single-product, +section.main-container {
+    + .single-product,
+    + section.main-container {
       left: gratio(9);
+      @include respond-to(small large) {
+        left: 0;
+      }
     }
   }
   img.shadow {
@@ -27,8 +46,21 @@ aside.main-menu {
   section.brand {
     margin-bottom: gratio(5);
     padding: 0 gratio(3);
-    @include respond-to(small wide) {
-      width: 50%;
+    @include respond-to(small large) {
+      @include container(50%);
+      margin-bottom: gratio(5);
+    }
+    #mobile-menu-close {
+      display: none;
+      @include respond-to(small large) {
+        display: inline-block;
+        position: absolute;
+        top: gratio(3);
+        right: gratio(3);
+        img {
+          width: gratio(3);
+        }
+      }
     }
   }
   nav {
@@ -42,7 +74,8 @@ aside.main-menu {
         margin-right: gratio(1);
       }
     }
-    ul#primary-menu, ul#checkout-menu {
+    ul#primary-menu,
+    ul#checkout-menu {
       &.disabled {
         display: none;
       }
@@ -54,7 +87,7 @@ aside.main-menu {
           display: inline-block;
           color: color(blueberry);
           text-decoration: none;
-          font-family: 'Botera TFE';
+          font-family: "Botera TFE";
           font-size: gratio(4); // text-shadow: 0 1px 0 #fff;
           position: relative;
           span {
@@ -70,9 +103,9 @@ aside.main-menu {
             transition: 0.4s ease;
             opacity: 0;
             filter: contrast(130%);
-              margin-left: 0;
-              top: - 5px;
-              width: 120%;
+            margin-left: 0;
+            top: -5px;
+            width: 120%;
             transform: translateX(- gratio(0));
           }
           &:hover {
