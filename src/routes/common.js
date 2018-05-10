@@ -1,3 +1,5 @@
+import { tween, easing, styler, keyframes } from 'popmotion';
+
 export default {
   init() {
 
@@ -123,18 +125,39 @@ export default {
       // var mobileMenuTrigger = document.getElementsByTagName('mobile-menu-trigger');
       var mobileMenu = document.getElementById('main-menu');
       var theBodyMenu = document.getElementsByTagName('body')[0];
+      const menuAnimation = styler(document.querySelector('#main-menu'));
+      const bodyAnimation = styler(document.querySelector('body'));
       $("#mobile-menu-trigger").click(
         function() {
-          mobileMenu.classList.add("fade-in-top");
           theBodyMenu.classList.add("OVERFLOW");
-          mobileMenu.classList.remove("fade-out-top");
+          theBodyMenu.classList.add("disapear-content");
+          keyframes({
+            values: [
+              { x: 0, y: -999},
+              { x: 0, y: 600},
+              { x: 0, y: 0}
+            ],
+            duration: 500,
+            easings: [easing.backOut, easing.backOut, easing.backOut],
+            loop: 0,
+          }).start(menuAnimation.set);
         }
       );
       $("#mobile-menu-close").click(
         function() {
-          mobileMenu.classList.add("fade-out-top");
-          mobileMenu.classList.remove("fade-in-top");
           theBodyMenu.classList.remove("OVERFLOW");
+          mobileMenu.classList.remove("dissapear-content");
+          keyframes({
+            values: [
+              { x: 0, y: 0},
+              { x: 0, y: 100},
+              { x: 0, y: -999}
+            ],
+            duration: 800,
+            easings: [easing.backOut, easing.backOut, easing.backOut],
+            loop: 0,
+            //times: [0, 0.2, 0.5, 0.6, 1]
+          }).start(menuAnimation.set);
         }
       );
     });

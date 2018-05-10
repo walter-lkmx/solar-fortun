@@ -12,6 +12,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "jquery.nicescroll": "^3.7.6",
+    "popmotion": "^8.1.22",
     "rellax": "^1.6.2"
   },
   "devDependencies": {

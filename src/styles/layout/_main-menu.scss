@@ -4,12 +4,16 @@ aside.main-menu {
   vertical-align: top;
   position: relative;
   @include respond-to(small large) {
-    display: none;
+    transform: translateY(-999px);
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100vh;
     background-image: url("../img/sf-background3.jpg");
     background-size: contain;
     background-attachment: fixed;
+    transition: 0.2s ease;
+    z-index: 9999;
   }
   @include respond-to(large mega) {
     width: gratio(9);
@@ -17,8 +21,10 @@ aside.main-menu {
   @include respond-to(mega) {
     width: gratio(9);
   } // border-right: 1px solid;
-  &.fade-in-top {
-    display: block;
+  &.displace {
+    transform: translateY(900px);
+    width: 100%;
+    z-index: 9999;
   }
   &.sticky {
     @include z-index(second-level);

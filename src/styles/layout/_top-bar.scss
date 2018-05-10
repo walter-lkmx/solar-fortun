@@ -2,7 +2,8 @@ section.top-bar {
   a.mobile-brand {
     @include respond-to(small large) {
       @include inline-block(50%, middle);
-      transform: translateY(- rem(2px));
+      @include translate3d(0px, -5px, 100px);
+      // transform: translateY(- rem(2px));
       padding: gratio(3);
       img {
         height: gratio(4);

@@ -1,5 +1,6 @@
 import 'jquery';
 import 'jquery.nicescroll';
+import 'popmotion';
 import './style.scss';
 
 import Router from './util/Router';
