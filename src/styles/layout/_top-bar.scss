@@ -2,7 +2,7 @@ section.top-bar {
   a.mobile-brand {
     @include respond-to(small large) {
       @include inline-block(50%, middle);
-      @include translate3d(0px, -5px, 100px);
+      @include translate3d(0px, -5px, 0);
       // transform: translateY(- rem(2px));
       padding: gratio(3);
       img {
@@ -50,10 +50,21 @@ section.top-bar {
             }
           }
         }
+        &#mini-cart-trigger {
+          @include respond-to(small large) {
+            @include translate3d(0, -3px, 0);
+
+          }
+        }
         &#mobile-menu-trigger {
-          img {
-            margin-left: gratio(4);
-            width: gratio(3);
+          display: none;
+          @include respond-to(small large) {
+            @include translate3d(0, -5px, 0);
+            display: inline-block;
+            img {
+              margin-left: gratio(4);
+              width: gratio(3);
+            }
           }
         }
       }

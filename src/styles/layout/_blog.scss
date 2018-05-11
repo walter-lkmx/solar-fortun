@@ -1,5 +1,12 @@
 .blog {
   @include inline-block(90%, top);
+  @include respond-to(small large) {
+    @include inline-block(100%, top);
+    padding: gratio(3);
+  }
+  @include respond-to(mega) {
+    max-width: gratio(12);
+  }
   section.post {
     margin-bottom: gratio(7);
     padding-top: gratio(7);
@@ -7,10 +14,13 @@
     position: relative;
     border-top: 1px solid rgba(color(purple), 0.2);
     &:nth-child(2) {
-      //padding-top: 0;
-      //border-top: 0;
+      border-top: 0;
+      padding-top: 0;
     }
     .featured-image {
+      @include respond-to(small large) {
+        @include inline-block(100%, top);  
+      }
       @include inline-block(50%, top);
       height: gratio(9);
       overflow: hidden;
@@ -23,6 +33,15 @@
       }
     }
     h1 {
+      @include respond-to(small large) {
+        @include inline-block(100%, top);  
+        position: relative;
+        left: 0;
+        bottom: 0;
+      }
+      @include respond-to(mega) {
+        left: gratio(4);  
+      }
       @include button(rgba(color(purple), 0.9), white);
       display: inline-block;
       width: 50%;
@@ -37,6 +56,9 @@
         transform: translateY(- gratio(0));
       }
       a {
+        @include respond-to(small large) {
+          font-size: fgratio(2);
+        }
         font-size: fgratio(3);
         text-decoration: none;
         color: color(white);
@@ -44,6 +66,9 @@
       }
     }
     .content {
+      @include respond-to(small large) {
+        display: none;
+      }
       @include inline-block(50%, top);
       padding-left: gratio(5);
       section.excerpt {
