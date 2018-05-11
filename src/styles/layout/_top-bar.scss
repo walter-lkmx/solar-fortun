@@ -82,8 +82,10 @@ section.top-bar {
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 44%, rgba(244, 234, 223, 0.9) 63%, rgba(244, 234, 223, 0.9) 35%);
     z-index: 1;
     + .content, + .blog-single-post {
+      @include respond-to(small large) {
+        padding-top: 0;
+      }
       padding-top: 55px;
-      
     }
   }
 }

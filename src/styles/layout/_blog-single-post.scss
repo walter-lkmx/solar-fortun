@@ -20,9 +20,15 @@ body.single-post {
   section.single {
     font-size: 0;
     position: relative;
+    padding: 0 gratio(3);
     &:nth-child(2) {
     }
     .featured-image {
+      @include respond-to(small large) {
+        @include inline-block(100%, top);
+        height: gratio(9);
+        position: relative;
+      }
       @include inline-block(gratio(10), top);
       @include z-index(first-level);
       height: 100vh;
@@ -36,6 +42,13 @@ body.single-post {
       }
     }
     .content {
+      @include respond-to(small large) {
+        @include inline-block(100%, top);
+        height: gratio(9);
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
       @include inline-block(gratio(11), top);
       margin-left: gratio(10);
       padding-left: gratio(5);
@@ -43,6 +56,9 @@ body.single-post {
       position: relative;
       section.title {
         h1 {
+          @include respond-to(small large) {
+            font-size: fgratio(3);
+          }
           @include before-line(color(blueberry));
           @include after-line(color(blueberry));
           line-height: 1.2;
