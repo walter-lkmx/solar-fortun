@@ -18,7 +18,7 @@
         <img class="ornament branch-2" src="<?php bloginfo('template_url'); ?>/img/ornaments/branch2.svg">
     </section>
     <section class="category-block">
-      <h1>Vino Joven</h1>
+      <h1>Vino<br/> Joven</h1>
       <div class="catalogs" id="youngWineCatalog"></div>
       <img class="ornament leaf-2" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf2.svg">
       <img class="ornament branch-3" src="<?php bloginfo('template_url'); ?>/img/ornaments/branch3.svg">

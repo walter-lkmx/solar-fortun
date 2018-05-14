@@ -11,12 +11,17 @@
 section.mini-cart {
   @include z-index(modal);
   @include boxShadow();
+  @include respond-to(small large) {
+    width: 100%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+  }
   display: none;
   background-color: rgba(white, 0.95);
   width: gratio(11);
   padding: gratio(3);
   position: fixed;
-  // overflow: hidden;
   font-size: fgratio(1);
   top: rem(53px);
   right: gratio(3);
@@ -34,6 +39,9 @@ section.mini-cart {
     }
   }  
   h1.cart-title {
+    @include respond-to(small large) {
+      font-size: fgratio(2);  
+    }
     font-size: fgratio(3);
     margin-bottom: gratio(5);
   }
@@ -51,6 +59,9 @@ section.mini-cart {
         td {
           padding-bottom: gratio(4);
           &.product-thumbnail {
+            @include respond-to(small large) {
+              display: none;
+            }
             text-align: left;
             width: 30%;
             position: relative;
@@ -70,6 +81,9 @@ section.mini-cart {
           }
           &.product-name {
             a {
+              // @include respond-to(small large) {
+              //   font-size: fgratio(1);
+              // }
               font-size: fgratio(2);
               color: color(blueberry);
               text-decoration: none;
@@ -82,6 +96,9 @@ section.mini-cart {
           }
           &.product-price {
             span {
+              @include respond-to(small large) {
+                font-size: fgratio(1);
+              }
               font-size: fgratio(2);
               color: color(red);
               &.cu {
@@ -95,6 +112,12 @@ section.mini-cart {
             }
             input {
               @include specialInputSolar();
+              @include respond-to(small large) {
+                font-size: fgratio(1);
+                width: 3rem;
+                height: 3rem;
+                margin-left: 0;
+              }
             }
           }
         }
@@ -102,7 +125,13 @@ section.mini-cart {
     }
   }
   .info-tools {
-    // display: block;
+    @include respond-to(small large) {
+      position: absolute;
+      padding: gratio(3);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
     ul {
       // width: 100%;
       font-size: 0;
@@ -113,13 +142,24 @@ section.mini-cart {
         width: 33.33%;
         font-size: fgratio(1);
         &.refresh {
+          @include respond-to(small large) {
+            display: block;
+            margin-bottom: gratio(3);
+            text-align: right;
+            width: 100%;
+            button {
+              width: gratio(6);
+            }
+          }
           button {
             @include buttonSolarWhite();
           }
         }
         &.subtotal {
           text-align: right;
-          // padding-right: gratio(3);
+          @include respond-to(small large) {
+            width: 50%;
+          }
           h2 {
             display: inline-block;
             font-size: fgratio(1);
@@ -140,6 +180,9 @@ section.mini-cart {
           }
         }
         &.checkout {
+          @include respond-to(small large) {
+            width: 50%;
+          }
           text-align: right;
           a {
             @include buttonSolar();

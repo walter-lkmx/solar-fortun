@@ -14,7 +14,7 @@
       <div class="content">  
         <?php the_content() ?>
       </div>
-      <h1><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h1>
+      <h1 id="demoId"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h1>
     </section>
     <?php endwhile; ?>
     <section class="pagination">

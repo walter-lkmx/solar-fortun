@@ -4,7 +4,7 @@
 <section class="main-container">
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="blog container-posts">
-    <h1 class="section-header">Noticias</h1>
+    <h1 id="demoId" class="section-header">Noticias</h1>
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
     <section class="post">

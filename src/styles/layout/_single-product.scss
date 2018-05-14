@@ -32,7 +32,10 @@ section.single-product {
         &#featStain {
           @include z-index(negative-underground);
           position: fixed;
-          transform: translatex(-4rem) translateY(7rem);
+          // transform: translatex(-4rem) translateY(7rem);
+          left: 12rem;
+          // top: -7rem;
+          bottom: 0;
           width: rem(380px);
         }
       }
@@ -44,6 +47,8 @@ section.single-product {
       padding: gratio(3);
       overflow-x: hidden;
       overflow-y: hidden;
+      position: relative;
+      z-index: 1;
       section.title-price {
         margin-bottom: gratio(3);
         h1#product-name {

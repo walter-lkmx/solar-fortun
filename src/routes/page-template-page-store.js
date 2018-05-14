@@ -1,4 +1,3 @@
-
 export default {
   init() {
 
@@ -66,6 +65,7 @@ export default {
 
     
     jQuery(document).ready(function($) {
+
       // top tier
       $.ajax(getTopTier).done(function (response) {
         console.log(response);
@@ -149,5 +149,7 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
+    // tyler(document.querySelector('body'));
+    
   },
 };

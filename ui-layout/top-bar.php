@@ -1,6 +1,6 @@
 <?php include('mini-cart.php'); ?>
 <section class="top-bar" id="header">
-  <a class="mobile-brand" href=""><img src="<?php bloginfo('template_url'); ?>/img/solar-logo-text.svg"></a>
+  <a class="mobile-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/img/solar-logo-text.svg"></a>
   <nav>
     <ul id="top-bar-controls">
       <li class="my-account"><a href="" title="">Mi cuenta</a></li>

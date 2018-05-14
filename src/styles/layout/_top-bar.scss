@@ -80,7 +80,7 @@ section.top-bar {
     right: 0;
     top: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 44%, rgba(244, 234, 223, 0.9) 63%, rgba(244, 234, 223, 0.9) 35%);
-    z-index: 1;
+    z-index: 2;
     + .content, + .blog-single-post {
       @include respond-to(small large) {
         padding-top: 0;

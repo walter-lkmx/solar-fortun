@@ -1,55 +1,8 @@
-// import {
-//   jarallax,
-//   jarallaxElement,
-//   jarallaxVideo
-// } from 'jarallax';
-
+import { tween, easing, styler, keyframes } from 'popmotion';
 export default {
   init() {
 
     console.log("estas en single-product");
-
-
-    // parallax stuff
-
-    // jarallaxVideo();
-    // jarallaxElement();
-
-    // jarallax(document.querySelectorAll('.leaf-8'), {
-    //   speed: 0.8,
-    // });
-
-    // jarallax(document.querySelectorAll('.leaf-5'), {
-    //   speed: 0.6,
-    // });
-
-    // jarallax(document.querySelectorAll('.leaf-6'), {
-    //   speed: -1.0,
-    // });
-
-    // jarallax(document.querySelectorAll('.leaf-7'), {
-    //   speed: 0.6,
-    // });
-
-    // jarallax(document.querySelectorAll('.baby-tomatoes'), {
-    //   speed: 1,
-    // });
-
-    // jarallax(document.querySelectorAll('.cheese-slice'), {
-    //   speed: 1,
-    // });
-
-    // jarallax(document.querySelectorAll('.mushrooms-sliced'), {
-    //   speed: 0.5,
-    // });
-
-    // jarallax(document.querySelectorAll('.peppermint'), {
-    //   speed: 0.7,
-    // });
-
-    // jarallax(document.querySelectorAll('.olive-branch'), {
-    //   speed: 2,
-    // });
 
     // JavaScript to be fired on all pages
     function setCookie(c_name, value, exdays) {
@@ -349,5 +302,19 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
+    jQuery(document).ready(function($){
+      const floatingStain = styler(document.querySelector('#featStain'));
+        keyframes({
+          values: [
+            { x: 0, y: 0},
+            { x: 25, y: -200},
+            { x: -25, y: 100}
+          ],
+          duration: 100000,
+          easings: [easing.easeInOut, easing.easeInOut, easing.easeInOut],
+          flip: Infinity
+          //times: [0, 0.2, 0.5, 0.6, 1]
+        }).start(floatingStain.set);
+    });
   },
 };
