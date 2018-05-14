@@ -4,7 +4,7 @@ aside.main-menu {
   vertical-align: top;
   position: relative;
   @include respond-to(small large) {
-    transform: translateY(-999px);
+    transform: translateY(-1024px);
     position: absolute;
     top: 0;
     width: 100%;

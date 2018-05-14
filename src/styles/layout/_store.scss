@@ -1,6 +1,10 @@
 body.page-template-page-store {
   section.main-container {
     section.content {
+      @include respond-to(small large) {
+        @include inline-block(100%, top);
+        padding: gratio(3);
+      }
       font-size: fgratio(1);
       white-space: normal;
       h1.section-header {
@@ -11,37 +15,56 @@ body.page-template-page-store {
         margin-bottom: gratio(7);
       }
       .category-block {
+        @include respond-to(small large) {
+          margin-bottom: gratio(5);  
+        }
         margin-bottom: gratio(7);
         position: relative;
         h1 {
           @include inline-block(auto, top);
+          @include respond-to(small large) {
+            margin-bottom: gratio(5);
+          }
           border: 1px solid rgba(color(blueberry), 0.8);
           outline: 3px solid rgba(color(blueberry), 1);
           outline-offset: - gratio(2);
           padding: gratio(3) gratio(4);
           font-size: fgratio(2);
-          // color: rgba(color(purple), 1);
+          &.monovarietals {
+            span {
+              @include respond-to(small large) {
+                display: none;
+              }
+              display: inline-block;
+              &.second-part {
+                display: block;
+                @include respond-to(small large) {
+                  display: inline-block;
+                }
+              }
+            }
+          }
           span {
             display: block;
+            @include respond-to(small large) {
+              display: inline-block;
+            }
           }
         }
         .catalogs {
           @include inline-block(85%, top);
+          @include respond-to(small large) {
+            padding-left: 0;  
+          }
           font-size: 0;
           padding-left: gratio(6);
           .wine {
+            @include respond-to(small large) {
+              @include inline-block(50%, top);  
+            }
             @include inline-block(33.33%, middle);
             font-size: 0;
             margin-bottom: gratio(5);
-            // &:hover {
-            //   .img-container {
-            //     img {
-            //       &.wineWatercolor {
-            //         opacity: 1;
-            //       }
-            //     }
-            //   }
-            // }
             &:hover {
               .img-container {
                 .imgWatercolor-container {
@@ -55,6 +78,9 @@ body.page-template-page-store {
               }
             }
             .img-container {
+              @include respond-to(small large) {
+                @include inline-block(40%, top);  
+              }
               @include inline-block(25%, top);
               position: relative;
               img {
@@ -68,7 +94,7 @@ body.page-template-page-store {
               .imgWatercolor-container {
                 @include z-index(negative-underground);
                 position: relative;
-                transition: 0.2s ease;
+                transition: 0.5s ease;
                 opacity: 0;
                 transform: translateY(- gratio(0));
                 .wineWatercolor {
@@ -77,7 +103,6 @@ body.page-template-page-store {
                   height: auto;
                   bottom: 0;
                   left: rem(-36px);
-                  // transition: 4s ease;
                   transform: translateY(- gratio(0));
                   &.elixir {
                     width: rem(140px);
@@ -105,12 +130,18 @@ body.page-template-page-store {
               }
             }
             .wine-specs {
+              @include respond-to(small large) {
+                @include inline-block(60%, top);  
+              }
               @include inline-block(75%, top);
               font-size: fgratio(1);
               padding-left: gratio(2);
               position: relative;
               z-index: 2;
               h2.wine-name {
+                @include respond-to(small large)  {
+                  font-size: fgratio(2);
+                }
                 font-size: fgratio(3);
                 margin-bottom: gratio(1);
               }

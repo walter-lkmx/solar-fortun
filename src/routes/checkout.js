@@ -66,6 +66,12 @@ export default {
         setTimeout(function() {
           window.scrollTo(0, 0);
         }, 2000);
+
+        // removing unnecessary fields
+        var createAccountCheckbox = document.getElementsByClassName("woocommerce-account-fields");
+        var secondShippingAddress = document.getElementsByClassName("woocommerce-shipping-fields");
+        $(createAccountCheckbox).remove();
+        $(secondShippingAddress).remove();
       });
     } else {
       // Thanks view
@@ -77,7 +83,7 @@ export default {
       h1Title.classList.add("section-header");
       wooContainter.appendChild(h1Title);
       wooContainter.insertBefore(h1Title, wooContainter.firstChild);
-
+      
       
       jQuery(document).ready(function($) {
         var paymentMethod = $(".method > strong").html();

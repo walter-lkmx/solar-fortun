@@ -45,6 +45,18 @@ section.mini-cart {
     font-size: fgratio(3);
     margin-bottom: gratio(5);
   }
+  #mobile-minicart-close {
+    display: none;
+    @include respond-to(small large) {
+      display: inline-block;
+      position: absolute;
+      top: gratio(3);
+      right: gratio(3);
+      img {
+        width: gratio(3);
+      }
+    }
+  }
   h2.nothing-here {
     font-size: fgratio(2);
     color: rgba(color(blueberry), 0.5);

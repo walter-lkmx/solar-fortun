@@ -158,3 +158,5 @@ add_theme_support( 'woocommerce', array(
   'thumbnail_image_width' => 150,
   'single_image_width' => 322,
   ) );
+
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );

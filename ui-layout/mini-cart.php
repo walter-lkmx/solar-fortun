@@ -28,6 +28,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <section id="mini-cart" class="mini-cart"><form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
   <h1 class="cart-title">Carrito de compras</h1>
+  <a id="mobile-minicart-close"><img src="<?php bloginfo('template_url'); ?>/img/mobile-menu-close.svg"></a>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<!-- <thead>
 			<tr>

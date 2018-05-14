@@ -109,7 +109,7 @@ export default {
           }, 500);
         }
       );
-      $("#clickFallback").click(
+      $("#clickFallback, #mobile-minicart-close").click(
         function() {
           miniCart.classList.add("fade-out-top");
           fallback.classList.add("fade-out-top");
@@ -133,7 +133,7 @@ export default {
           theBodyMenu.classList.add("disapear-content");
           keyframes({
             values: [
-              { x: 0, y: -999},
+              { x: 0, y: -1024},
               { x: 0, y: 600},
               { x: 0, y: 0}
             ],
@@ -151,7 +151,7 @@ export default {
             values: [
               { x: 0, y: 0},
               { x: 0, y: 100},
-              { x: 0, y: -999}
+              { x: 0, y: -1024}
             ],
             duration: 800,
             easings: [easing.backOut, easing.backOut, easing.backOut],
