@@ -1,4 +1,7 @@
 section.single-product {
+  @include  respond-to(small large) {
+    width: calc(100%);
+  }
   display: inline-block;
   vertical-align: top;
   width: calc(100% - 233px);
@@ -12,12 +15,18 @@ section.single-product {
     // max-height: calc(100vh - 59px); // background: rgba(red, 0.2);
     font-size: 0; // padding: gratio(3);
     .image {
+      @include respond-to(small large) {
+        @include inline-block(20%, top);
+      }
       @include inline-block(30%, top);
       position: relative;
       height: 100vh;
       z-index: 1;
       img {
         &#featSeal {
+          @include respond-to(small large) {
+            transform: translatex(-3rem);
+          }
           @include z-index(first-level);
           position: fixed;
           width: gratio(8);
@@ -25,22 +34,31 @@ section.single-product {
         }
         &#featImage {
           @include z-index(underground);
+          @include  respond-to(small large) {
+            height: 90vh;
+            top: gratio(6);
+            left: - 6.8rem;
+          }
           height: 120vh;
           top: - gratio(7);
           position: fixed;
         }
         &#featStain {
+          @include respond-to(small large) {
+            left: -18rem;
+          }
           @include z-index(negative-underground);
           position: fixed;
-          // transform: translatex(-4rem) translateY(7rem);
           left: 12rem;
-          // top: -7rem;
           bottom: 0;
           width: rem(380px);
         }
       }
     }
     section.product-details {
+      @include respond-to(small large) {
+        @include inline-block(80%, top);  
+      }
       @include inline-block(70%, top);
       font-size: fgratio(1); // width: gratio(11);
       height: auto;
@@ -52,11 +70,17 @@ section.single-product {
       section.title-price {
         margin-bottom: gratio(3);
         h1#product-name {
-          font-size: fgratio(5); // margin-bottom: gratio(3);
+          @include respond-to(small large) {
+            font-size: fgratio(3);
+          }
+          font-size: fgratio(5);
           margin-top: gratio(4);
           display: inline-block;
         }
         #price {
+          @include respond-to(small large) {
+            font-size: fgratio(2);  
+          }
           font-size: fgratio(3);
           color: color(red);
           small {
@@ -71,10 +95,17 @@ section.single-product {
         font-size: 0;
         margin-bottom: gratio(7);
         span.qty {
+          @include respond-to(small large) {
+            display: none;
+          }
           @include inline-block(auto, top);
           font-size: fgratio(1);
         }
         input {
+          @include respond-to(small large) {
+            margin: 0;
+            width: 4rem;
+          }
           @include specialInputSolar();
         }
         a {
@@ -84,6 +115,9 @@ section.single-product {
           }
         }
         img {
+          @include respond-to(small large) {
+            display: none;
+          }
           @include inline-block(25%, middle);
           text-align: right;
           width: gratio(4); // position: absolute;
@@ -97,6 +131,9 @@ section.single-product {
           margin-bottom: gratio(7);
           position: relative;
           img.ornament {
+            @include respond-to(small large) {
+              display: none;
+            }
             position: absolute;
             &.big-grape {
               width: 18.5625rem;
@@ -121,6 +158,9 @@ section.single-product {
             }
           }
           #intensity {
+            @include respond-to(small large) {
+              @include inline-block(100%, bottom);
+            }
             @include inline-block(50%, bottom);
             height: rem(86px);
             margin-bottom: gratio(5);
@@ -133,6 +173,9 @@ section.single-product {
               }
             }
             .content {
+              @include respond-to(small large) {
+                @include inline-block(200px, bottom);
+              }
               @include inline-block(290px, bottom);
               h3 {
                 font-size: gratio(4);
@@ -156,8 +199,9 @@ section.single-product {
             }
           }
           #type-grape {
-            // @include inline-block(auto, bottom);
-            // height: gratio(7);
+            @include respond-to(small large) {
+              width: 100%;
+            }
             width: 70%;
             h2 {
               font-size: gratio(4);
@@ -169,6 +213,9 @@ section.single-product {
               margin-bottom: gratio(5);
               font-size: 0;
               .grape-img {
+                @include respond-to(small large) {
+                  margin-bottom: gratio(2); 
+                }
                 @include inline-block(gratio(6), bottom);
                 height: gratio(6);
                 background-size: contain;
@@ -190,8 +237,10 @@ section.single-product {
                 }
               }
               .grape-specs {
-                @include inline-block(60%,
-                top);
+                @include respond-to(small large) {
+                  @include inline-block(100%, top);  
+                }
+                @include inline-block(60%, top);
                 height: 50px;
                 padding-left: gratio(1);
                 h3.grapeValue {
@@ -211,6 +260,9 @@ section.single-product {
           margin-bottom: gratio(6);
           position: relative;
           .img-container {
+            @include respond-to(small large) {
+              display: block;
+            }
             @include inline-block(auto,
             middle);
             min-width: rem(34px);
@@ -219,16 +271,25 @@ section.single-product {
               width: gratio(5);
               filter: contrast(120%) opacity(100%);
               &.kindaBigger {
+                @include respond-to(small large) {
+                  position: relative;  
+                }
                 width: 2.5rem;
                 position: absolute;
               }
             }
           }
           .content {
-            @include inline-block(80%,
-            top);
+            @include respond-to(small large) {
+              @include inline-block(100%, top);  
+              padding-left: 0;
+            }
+            @include inline-block(80%, top);
             padding-left: gratio(4);
             h2 {
+              @include respond-to(small large) {
+                font-size: fgratio(2);
+              }
               font-size: fgratio(3);
               margin-bottom: gratio(3);
             }
@@ -247,6 +308,9 @@ section.single-product {
             }
           }
           img.ornament {
+            @include respond-to(small large) {
+              display: none;
+            }
             position: absolute;
             &.leaf-6 {
               width: 4.3125rem;
@@ -318,9 +382,11 @@ section.single-product {
           }
         }
         section.info-tec {
-          @include inline-block(50%,
-          top); // margin-top: gratio(6);
-          margin-bottom: gratio(6); // background: rgba(color(wood), 1);
+          @include respond-to(small large) {
+            @include inline-block(100%, top)  
+          }
+          @include inline-block(50%, top);
+          margin-bottom: gratio(6);
           border: 1px solid rgba(color(blueberry), 0.8);
           outline: 3px solid rgba(color(blueberry), 1);
           outline-offset: - gratio(2);

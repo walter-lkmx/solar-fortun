@@ -1,4 +1,8 @@
 section.top-bar {
+  @include respond-to(small large) {
+    position: relative;
+    z-index: 1;
+  }
   a.mobile-brand {
     @include respond-to(small large) {
       @include inline-block(50%, middle);
