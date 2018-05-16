@@ -239,8 +239,6 @@ export default {
           // image
           var metaData = product.images[0];
           var featImage = metaData.src;
-          // document.getElementById('image').append(featImage);
-          // document.getElementById("featImage").setAttribute("src", featImage);
 
           var pathIn = "<?php bloginfo('template_url'); ?>";
           // seal image
@@ -255,6 +253,9 @@ export default {
           var metaData = product['meta_data'][5];
           var featStainImage = metaData.value;
           document.getElementById("featStain").src += featStainImage;
+          var wineName = product.name;
+          var featuredImage = document.getElementById("featImage");
+          featuredImage.classList.add(productPathName);
           // dominant flavors
           var metaData = product['meta_data'][1];
           var dominantFlavors = metaData.value;
