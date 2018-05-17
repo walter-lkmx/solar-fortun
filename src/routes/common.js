@@ -3,6 +3,34 @@ import { tween, easing, styler, keyframes } from 'popmotion';
 export default {
   init() {
 
+    var x = window.matchMedia("(max-width: 920px)")
+    function myFunction(x) {
+      if (!x.matches) { // If media query matches
+            jQuery(document).ready(function($) {
+              $(function() {
+                $("#h-scroll").niceScroll({
+                  rtlmode: "auto",
+                  horizrailenabled: true,
+                  oneaxismousemode: "auto",
+                  scrollspeed: 10,
+                  hwacceleration: true,
+                  bouncescroll: true,
+                  enablemousewheel: true,
+                  smoothscroll: true,
+                  cursordragontouch: true,
+                  enablekeyboard: true,
+                });
+              });
+            });
+            console.log('ESTAS EN ESCRITORIO');
+        } else {
+            console.log('ESTAS EN MOVIL');
+        }
+      }
+      myFunction(x) // Call listener function at run time
+      x.addListener(myFunction) // Attach listener function on state changes
+      
+
     // get path name
     var cartRedirect = window.location.protocol + "//" + window.location.host + "/" + 'carrito';
 
@@ -52,20 +80,6 @@ export default {
     // initial horizontal scroll
     jQuery(document).ready(function($) {
       // horizontal scroll
-      $(function() {
-        $("#h-scroll").niceScroll({
-          rtlmode: "auto",
-          horizrailenabled: true,
-          oneaxismousemode: "auto",
-          scrollspeed: 10,
-          hwacceleration: true,
-          bouncescroll: true,
-          enablemousewheel: true,
-          smoothscroll: true,
-          cursordragontouch: true,
-          enablekeyboard: true,
-        });
-      });
 
       // vertical scroll in single product
       // $(function() {

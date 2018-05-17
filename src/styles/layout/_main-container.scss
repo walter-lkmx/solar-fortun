@@ -18,8 +18,15 @@ section.main-container {
     // overflow-y: hidden; // overflow-x: hidden;
     max-height: calc(100vh - 47px); // padding: gratio(3);
     nav.products {
+      @include respond-to(small large) {
+        overflow-x: auto;
+        width: 100%;
+      }
+      // @include respond-to(mega) {
+      //   width: 220%;
+      // }
       height: 100% !important;
-      width: 180%;
+      width: rem(2155px);
       white-space: nowrap;
       overflow-y: hidden;
       overflow-x: hidden;
@@ -34,8 +41,16 @@ section.main-container {
           display: inline-block;
           // see more wines
           &.last {
-            @include absolute-center(false, true);
+            @include respond-to(small large) {
+              margin-top: 90%;
+              margin-right: gratio(3);
+            }
             vertical-align: middle;
+            margin-top: 20%;
+            a {
+              vertical-align: middle;
+              // @include absolute-center(false, true);
+            }
           }
           // hover bottle & seal
           &:hover {

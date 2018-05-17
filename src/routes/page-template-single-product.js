@@ -313,9 +313,26 @@ export default {
         var featImageContainer = document.getElementById("clone-container");
         var wineSpecsContainer = document.getElementById("v-scroll");
         var toggleBottle = false;
+        // if click on product specs while bottle is revealed, hide bottle
         specsHideBottle.addEventListener("click", function(){
-          toggleBottle = false;
+          if(toggleBottle === true) {
+            keyframes({
+              values: [
+                { x: 100, y: 0},
+                { x: 0, y: 0}
+              ],
+              duration: 500,
+              easings: [easing.easeInOut, easing.easeInOut],
+              loop: 0
+            }).start(bottleRevealer.set);
+            setTimeout(function() {
+              toggleBottle = false;
+              featImageContainer.classList.remove('superiorLayer');
+              wineSpecsContainer.style.opacity = "1";
+            }, 500);
+          }
         });
+        // toggle on bottle to show/hide himself
         bottleTrigger.addEventListener("click", function(){
           if (toggleBottle === false) {
             featImageContainer.classList.add('superiorLayer');
@@ -348,8 +365,6 @@ export default {
               featImageContainer.classList.remove('superiorLayer');
               wineSpecsContainer.style.opacity = "1";
             }, 500);
-            // setTimeout(function() {
-            // }, 1000);
           }
       });
     });
