@@ -22,11 +22,14 @@ section.single-product {
       position: relative;
       height: 100vh;
       z-index: 1;
+      &.superiorLayer {
+        z-index: 3;
+      } 
       img {
         &#featSeal {
           @include respond-to(small large) {
+            @include translate3d(-1rem, 2rem, 0);
             width: gratio(7);
-            transform: translatex(-1rem);
           }
           @include z-index(first-level);
           position: fixed;
@@ -39,6 +42,7 @@ section.single-product {
             height: 90vh;
             top: gratio(6);
             left: - 6.8rem;
+            transform: translateX(0);
             &.elixir-cordis, &.la-vina-en-rosa, &.baya-baya, &.syrah, &.mourvedre, &.petit-verdot, &.cabernet {
               left: - 5rem;
             } 
@@ -71,6 +75,10 @@ section.single-product {
       overflow-y: hidden;
       position: relative;
       z-index: 1;
+      transition: 1s ease;
+      &.obfuscate {
+        opacity: 0.3;
+      }
       section.title-price {
         margin-bottom: gratio(3);
         h1#product-name {

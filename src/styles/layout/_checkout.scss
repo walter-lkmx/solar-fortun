@@ -1,5 +1,9 @@
 body.checkout {
   section.content {
+    @include respond-to(small large) {
+      @include inline-block(100%, top);
+      padding: gratio(3);
+    }
     font-size: fgratio(1);
     white-space: inherit;
     @include inline-block(50%, top);
@@ -135,6 +139,9 @@ body.checkout {
         }
         #order_review {
           table {
+            @include respond-to(small large) {
+              @include inline-block(100%, top);
+            }
             width: 50%;
             margin-bottom: gratio(6);
             border-collapse: separate;

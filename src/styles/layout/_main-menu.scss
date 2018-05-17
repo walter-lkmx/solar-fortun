@@ -1,3 +1,11 @@
+body.woocommerce-order-received {
+  aside.main-menu {
+    ul#checkout-menu {
+      display: none;
+    }
+  }
+}
+
 aside.main-menu {
   padding: gratio(3);
   display: inline-block;

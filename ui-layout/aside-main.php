@@ -52,9 +52,17 @@
           </div>
         </a>
       </li>
-      <li class="spacer">
+      <li>
         <a href="/enologo" title="">
           <span>Enólogo</span>
+          <div class="stain">
+            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
+          </div>
+        </a>
+      </li>
+      <li class="spacer">
+        <a href="/contacto" title="">
+          <span>Contacto</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
@@ -63,14 +71,6 @@
       <li>
         <a href="/privacidad" title="">
           <span>Privacidad</span>
-          <div class="stain">
-            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="/contacto" title="">
-          <span>Contacto</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>

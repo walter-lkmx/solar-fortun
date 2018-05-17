@@ -106,6 +106,26 @@ body.woocommerce-order-received {
           }
         }
       }
+      section.woocommerce-customer-details {
+        .col-1 {
+          margin-bottom: gratio(4);
+          h2 {
+            font-size: fgratio(2);
+            margin-bottom: gratio(2);
+          }
+          address {
+            p {
+              margin-top: gratio(2);
+            }
+          }
+        }
+        .col-2 {
+          display: none;
+        }
+      }
     }
+        a.post-edit-link {
+          display: none;
+        }
   }
 }
