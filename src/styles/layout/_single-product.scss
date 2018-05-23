@@ -24,6 +24,9 @@ section.single-product {
       z-index: 1;
       &.superiorLayer {
         z-index: 3;
+        #add-cart-custom {
+          pointer-events: none;
+        }
       } 
       img {
         &#featSeal {

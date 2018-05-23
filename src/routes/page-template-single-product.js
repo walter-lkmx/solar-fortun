@@ -71,14 +71,6 @@ export default {
       }
     };
 
-    // name animations
-
-
-
-    // console.log(newURL);
-    // console.log('store:' + storePathName);
-    // console.log('product:' + productPathName);
-
     var productId = PRODUCTS.get(productPathName);
     console.log(productId)
 
@@ -109,9 +101,8 @@ export default {
           presentationCard.remove();
         }
       }
-      // console.log('awesome! this is a vinos page');
     } else {
-      // console.log('not a vinos page =P');
+
     }
 
     // if tis wine was previously visited
@@ -200,26 +191,15 @@ export default {
           $('#product-name').html(response.name);
           $('.presentation-card').addClass(response.slug);
           $('.presentation-title').html(response.name);
-          // console.log(response.attributes[0]);
-          // console.log(response.attributes[0].options);
 
 
           // varietales template
           var a = response.attributes;
           var grapeTemplate = "";
           a.forEach(function(entry) {
-            // console.log(entry.name);
-            // console.log(entry.options[0]);
             grapeTemplate += "<div class=\"grape\">" + "<div class=\"grape-img " + entry.name + "\"></div>" + "<div class=\"grape-specs\"><h3 class=\"grapeValue\">" + entry.options[0] + "%" + "</h3>" + "<span class=\"grapeName\">" + entry.name + "</span></div>" + "</div>"
           });
           document.getElementById("type-grape").innerHTML = "<h2>Varietal</h2>" + grapeTemplate;
-
-          // var numberGrapes = $("#type-grape > div.grape").length;
-          // if (numberGrapes >= 2) {
-          //   $('#type-grape').addClass('wide');
-          // } else {
-          //   $('#type-grape').addClass('narrow');
-          // }
 
         });
         // Get object deep data
@@ -312,61 +292,73 @@ export default {
         var specsHideBottle = document.getElementById('v-scroll');
         var featImageContainer = document.getElementById("clone-container");
         var wineSpecsContainer = document.getElementById("v-scroll");
+        var addCartCustom = document.getElementById("add-cart-custom");
         var toggleBottle = false;
         // if click on product specs while bottle is revealed, hide bottle
-        specsHideBottle.addEventListener("click", function(){
-          if(toggleBottle === true) {
-            keyframes({
-              values: [
-                { x: 100, y: 0},
-                { x: 0, y: 0}
-              ],
-              duration: 500,
-              easings: [easing.easeInOut, easing.easeInOut],
-              loop: 0
-            }).start(bottleRevealer.set);
-            setTimeout(function() {
-              toggleBottle = false;
-              featImageContainer.classList.remove('superiorLayer');
-              wineSpecsContainer.style.opacity = "1";
-            }, 500);
+        var mediaQueriesSP = window.matchMedia("(max-width: 920px)")
+        function mediaQueriesWatcherSP(mediaQueries) {
+          if (mediaQueries.matches) {
+            console.log('nelson, esto es escritorio');
+            specsHideBottle.addEventListener("click", function(){
+              if(toggleBottle === true) {
+                keyframes({
+                  values: [
+                    { x: 100, y: 0},
+                    { x: 0, y: 0}
+                  ],
+                  duration: 500,
+                  easings: [easing.easeInOut, easing.easeInOut],
+                  loop: 0
+                }).start(bottleRevealer.set);
+                setTimeout(function() {
+                  toggleBottle = false;
+                  featImageContainer.classList.remove('superiorLayer');
+                  wineSpecsContainer.style.opacity = "1";
+                  addCartCustom.style.pointerEvents = "auto";
+                }, 500);
+              }
+            });
+              // toggle on bottle to show/hide himself
+              bottleTrigger.addEventListener("click", function(){
+                if (toggleBottle === false) {
+                  featImageContainer.classList.add('superiorLayer');
+                  wineSpecsContainer.style.opacity = "0.3";
+                  addCartCustom.style.pointerEvents = "none";
+                  keyframes({
+                    values: [
+                      { x: 0, y: 0},
+                      { x: 100, y: 0}
+                    ],
+                    duration: 500,
+                    easings: [easing.easeInOut, easing.easeInOut],
+                    loop: 0
+                    //times: [0, 0.2, 0.5, 0.6, 1]
+                  }).start(bottleRevealer.set);
+                  setTimeout(function() {
+                    toggleBottle = true;
+                  }, 500);
+                } else if(toggleBottle === true) {
+                  keyframes({
+                    values: [
+                      { x: 100, y: 0},
+                      { x: 0, y: 0}
+                    ],
+                    duration: 500,
+                    easings: [easing.easeInOut, easing.easeInOut],
+                    loop: 0
+                  }).start(bottleRevealer.set);
+                  setTimeout(function() {
+                    toggleBottle = false;
+                    featImageContainer.classList.remove('superiorLayer');
+                    wineSpecsContainer.style.opacity = "1";
+                    addCartCustom.style.pointerEvents = "auto";
+                  }, 500);
+                }
+            });
           }
-        });
-        // toggle on bottle to show/hide himself
-        bottleTrigger.addEventListener("click", function(){
-          if (toggleBottle === false) {
-            featImageContainer.classList.add('superiorLayer');
-            wineSpecsContainer.style.opacity = "0.3";
-            keyframes({
-              values: [
-                { x: 0, y: 0},
-                { x: 100, y: 0}
-              ],
-              duration: 500,
-              easings: [easing.easeInOut, easing.easeInOut],
-              loop: 0
-              //times: [0, 0.2, 0.5, 0.6, 1]
-            }).start(bottleRevealer.set);
-            setTimeout(function() {
-              toggleBottle = true;
-            }, 500);
-          } else if(toggleBottle === true) {
-            keyframes({
-              values: [
-                { x: 100, y: 0},
-                { x: 0, y: 0}
-              ],
-              duration: 500,
-              easings: [easing.easeInOut, easing.easeInOut],
-              loop: 0
-            }).start(bottleRevealer.set);
-            setTimeout(function() {
-              toggleBottle = false;
-              featImageContainer.classList.remove('superiorLayer');
-              wineSpecsContainer.style.opacity = "1";
-            }, 500);
-          }
-      });
+        }
+        mediaQueriesWatcherSP(mediaQueriesSP);
+        mediaQueriesSP.addListener(mediaQueriesWatcherSP);
     });
   },
 };

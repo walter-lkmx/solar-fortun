@@ -42,6 +42,21 @@ body.woocommerce-order-received {
           }
         }
       }
+      .facturacion-instrucciones {
+        margin-bottom: gratio(3);
+        padding: gratio(3);
+        background-color: rgba(color(brown-light), 0.1);
+        font-size: fgratio(1);
+        a {
+          margin-top: gratio(1);
+          color: color(brown-light);
+          text-decoration: none;
+          display: block;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
       section.woocommerce-order-details {
         padding-top: gratio(4);
         h2 {
@@ -77,6 +92,19 @@ body.woocommerce-order-received {
               height: 1px;
               position: absolute;
               width: 100%;
+            }
+            tr{
+              td {
+                a {
+                  margin-top: gratio(1);
+                  color: color(brown-light);
+                  text-decoration: none;
+                  // display: block;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
             }
           }
           tfoot {

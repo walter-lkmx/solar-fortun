@@ -94,6 +94,9 @@ export default {
           if (paymentMethod === "OXXO Pay") {
             $( ".order_details" ).siblings( "p" ).wrapAll("<section class=\"methodInstructions\"></section>");
           }
+
+          // facturación
+          $('.woocommerce-order-details').before('<section class="facturacion-instrucciones">Si deseas facturar tu compra, envía tu información fiscal a este correo: <a class="mail" href="mailto:santiago@solarfortun.com">santiago@solarfortun.com</a> </section>')
       });
     }
   },

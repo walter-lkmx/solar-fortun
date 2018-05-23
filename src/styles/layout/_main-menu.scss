@@ -1,7 +1,7 @@
 body.woocommerce-order-received {
   aside.main-menu {
     ul#checkout-menu {
-      display: none;
+      display: none !important;
     }
   }
 }
