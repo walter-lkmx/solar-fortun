@@ -3,7 +3,7 @@
 <?php include('ui-layout/aside-main.php'); ?>
 <section class="main-container">
   <?php include('ui-layout/top-bar.php'); ?>
-  <section class="content" id="v-scroll">
+  <section class="page-template" id="v-scroll">
     <section class="single">
       <div class="featured-image">
       <div id='map' style='width: 100%; height: 300vh;'></div>
@@ -45,28 +45,32 @@
           <h1><?php the_title() ?></h1> 
         </section>
         <div class="text">
-          <h3>Viñedo</h3>
+        <h3>Viñedo</h3>
           <p>Cañada de Guadalupe en el poblado de Fracisco Zarco.</p>
 
           <h3>Vinícola</h3>
           <p>Actualmente vinificamos en Vinícola Tierra Santa, donde compartimos espacios de forma temporal. Próximamente abriremos nuevas instalaciones en el Sauzal de Rodríguez, frente al mar.</p>
-
-          <h3>Dirección Fiscal</h3>
-          <p>Vinícola Solar Fortún S de RL de CV ,Colinas de  Montemar 342, Colinas del Mar.<br>Ensenada, Baja California 22760.</p>
+          <section class="info-tec">
+          <div class="info">
+            <h3>Fundador</h3>
+            <span>Alberto López</span>
+            <p>(646) 179-4810</p>
+            <p>alberto@solarfortun.com</p>
+          </div>
+          <div class="info">
+            <h3>Enólogo</h3>
+            <span>Santiago López</span>
+            <p>(646) 116-7235</p>
+            <p>santiago@solarfortun.com</p>
+          </div>
+          </section>
 
           <h3>Horario de Oficina</h3>
-          <p>Lunes a viernes: 10 am - 2 pm<br>
-          (646) 174-7674</p>
+            <p>Lunes a viernes: 10 am - 2 pm<br>
+            (646) 174-7674</p>
 
-          <h3>Enólogo</h3>
-          <p>Santiago López Viana<br>
-          (646) 116-7235<br>
-          santiago@solarfortun.com</p>
-
-          <h3>Fundador</h3>
-          <p>Alberto López<br>
-          (646) 179-4810<br>
-          alberto@solarfortun.com</p>
+            <h3>Dirección Fiscal</h3>
+          <p>Vinícola Solar Fortún S de RL de CV ,Colinas de  Montemar 342, Colinas del Mar.<br>Ensenada, Baja California 22760.</p>
         </div>
       </div>
     </section>

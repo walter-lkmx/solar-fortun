@@ -3,12 +3,12 @@
 <?php include('ui-layout/aside-main.php'); ?>
 <section class="main-container">
   <?php include('ui-layout/top-bar.php'); ?>
-  <section class="content" id="v-scroll">
+  <section class="page-template" id="v-scroll">
     <section class="single">
-      <div class="featured-image">
+      <div class="featured-image privacy-image">
         <?php the_post_thumbnail() ?>
       </div>
-      <div class="content"> 
+      <div class="content privacy-content"> 
         <section class="title">
           <h1><?php the_title() ?></h1> 
         </section>

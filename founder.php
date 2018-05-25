@@ -3,7 +3,7 @@
 <?php include('ui-layout/aside-main.php'); ?>
 <section class="main-container">
   <?php include('ui-layout/top-bar.php'); ?>
-  <section class="content" id="v-scroll">
+  <section class="page-template" id="v-scroll">
     <section class="single">
       <div class="featured-image">
         <?php the_post_thumbnail() ?>
