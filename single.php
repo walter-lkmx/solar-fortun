@@ -6,7 +6,7 @@
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
     <section class="single">
-      <div class="featured-image">
+      <div class="featured-image blog-img">
         <?php the_post_thumbnail() ?>
       </div>
       <div class="content"> 

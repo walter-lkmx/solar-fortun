@@ -39,6 +39,18 @@ body.single-post {
         @include absolute-center(true, true);
         width: auto;
         height: 100%;
+        @include respond-to(small large) {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &.blog-img {
+        img {
+          @include respond-to(small large) {
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+          }
+        }
       }
     }
     .content {

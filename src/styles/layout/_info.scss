@@ -39,10 +39,34 @@ body.page-template {
         @include absolute-center(true, true);
         width: auto;
         height: 100%;
+        @include respond-to(small large) {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &.founder-img {
+        img {
+          @include respond-to(small large) {
+            transform: translate(-50%, -31%);
+            -ms-transform: translate(-50%, -31%);
+          }
+        }
+      }
+      &.oenologist-img {
+        img {
+          @include respond-to(small) {
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+          }
+          @include respond-to(medium large) {
+            transform: translate(-50%, -25%);
+            -ms-transform: translate(-50%, -25%);
+          }
+        }
       }
     }
     .privacy-image {
-      @include respond-to(small medium) {
+      @include respond-to(small large) {
         display: none;
         img {
           display: none;

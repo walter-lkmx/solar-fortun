@@ -5,7 +5,7 @@
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="page-template" id="v-scroll">
     <section class="single">
-      <div class="featured-image">
+      <div class="featured-image oenologist-img">
         <?php the_post_thumbnail() ?>
       </div>
       <div class="content"> 
