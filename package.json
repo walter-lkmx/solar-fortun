@@ -10,10 +10,14 @@
   "author": "jaredpalmer",
   "license": "MIT",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "jquery": "^3.2.1",
     "jquery.nicescroll": "^3.7.6",
+    "net": "^1.0.2",
     "popmotion": "^8.1.22",
-    "rellax": "^1.6.2"
+    "rellax": "^1.6.2",
+    "tls": "^0.0.1",
+    "woocommerce-api": "^1.4.2"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",

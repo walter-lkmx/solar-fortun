@@ -11,6 +11,8 @@ import pageTemplatePageStore from './routes/page-template-page-store';
 import singlePost from './routes/single-post';
 import woocommerceCheckout from './routes/checkout';
 
+import pageTemplatePageStorev2 from './routes/page-template-page-storev2';
+
 /**
  * Populate Router instance with DOM routes 
  * @type {Router} routes - An instance of our router
@@ -24,6 +26,7 @@ const routes = new Router({
   pageTemplatePageStore,
   singlePost,
   woocommerceCheckout,
+  pageTemplatePageStorev2,
   /** About Us page, note the change from about-us to aboutUs. */
 });
 

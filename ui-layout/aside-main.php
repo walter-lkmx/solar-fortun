@@ -9,11 +9,11 @@
   </section>
   <nav>
     <ul id="checkout-menu">
-      <li><a href="/vinos"><img src="<?php bloginfo('template_url'); ?>/img/icons8-left_4.svg">Regresar</a></li>
+      <li><a href="/catalogo"><img src="<?php bloginfo('template_url'); ?>/img/icons8-left_4.svg">Regresar</a></li>
     </ul>
     <ul id="primary-menu">
       <li>
-        <a href="/vinos" title="">
+        <a href="/catalogo" title="">
         <span>Tienda</span>
         <div class="stain">
           <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">

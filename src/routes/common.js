@@ -109,6 +109,13 @@ export default {
       // controlling cart widget
       var miniCart = document.getElementById("mini-cart");
       var fallback = document.getElementById("clickFallback");
+      var cartItems = document.getElementById("cart-items");
+      var cartItemsCount = $( cartItems ).find( "tr" );
+      if(cartItemsCount <= 1) {
+        console.log(cartItemsCount);
+      } else {
+        console.log('no hay nada en el carrito');
+      }
       $("#mini-cart-trigger, #carrito").click(
         function() {
           miniCart.classList.add("fade-in-top");

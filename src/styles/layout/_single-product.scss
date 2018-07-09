@@ -84,6 +84,9 @@ section.single-product {
       }
       section.title-price {
         margin-bottom: gratio(3);
+        #product-id {
+          font-size: 0;
+        }
         h1#product-name {
           @include respond-to(small large) {
             font-size: fgratio(3);
@@ -222,6 +225,36 @@ section.single-product {
               font-size: gratio(4);
               margin-bottom: gratio(3);
             }
+            ul {
+              li {
+                display: inline-block;
+                width: 50%;
+                margin-bottom: gratio(4);
+                .img-container {
+                  width: 30%;
+                  height: 100px;
+                  display: inline-block;
+                  vertical-align: top;
+                  background-image: url("../img/grapes/tinto1.svg");
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                }
+                .grape-data {
+                  width: 70%;
+                  display: inline-block;
+                  vertical-align: top;
+                  padding-left: gratio(3);
+                }
+                h3 {
+                  font-size: gratio(5);
+                  margin-bottom: 0;
+                  // text-transform: capitalize;
+                }
+                span {
+                  font-size: gratio(3);
+                }
+              }
+            }
             .grape {
               @include inline-block(35%, bottom);
               margin-right: gratio(4);
@@ -258,6 +291,9 @@ section.single-product {
                 @include inline-block(60%, top);
                 height: 50px;
                 padding-left: gratio(1);
+                li {
+                  font-size: fgratio(1);
+                }
                 h3.grapeValue {
                   font-size: fgratio(3);
                   line-height: 0.8;

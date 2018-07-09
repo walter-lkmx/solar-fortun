@@ -7,49 +7,49 @@ export default {
     var getTopTier = {
       "async": true,
       "crossDomain": true,
-      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=21",
+      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=96",
       "method": "GET",
-      "headers": {
-        "Authorization": "Basic Y2tfNDRlMDYyNmRiMDc3MzdiZTZhYjhlYzkwZGNlNWRhOTJjOGVjODU5MTpjc184ODM1YjdkMTRhZTc1ZmY5NTI4YzRhY2FjY2IwZWQxYjY0YWYzN2Mw",
-        "Cache-Control": "no-cache",
-        "Postman-Token": "fbdb2959-75c2-42a6-a31f-d27a12973362"
-      }
+        "headers": {
+    "Authorization": "Basic Y2tfYjliODdmZjZjZjQyNGMwNmUwMTdlNzI3MzczZGY5ZGRkMjZhOWUyYTpjc182OTRkMGQ1ZjIxY2VmYmZmODc0NjI1NGQzOWFiM2U1ZjcxMjdlNjkz",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "7c4e3715-bf17-4b83-95b6-0eb3cef36e37"
+  }
     };
 
     var getMixtures = {
       "async": true,
       "crossDomain": true,
-      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=22",
+      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=94",
       "method": "GET",
-      "headers": {
-        "Authorization": "Basic Y2tfNDRlMDYyNmRiMDc3MzdiZTZhYjhlYzkwZGNlNWRhOTJjOGVjODU5MTpjc184ODM1YjdkMTRhZTc1ZmY5NTI4YzRhY2FjY2IwZWQxYjY0YWYzN2Mw",
-        "Cache-Control": "no-cache",
-        "Postman-Token": "fbdb2959-75c2-42a6-a31f-d27a12973362"
-      }
+        "headers": {
+    "Authorization": "Basic Y2tfYjliODdmZjZjZjQyNGMwNmUwMTdlNzI3MzczZGY5ZGRkMjZhOWUyYTpjc182OTRkMGQ1ZjIxY2VmYmZmODc0NjI1NGQzOWFiM2U1ZjcxMjdlNjkz",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "7c4e3715-bf17-4b83-95b6-0eb3cef36e37"
+  }
     };
     
     var getYoungWine = {
       "async": true,
       "crossDomain": true,
-      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=20",
+      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=97",
       "method": "GET",
-      "headers": {
-        "Authorization": "Basic Y2tfNDRlMDYyNmRiMDc3MzdiZTZhYjhlYzkwZGNlNWRhOTJjOGVjODU5MTpjc184ODM1YjdkMTRhZTc1ZmY5NTI4YzRhY2FjY2IwZWQxYjY0YWYzN2Mw",
-        "Cache-Control": "no-cache",
-        "Postman-Token": "fbdb2959-75c2-42a6-a31f-d27a12973362"
-      }
+        "headers": {
+    "Authorization": "Basic Y2tfYjliODdmZjZjZjQyNGMwNmUwMTdlNzI3MzczZGY5ZGRkMjZhOWUyYTpjc182OTRkMGQ1ZjIxY2VmYmZmODc0NjI1NGQzOWFiM2U1ZjcxMjdlNjkz",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "7c4e3715-bf17-4b83-95b6-0eb3cef36e37"
+  }
     };
     
     var getMonovarietals = {
       "async": true,
       "crossDomain": true,
-      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=23",
+      "url": "https://" + window.location.host + "/wp-json/wc/v2/products?category=95",
       "method": "GET",
-      "headers": {
-        "Authorization": "Basic Y2tfNDRlMDYyNmRiMDc3MzdiZTZhYjhlYzkwZGNlNWRhOTJjOGVjODU5MTpjc184ODM1YjdkMTRhZTc1ZmY5NTI4YzRhY2FjY2IwZWQxYjY0YWYzN2Mw",
-        "Cache-Control": "no-cache",
-        "Postman-Token": "fbdb2959-75c2-42a6-a31f-d27a12973362"
-      }
+        "headers": {
+    "Authorization": "Basic Y2tfYjliODdmZjZjZjQyNGMwNmUwMTdlNzI3MzczZGY5ZGRkMjZhOWUyYTpjc182OTRkMGQ1ZjIxY2VmYmZmODc0NjI1NGQzOWFiM2U1ZjcxMjdlNjkz",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "7c4e3715-bf17-4b83-95b6-0eb3cef36e37"
+  }
     };
 
     if (!String.prototype.format) {

@@ -1,32 +1,34 @@
 <?php /* Template Name: Single product */ ?>
-<section id="leave-card" class="presentation-card">
-  <p>
-    <?php 
-      $path = $_SERVER['REQUEST_URI'];
-      $tokens = explode('/', $path);
-      // echo $path;
-      $pathResult = $tokens[sizeof($tokens)-2];
-    ?>
-  </p>
-  <?php include('ui-layout/presentation-cards/' . $pathResult .'.php'); ?>
-</section>
 <?php get_header(); ?>
 <?php include('ui-layout/aside-main.php'); ?>
+<?php
+  $bottle = get_post_custom_values($key = 'bottle');
+  $watercolor = get_post_custom_values($key = 'watercolor');
+  $dominant_notes = get_post_custom_values($key = 'dominant_notes');
+  $enologist_comments = get_post_custom_values($key = 'enologist_comments');
+  $intensity = get_post_custom_values($key = 'intensity');
+  $seal = get_post_custom_values($key = 'seal');
+  $technical_info = get_post_custom_values($key = 'technical_info');
+  $varietal = get_post_custom_values($key = 'varietal');
+  $current_product = $product->id;
+?>
 <!-- 
   <h1 class="presentation-title"></h1>
  -->
 <section class="single-product">
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
-    <section id="clone-container" class="image">
-      <img src="<?php bloginfo('template_url'); ?>/" id="featSeal">
-      <img src="<?php bloginfo('template_url'); ?>/" id="featImage">
-      <img src="<?php bloginfo('template_url'); ?>/" id="featStain">
+    <section class="image">
+      <img src="<?php bloginfo('template_url'); ?>/<?php echo $seal[0];?>" id="featSeal">
+      <img src="<?php bloginfo('template_url'); ?>/<?php echo $bottle[0];?>" id="featImage">
+      <img src="<?php bloginfo('template_url'); ?>/<?php echo $watercolor[0];?>" id="featStain">
     </section>
     <section id="v-scroll" class="product-details">
+   
       <section class="title-price">
-        <h1 id="product-name"></h1>
-        <p id="price"></p>
+        <span id="product-id"><?php echo get_the_ID(); ?></span>
+        <h1 id="product-name"><?php the_title(); ?></h1>
+        <p id="price"><?php echo $product->get_price_html(); ?></p>
       </section>
       <section class="add-cart">
         <span class="qty">Cant.</span>
@@ -36,14 +38,14 @@
       <section class="product-specs">
         <section class="metrics">
           <img class="ornament big-grape" src="<?php bloginfo('template_url'); ?>/img/ornaments/grapes2.svg">
-          <img class="ornament leaf-8" data-jarallax-element="-69" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf8.svg">
-          <img class="ornament leaf-5" data-jarallax-element="24" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf5.svg">
+          <img class="ornament leaf-8" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf8.svg">
+          <img class="ornament leaf-5" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf5.svg">
           <section id="intensity">
             <div class="img-container">
               <img src="<?php bloginfo('template_url'); ?>/img/glass.svg">
             </div>
             <div class="content">
-              <h3>Intensidad: <span id="intensityValue"> </span>de 10</h3>
+              <h3>Intensidad: <span id="intensityValue"><?php echo $intensity[0];?> </span>de 10</h3>
               <div class="bar">
                 <div id="intensityBarLevel">
                 </div>
@@ -51,12 +53,13 @@
             </div>
           </section>
           <section id="type-grape">
-            <h2>Notas de cata</h2>
+            <h2>Varietal</h2>
+            <p id="varietal"><?php echo $varietal[0];?></p>
           </section>
         </section>
         <section class="info-tec">
           <h2>[información·técnica]</h2>
-          <p id="technical-info"></p>
+          <p id="technical-info"><?php echo $technical_info[0];?></p>
         </section>
         <section class="general-info">
           <div class="img-container">
@@ -64,7 +67,7 @@
           </div>
           <div class="content">
             <h2>Notas dominantes</h2>
-            <p id="dominant-flavors"></p>
+            <p id="dominant-notes"><?php echo $dominant_notes[0];?></p>
              <img class="ornament herbs" src="<?php bloginfo('template_url'); ?>/img/ornaments/herbs.svg">
           </div>
         </section>
@@ -74,7 +77,7 @@
           </div>
           <div class="content">
             <h2>Comentarios del enólogo</h2>
-            <p id="oenologist-comments"></p>
+            <p id="oenologist-comments"><?php the_content() ?></p>
           </div>
           <img class="ornament leaf-6" data-jarallax-element="-15" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf4.svg">
           <img class="ornament leaf-7" data-jarallax-element="70" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf2.svg">

@@ -8,7 +8,7 @@
       <ul>
         <!-- confabulario -->
         <li class="product">
-          <a href="vinos/confabulario" title="">
+          <a href="catalogo/confabulario" title="">
             <img class="bottle-mixtures" src="<?php bloginfo('template_url'); ?>/img/bottles/confabulario.png">
           </a>
           <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-confabulario.png">
@@ -25,7 +25,7 @@
         </li>
         <!-- o positivo -->
         <li class="product">
-          <a href="vinos/o-positivo" title="">
+          <a href="catalogo/o-positivo" title="">
             <img class="bottle-mixtures" src="<?php bloginfo('template_url'); ?>/img/bottles/opositivo.png">
           </a>
           <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-opositivo.png">
@@ -42,7 +42,7 @@
         </li>
         <!-- noble cru -->
         <li class="product">
-          <a href="vinos/noble-cru" title="">
+          <a href="catalogo/noble-cru" title="">
             <img class="bottle-mixtures" src="<?php bloginfo('template_url'); ?>/img/bottles/noblecru.png">
           </a>
           <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-noble.png">
@@ -59,7 +59,7 @@
         </li>
         <!-- viña en rosa -->
         <li class="product">
-          <a href="vinos/la-vina-en-rosa" title="">
+          <a href="catalogo/la-vina-en-rosa" title="">
             <img class="bottle-vina-rosa" src="<?php bloginfo('template_url'); ?>/img/bottles/vinaenrosa.png">
           </a>
           <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-vinarosa.png">
@@ -76,7 +76,7 @@
         </li>        
         <!-- elixir cordis -->
         <li class="product">
-          <a href="vinos/elixir-cordis" title="">
+          <a href="catalogo/elixir-cordis" title="">
             <img class="bottle-elixir-cordis" src="<?php bloginfo('template_url'); ?>/img/bottles/elixircordis.png">
           </a>
           <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-elixir.png">
@@ -92,7 +92,7 @@
           </div>
         </li>
         <li class="product last">
-            <a class="see-more" href="/vinos">
+            <a class="see-more" href="/catalogo">
               Ver todos <br>los vinos
             </a>
         </li>
