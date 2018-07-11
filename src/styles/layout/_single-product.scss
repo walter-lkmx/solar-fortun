@@ -46,9 +46,9 @@ section.single-product {
             top: gratio(6);
             left: - 6.8rem;
             transform: translateX(0);
-            &.elixir-cordis, &.la-vina-en-rosa, &.baya-baya, &.syrah, &.mourvedre, &.petit-verdot, &.cabernet {
+            /*&.elixir-cordis, &.la-vina-en-rosa, &.baya-baya, &.syrah, &.mourvedre, &.petit-verdot, &.cabernet {
               left: - 5rem;
-            } 
+            }*/
           }
           height: 120vh;
           top: - gratio(7);
@@ -442,6 +442,9 @@ section.single-product {
           outline: 3px solid rgba(color(blueberry), 1);
           outline-offset: - gratio(2);
           padding: gratio(5);
+          @include respond-to(small medium) {
+            padding: gratio(3); 
+          }
           h2 {
             font-size: gratio(4);
             margin-bottom: gratio(3);
@@ -458,6 +461,47 @@ section.single-product {
                   text-transform: capitalize;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.confabulario, &.noble-cru, &.o-positivo {
+    section.content {
+      .image {
+        img {
+          &#featImage {
+            @include respond-to(320px 359px) {
+              left: -8.8rem;
+            }
+            @include respond-to(360px 369px) {
+              left: -6rem;
+            }
+            @include respond-to(370px 385px) {
+              left: -8.8rem;
+            }
+            @include respond-to(386px 420px) {
+              left: -7.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.la-vina-en-rosa, &.elixir-cordis, &.baya-baya, &.syrah, &.petit-verdot, &.mourvedre, &.cabernet {
+    section.content {
+      .image {
+        img {
+          &#featImage {
+            @include respond-to(320px 359px) {
+              left: -5rem;
+            }
+            @include respond-to(360px 369px) {
+              left: -5rem;
+            }
+            @include respond-to(370px 385px) {
+              left: -6.8rem;
             }
           }
         }

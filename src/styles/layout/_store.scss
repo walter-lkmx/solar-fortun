@@ -56,6 +56,9 @@ body.page-template-page-store, body.page-template-page-storev2 {
           @include respond-to(small large) {
             padding-left: 0;  
           }
+          @include respond-to(small medium) {
+            width: 100%; 
+          }
           font-size: 0;
           padding-left: gratio(6);
           .wine {
@@ -132,7 +135,7 @@ body.page-template-page-store, body.page-template-page-storev2 {
             }
             .wine-specs {
               @include respond-to(small large) {
-                @include inline-block(60%, top);  
+                @include inline-block(60%, top);
               }
               @include inline-block(75%, top);
               font-size: fgratio(1);
@@ -142,6 +145,12 @@ body.page-template-page-store, body.page-template-page-storev2 {
               h2 {
                 @include respond-to(small large)  {
                   font-size: fgratio(2);
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  -ms-hyphens: auto;
+                  -moz-hyphens: auto;
+                  -webkit-hyphens: auto;
+                  hyphens: auto;
                 }
                 font-size: fgratio(3);
                 margin-bottom: gratio(1);
@@ -196,6 +205,12 @@ body.page-template-page-store, body.page-template-page-storev2 {
               left: gratio(5);
               bottom: gratio(6);
               z-index: 4;
+              @include respond-to(small medium) {
+                padding: gratio(2);
+                left: 4rem;
+                bottom: gratio(4);
+                width: 5rem;
+              }
               &:hover {
                 @include boxShadowBig();
                 transform: translateY(- gratio(0));
@@ -220,6 +235,9 @@ body.page-template-page-store, body.page-template-page-storev2 {
             right: 8.2375rem;
             top: 17.425rem;
             transform: rotate(12deg);
+            @include respond-to(small medium) {
+              right: 3.2375rem; 
+            }
           }
           &.grapes {
             width: 26.3125rem;
@@ -243,6 +261,10 @@ body.page-template-page-store, body.page-template-page-storev2 {
             right: 7rem;
             top: 21.875rem;
             transform: rotate(135deg);
+            @include respond-to(small medium) {
+              right: 10rem;
+              top: 15.875rem;
+            }
           }
           &.olives-4 {
             width: 7.5625rem;
@@ -272,6 +294,10 @@ body.page-template-page-store, body.page-template-page-storev2 {
             right: 14rem;
             top: 2.125rem; // transform: rotate(90deg);
             transform: rotate(45deg);
+            @include respond-to(small medium) {
+              right: 8rem;
+              transform: rotate(0deg); 
+            }
           }
           &.olive-branch4 {
             width: 5.3125rem;

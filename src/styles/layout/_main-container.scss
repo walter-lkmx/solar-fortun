@@ -29,7 +29,7 @@ section.main-container {
       width: rem(2155px);
       white-space: nowrap;
       overflow-y: hidden;
-      overflow-x: hidden;
+      overflow-x: auto;
       ul {
         position: relative;
         li.product {
@@ -41,12 +41,14 @@ section.main-container {
           display: inline-block;
           // see more wines
           &.last {
-            @include respond-to(small large) {
+            position: absolute;
+            bottom: 50%;
+           /* @include respond-to(small large) {
               margin-top: 90%;
               margin-right: gratio(3);
             }
             vertical-align: middle;
-            margin-top: 20%;
+            margin-top: 20%;*/
             a {
               vertical-align: middle;
               // @include absolute-center(false, true);

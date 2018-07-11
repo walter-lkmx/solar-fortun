@@ -172,6 +172,68 @@ body.checkout {
                 position: absolute;
                 width: 100%;
               }
+              /*tr {
+                display: inline-block;
+                td {
+                  &.product-remove {
+                    display: inline;
+                    a {
+                      font-size: 2rem;
+                      vertical-align: top;
+                      text-decoration: none;
+                      color: color(red);
+                      display: inline-block;
+                    }
+                  }
+                  &.product-thumbnail {
+                    display: inline-block;
+                    a {
+                      img {
+                        width: 5rem;
+                        height: auto;
+                      }
+                    }
+                  }
+                  &.product-name {
+                    display: block;
+                    a {
+                      font-size: 1.5rem;
+                      text-decoration: none;
+                      vertical-align: top;
+                      font-family: 'Botera TFE'; 
+                      color: color(blueberry);
+                    }
+                  }
+                  &.product-price {
+                    display: block;
+                    span {
+                      color: color(red);
+                      font-size: 14px;
+                    }
+                  }
+                  &.product-quantity {
+                    display: block;
+                    margin-top: 2rem;
+                    div.quantity {
+                      font-size: 1rem;
+                      label {
+
+                      }
+                      input {
+                        width: 4rem;
+                        padding: 0 5px;
+                      }
+                    }
+                  }
+                  &.product-subtotal {
+                    display: block;
+                    span {
+                      font-size: 24px;
+                      color: color(purple);
+                    }
+                  }
+                }
+              }*/
             }
             tfoot {
               tr {
