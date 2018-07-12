@@ -29,7 +29,10 @@ section.main-container {
       width: rem(2155px);
       white-space: nowrap;
       overflow-y: hidden;
-      overflow-x: auto;
+      overflow-x: hidden;
+      @include respond-to(small medium) {
+        overflow-x: auto;
+      }
       ul {
         position: relative;
         li.product {
