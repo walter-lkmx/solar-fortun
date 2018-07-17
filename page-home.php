@@ -15,7 +15,7 @@
           <a href="catalogo/confabulario">
             <section class="title">
               <h1 class="confabulario">Confa~<br>bulario</h1>
-              <a href="/catalogo/?add-to-cart=1564">
+              <a href="/?add-to-cart=1564">
                 <div class="add-cart">
                   <span>Añadir a carrito</span>
                   <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
@@ -36,7 +36,7 @@
           <a href="catalogo/o-positivo">
             <section class="title">
               <h1 class="o-positivo">O Positivo</h1>
-              <a href="/catalogo/?add-to-cart=1565">
+              <a href="/?add-to-cart=1565">
                 <div class="add-cart">
                   <span>Añadir a carrito</span>
                   <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
@@ -57,7 +57,7 @@
           <a href="catalogo/noble-cru">
             <section class="title">
               <h1 class="noble-cru">Noble Cru</h1>
-              <a href="/catalogo/?add-to-cart=1566">
+              <a href="/?add-to-cart=1566">
                 <div class="add-cart">
                   <span>Añadir a carrito</span>
                   <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
@@ -78,7 +78,7 @@
           <a href="catalogo/la-vina-en-rosa">
             <section class="title">
               <h1 class="vina-rosa">La Viña<br> en Rosa</h1>
-              <a href="/catalogo/?add-to-cart=1562">
+              <a href="/?add-to-cart=1562">
                 <div class="add-cart">
                   <span>Añadir a carrito</span>
                   <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
@@ -99,7 +99,7 @@
           <a href="catalogo/elixir-cordis">
             <section class="title">
               <h1 class="elixir-cordis">Elixir<br> Cordis</h1>
-              <a href="/catalogo/?add-to-cart=1563">
+              <a href="/?add-to-cart=1563">
                 <div class="add-cart">
                   <span>Añadir a carrito</span>
                   <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
