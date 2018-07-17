@@ -42,6 +42,10 @@ section.main-container {
           margin-right: gratio(7);
           transform: translateY(30px);
           display: inline-block;
+          a {
+            text-decoration: none;
+            color: color(blueberry);
+          }
           // see more wines
           &.last {
             position: absolute;
@@ -54,6 +58,7 @@ section.main-container {
             margin-top: 20%;*/
             a {
               vertical-align: middle;
+              color: inherit;
               // @include absolute-center(false, true);
             }
           }
