@@ -50,27 +50,27 @@
 
           <h3>Vinícola</h3>
           <p>Actualmente vinificamos en Vinícola Tierra Santa, donde compartimos espacios de forma temporal. Próximamente abriremos nuevas instalaciones en el Sauzal de Rodríguez, frente al mar.</p>
+
+          <p>Para más información sobre visitas a viñedo/restaurante, marcar al (646) 116-7235.</p>
+
+          <h3>Horario de Oficina</h3>
+            <p>Lunes a viernes: 10 am - 2 pm<br>
+            (646) 174-7674</p>
           <section class="info-tec">
           <div class="info">
             <h3>Fundador</h3>
             <span>Alberto López</span>
-            <p>(646) 179-4810</p>
             <p>alberto@solarfortun.com</p>
           </div>
           <div class="info">
             <h3>Enólogo</h3>
             <span>Santiago López</span>
-            <p>(646) 116-7235</p>
             <p>santiago@solarfortun.com</p>
           </div>
           </section>
 
-          <h3>Horario de Oficina</h3>
-            <p>Lunes a viernes: 10 am - 2 pm<br>
-            (646) 174-7674</p>
-
             <h3>Dirección Fiscal</h3>
-          <p>Vinícola Solar Fortún S de RL de CV ,Colinas de  Montemar 342, Colinas del Mar.<br>Ensenada, Baja California 22760.</p>
+          <p>Carretera Ensenada-Tecate #990, interior 'K'. El Sauzal.<br>Ensenada, Baja California 22760.</p>
         </div>
       </div>
     </section>
