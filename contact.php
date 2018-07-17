@@ -48,10 +48,11 @@
         <h3>Viñedo</h3>
           <p>Cañada de Guadalupe en el poblado de Fracisco Zarco.</p>
 
+          <h3>Visitas a viñedo</h3>
+          <p>Para más información, comunicarse al (646) 116-7235.</p>
+
           <h3>Vinícola</h3>
           <p>Actualmente vinificamos en Vinícola Tierra Santa, donde compartimos espacios de forma temporal. Próximamente abriremos nuevas instalaciones en el Sauzal de Rodríguez, frente al mar.</p>
-
-          <p>Para más información sobre visitas a viñedo/restaurante, marcar al (646) 116-7235.</p>
 
           <h3>Horario de Oficina</h3>
             <p>Lunes a viernes: 10 am - 2 pm<br>
