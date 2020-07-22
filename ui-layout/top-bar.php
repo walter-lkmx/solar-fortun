@@ -8,7 +8,7 @@
       <li id="carrito">
         <?php include('cart.php'); ?>
       </li>
-      <li id="mobile-menu-trigger"><img src="<?php bloginfo('template_url'); ?>/img/mobile-menu.svg"></li>
+      <li id="mobile-menu-trigger"><a>Menú</a></li>
     </ul>
   </nav>
 </section>
