@@ -45,33 +45,7 @@
           <h1><?php the_title() ?></h1> 
         </section>
         <div class="text">
-        <h3>Viñedo</h3>
-          <p>Cañada de Guadalupe en el poblado de Fracisco Zarco.</p>
-
-          <h3>Visitas a viñedo</h3>
-          <p>Para más información, comunicarse al (646) 116-7235.</p>
-
-          <h3>Vinícola</h3>
-          <p>Actualmente vinificamos en Vinícola Tierra Santa, donde compartimos espacios de forma temporal. Próximamente abriremos nuevas instalaciones en el Sauzal de Rodríguez, frente al mar.</p>
-
-          <h3>Horario de Oficina</h3>
-            <p>Lunes a viernes: 10 am - 2 pm<br>
-            (646) 174-7674</p>
-          <section class="info-tec">
-          <div class="info">
-            <h3>Fundador</h3>
-            <span>Alberto López</span>
-            <p>alberto@solarfortun.com</p>
-          </div>
-          <div class="info">
-            <h3>Enólogo</h3>
-            <span>Santiago López</span>
-            <p>santiago@solarfortun.com</p>
-          </div>
-          </section>
-
-            <h3>Dirección Fiscal</h3>
-          <p>Carretera Ensenada-Tecate #990, interior 'K'. El Sauzal.<br>Ensenada, Baja California 22760.</p>
+          <?php the_content() ?>
         </div>
       </div>
     </section>
