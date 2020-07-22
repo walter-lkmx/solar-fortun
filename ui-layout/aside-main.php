@@ -3,8 +3,8 @@
   <!-- <div class="shadow">
     
   </div> -->
+  <a id="mobile-menu-close">Cerrar</a>
   <section class="brand">
-    <a id="mobile-menu-close"><img src="<?php bloginfo('template_url'); ?>/img/mobile-menu-close.svg"></a>
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/img/solar-logo-black.svg"></a> 
   </section>
   <nav>
@@ -35,26 +35,26 @@
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
         </a>
-        </li>
+      </li>
+      <li>
+        <a href="/restaurante-eventos" title="">
+          <span>Restaurante y Eventos</span>
+          <div class="stain">
+            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/solar-fortun-usa" title="">
+          <span>Solar Fortún USA</span>
+          <div class="stain">
+            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
+          </div>
+        </a>
+      </li>
       <li>
         <a href="/nosotros" title="">
-          <span>Nosotros</span>
-          <div class="stain">
-            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="/fundador" title="">
-          <span>Fundador</span>
-          <div class="stain">
-            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="/enologo" title="">
-          <span>Enólogo</span>
+          <span>Nuestra Familia</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
@@ -68,13 +68,19 @@
           </div>
         </a>
       </li>
-      <li>
+      <li class="spacer">
         <a href="/privacidad" title="">
           <span>Privacidad</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
         </a>
+      </li>
+      <li>
+        <a href="http://www.facebook.com/SolarFortun/" class="social" alt="Facebook" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-media/facebook.svg"></a>
+        <a href="http://www.instagram.com/solarfortun/" class="social" alt="Instagram" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-media/instagram.svg"></a>
+        <a href="http://www.youtube.com/user/solarfortun" class="social" alt="YouTube" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-media/youtube.svg"></a>
+        <a href="http://www.twitter.com/solarfortun" class="social" alt="Twitter" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-media/twitter.svg"></a>
       </li>
     </ul>
   </nav>
