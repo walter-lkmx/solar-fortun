@@ -76,8 +76,11 @@ section.main-container {
               transform: translateX(-7rem);
             }
           }
-          &:last-child {
-
+          &:first-child {
+            margin-left: gratio(6);
+            @include respond-to(small medium) {
+              margin-left: 0;
+            }
           }
           a {
             position: relative;
@@ -87,15 +90,19 @@ section.main-container {
               @include z-index(second-level);
               &.bottle-mixtures {
                 @include clipBottleMixtures();
-                height: calc(100vh);
+                height: calc(85vh);
               }
               &.bottle-vina-rosa {
                 @include clipBottleVinaRosa();
-                height: calc(100vh);
+                height: calc(85vh);
               }
               &.bottle-elixir-cordis {
                 @include clipBottleElixirCordis();
-                height: calc(100vh + 80px);
+                height: calc(85vh);
+              }
+              &.bottle-mono {
+                @include clipBottleMonovarietales();
+                height: calc(85vh);
               }
               position: relative;
             }
@@ -155,6 +162,21 @@ section.main-container {
               }
               &.elixir-cordis {
                 background: color(elixir-cordis);
+              }
+              &.mourvedre {
+                background: color(mourvedre);
+              }
+              &.cabernet-sauvignon {
+                background: color(cabernet-sauvignon);
+              }
+              &.syrah {
+                background: color(syrah);
+              }
+              &.baya-baya {
+                background: color(baya-baya);
+              }
+              &.petit-verdot {
+                background: color(petit-verdot);
               }
             }
             .add-cart {
@@ -218,6 +240,11 @@ section.main-container {
                 width: 350px;
                 transform: rotate(16deg) translateY(-128px);
                 left: -7.5rem;
+              }
+              &.mono {
+                width: 310px;
+                left: -3.3rem;
+                transform: translateY(-50px);
               }
             }
           }

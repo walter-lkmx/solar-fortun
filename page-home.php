@@ -1,4 +1,4 @@
-<?php /* Template Name: Home */ ?>
+<?php /* Template Name: Home-SF */ ?>
 <?php get_header(); ?>
 <?php include('ui-layout/aside-main.php'); ?>
 <section class="main-container">
@@ -6,69 +6,6 @@
   <section class="content" id="h-scroll">
     <nav class="products">
       <ul>
-        <!-- confabulario -->
-        <li class="product">
-          <a href="catalogo/confabulario" title="">
-            <img class="bottle-mixtures" src="<?php bloginfo('template_url'); ?>/img/bottles/confabulario.png">
-          </a>
-          <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-confabulario.png">
-          <a href="catalogo/confabulario">
-            <section class="title">
-              <h1 class="confabulario">Confa~<br>bulario</h1>
-              <a href="/?add-to-cart=1564">
-                <div class="add-cart">
-                  <span>Añadir a carrito</span>
-                  <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
-                </div>
-              </a>
-            </section>
-          </a>
-          <div class="stain">
-            <img class="confabulario" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_Confabulario_fondo.png">
-          </div>
-        </li>
-        <!-- o positivo -->
-        <li class="product">
-          <a href="catalogo/o-positivo" title="">
-            <img class="bottle-mixtures" src="<?php bloginfo('template_url'); ?>/img/bottles/opositivo.png">
-          </a>
-          <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-opositivo.png">
-          <a href="catalogo/o-positivo">
-            <section class="title">
-              <h1 class="o-positivo">O Positivo</h1>
-              <a href="/?add-to-cart=1565">
-                <div class="add-cart">
-                  <span>Añadir a carrito</span>
-                  <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
-                </div>
-              </a>
-            </section>
-          </a>
-          <div class="stain">
-            <img class="positivo" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_OPositivo_fondo.png">
-          </div>
-        </li>
-        <!-- noble cru -->
-        <li class="product">
-          <a href="catalogo/noble-cru" title="">
-            <img class="bottle-mixtures" src="<?php bloginfo('template_url'); ?>/img/bottles/noblecru.png">
-          </a>
-          <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-noble.png">
-          <a href="catalogo/noble-cru">
-            <section class="title">
-              <h1 class="noble-cru">Noble Cru</h1>
-              <a href="/?add-to-cart=1566">
-                <div class="add-cart">
-                  <span>Añadir a carrito</span>
-                  <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
-                </div>
-              </a>
-            </section>
-          </a>
-          <div class="stain">
-            <img class="noble-cru" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_NobelCru_fondo.png">
-          </div>
-        </li>
         <!-- viña en rosa -->
         <li class="product">
           <a href="catalogo/la-vina-en-rosa" title="">
@@ -89,7 +26,91 @@
           <div class="stain">
             <img class="vina-rosa" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_EnRosa_fondo.png">
           </div>
-        </li>        
+        </li> 
+        <!-- mourvedre -->
+        <li class="product">
+          <a href="catalogo/mourvedre" title="">
+            <img class="bottle-mono" src="<?php bloginfo('template_url'); ?>/img/bottles/mourvedre.png">
+          </a>
+          <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-mono.png">
+          <a href="catalogo/mourvedre">
+            <section class="title">
+              <h1 class="mourvedre">Mour~<br>vèdre</h1>
+              <a href="/?add-to-cart=1569">
+                <div class="add-cart">
+                  <span>Añadir a carrito</span>
+                  <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
+                </div>
+              </a>
+            </section>
+          </a>
+          <div class="stain">
+            <img class="mono" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_Monovarietales_fondo.png">
+          </div>
+        </li>
+         <!-- syrah -->
+         <li class="product">
+          <a href="catalogo/syrah" title="">
+            <img class="bottle-mono" src="<?php bloginfo('template_url'); ?>/img/bottles/syrah.png">
+          </a>
+          <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-mono.png">
+          <a href="catalogo/syrah">
+            <section class="title">
+              <h1 class="syrah">Syrah</h1>
+              <a href="/?add-to-cart=1570">
+                <div class="add-cart">
+                  <span>Añadir a carrito</span>
+                  <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
+                </div>
+              </a>
+            </section>
+          </a>
+          <div class="stain">
+            <img class="mono" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_Monovarietales_fondo.png">
+          </div>
+        </li>
+         <!-- petit verdot -->
+         <li class="product">
+          <a href="catalogo/petit-verdot" title="">
+            <img class="bottle-mono" src="<?php bloginfo('template_url'); ?>/img/bottles/petitverdot.png">
+          </a>
+          <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-mono.png">
+          <a href="catalogo/petit-verdot">
+            <section class="title">
+              <h1 class="petit-verdot">Petit<br>Verdot</h1>
+              <a href="/?add-to-cart=1568">
+                <div class="add-cart">
+                  <span>Añadir a carrito</span>
+                  <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
+                </div>
+              </a>
+            </section>
+          </a>
+          <div class="stain">
+            <img class="mono" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_Monovarietales_fondo.png">
+          </div>
+        </li>  
+        <!-- o positivo -->
+        <li class="product">
+          <a href="catalogo/o-positivo" title="">
+            <img class="bottle-mixtures" src="<?php bloginfo('template_url'); ?>/img/bottles/opositivo.png">
+          </a>
+          <img class="seal noble-cru" src="<?php bloginfo('template_url'); ?>/img/seals/_seal-opositivo.png">
+          <a href="catalogo/o-positivo">
+            <section class="title">
+              <h1 class="o-positivo">O Positivo</h1>
+              <a href="/?add-to-cart=1565">
+                <div class="add-cart">
+                  <span>Añadir a carrito</span>
+                  <!-- <div class="img-container"><img src="<?php bloginfo('template_url'); ?>/img/cart.svg"></div> -->
+                </div>
+              </a>
+            </section>
+          </a>
+          <div class="stain">
+            <img class="positivo" src="<?php bloginfo('template_url'); ?>/img/watercolors/_SolarFortun_OPositivo_fondo.png">
+          </div>
+        </li>     
         <!-- elixir cordis -->
         <li class="product">
           <a href="catalogo/elixir-cordis" title="">
