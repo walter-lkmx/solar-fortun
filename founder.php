@@ -8,7 +8,18 @@
       <div class="featured-image founder-img">
         <?php the_post_thumbnail() ?>
       </div>
-      <div class="content"> 
+      <div class="content">
+        <div class="breadcrumbs">
+          <a href="/nosotros" title="">
+            <span>Nosotros</span>
+          </a>
+          <span> · </span>
+          <span class="selected">Fundador</span>
+          <span> · </span>
+          <a href="/enologo" title="">
+            <span>Enólogo</span>
+          </a>
+        </div>
         <section class="title">
           <h1><?php the_title() ?></h1> 
         </section>

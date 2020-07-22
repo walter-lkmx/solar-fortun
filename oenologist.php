@@ -8,7 +8,18 @@
       <div class="featured-image oenologist-img">
         <?php the_post_thumbnail() ?>
       </div>
-      <div class="content"> 
+      <div class="content">
+        <div class="breadcrumbs">
+          <a href="/nosotros" title="">
+            <span>Nosotros</span>
+          </a>
+          <span> · </span>
+          <a href="/fundador" title="">
+            <span>Fundador</span>
+          </a>
+          <span> · </span>
+          <span class="selected">Enólogo</span>
+        </div>
         <section class="title">
           <h1><?php the_title() ?></h1> 
         </section>

@@ -8,9 +8,20 @@
       <div class="featured-image">
         <?php the_post_thumbnail() ?>
       </div>
-      <div class="content"> 
+      <div class="content">
+        <div class="breadcrumbs">
+          <span class="selected">Nosotros</span>
+          <span> · </span>
+          <a href="/fundador" title="">
+            <span>Fundador</span>
+          </a>
+          <span> · </span>
+          <a href="/enologo" title="">
+            <span>Enólogo</span>
+          </a>
+        </div>
         <section class="title">
-          <h1><?php the_title() ?></h1> 
+          <h1>Nosotros</h1> 
         </section>
         <div class="text">
           <p>El proyecto de vinícola familiar es iniciado por José Alberto López, en el año 2007, al plantar sus primeras parras en la cañada de Guadalupe, en el poblado de Francisco Zarco. Las primeras uvas serían cosechadas en el año 2010.</p>

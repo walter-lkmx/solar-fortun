@@ -96,6 +96,31 @@ body.page-template {
         padding-right: gratio(5);
         top: 34%;
       }*/
+      .breadcrumbs {
+        display: inline-block;
+        color: color(blueberry);
+        font-family: "Botera TFE";
+        font-size: gratio(4);
+        span {
+          &.selected {
+            border-bottom: 1px solid #000;
+          }
+        }
+        a {
+          display: inline-block;
+          font-size: gratio(4);
+          line-height: 1.2;
+          font-family: 'Botera TFE';
+          color: color(purple);
+          text-decoration: none;
+          &:hover {
+            border-bottom: 2px solid color(purple);
+          }
+        }
+        @include respond-to(small large) {
+          margin-top: gratio(4);
+        }
+      }
       section.title {
         h1 {
           @include respond-to(small large) {
@@ -118,6 +143,7 @@ body.page-template {
         p {
           font-size: fgratio(1);
           margin-bottom: gratio(4);
+          line-height: 1.5;
           &.paragraph-img {
             z-index: 11;
             position: relative;
@@ -127,6 +153,21 @@ body.page-template {
               height: 120% !important;
               width: auto;
             }
+          }
+          &.disclaimer {
+            color: color(red);
+          }
+        }
+        a {
+          display: inline-block;
+          font-size: gratio(4);
+          line-height: 1.2;
+          font-family: 'Botera TFE';
+          color: color(purple);
+          text-decoration: none;
+          margin-bottom: gratio(4);
+          &:hover {
+            text-decoration: underline;
           }
         }
         ol, ul {
@@ -146,6 +187,13 @@ body.page-template {
           list-style-type: decimal;
           li {
 
+          }
+        }
+        .menu {
+          .see-menu {
+            @include buttonSolar();
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: gratio(2);
           }
         }
         section.info-tec {
@@ -176,20 +224,28 @@ body.page-template {
             p {
               margin: 0;
               &:last-child {
-                font-size: fgratio(0);
+                font-size: rem(13px);
                 @include respond-to(small medium) {
                   font-size: fgratio(1);
                 }
               }
             }
-            &:first-child {
-              @include respond-to(small medium) {
-                padding-bottom: gratio(3);
+            &:first-child, &:nth-child(2) {
+              padding-bottom: gratio(4);
+            }
+            @include respond-to(small medium) {
+              padding-bottom: gratio(3);
+              &:last-child {
+                  padding-bottom: 0;
               }
             }
-            &:last-child {
-              @include respond-to(small medium) {
-                padding-top: gratio(3);
+          }
+          &.restaurant {
+            margin-bottom: gratio(6);
+            .info {
+              @include inline-block(100%, top);
+              &:nth-child(2) {
+                padding-bottom: 0;
               }
             }
           }
