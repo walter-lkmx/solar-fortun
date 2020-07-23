@@ -116,3 +116,238 @@ input::-webkit-inner-spin-button {
   top: -9999px;
   left: -9999px;
 }
+
+.product_cat_ropa-accesorios, .product_cat_restaurante {
+  .single-product {
+    .content {
+      .product-details {
+        .product-specs {
+          .metrics, .info-tec, .general-info:not(:nth-child(4)) {
+            display: none;
+          }
+          .general-info {
+            &:nth-child(4) {
+              .img-container {
+                display: none;
+              }
+              .content {
+                h2 {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product_cat_restaurante {
+  .single-product {
+    .content {
+      .image {
+        #featSeal {
+          display: none;
+        }
+        #featStain {
+          bottom: gratio(7);
+        }
+        #featImage {
+          width: auto;
+          height: 43vh;
+          top: gratio(6);
+        }
+      }
+    }
+  }
+}
+
+.product_cat_ropa-accesorios {
+  .single-product {
+    .content {
+      .image {
+        #featSeal, #featStain, #featImage {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.product_cat-restaurante {
+  height: rem(149px);
+  a {
+    .img-container {
+      .imgWatercolor-container {
+        .wineWatercolor {
+          top: - gratio(3);
+          @include respond-to(small medium) {
+            left: 0 !important;
+            top: - gratio(6) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product_cat-ropa-accesorios {
+  height: rem(149px);
+  a {
+    .img-container {
+      .imgWatercolor-container {
+        .wineWatercolor {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//Additional CSS styles from Wordpress console
+#mixturesCatalog .products {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+#mobile-menu-close {
+	display: none;
+}
+
+@media only screen and (max-width: 992px) {
+	#mixturesCatalog .products {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+#mixturesCatalog .products .product .imgWatercolor-container{
+	width: 200% !important;
+    position: absolute;
+}
+
+#mixturesCatalog .products .product .imgWatercolor-container img{
+	left: -2.25rem;
+	transform: translateY(-0.1875rem);
+}
+
+#mixturesCatalog .products .product:nth-child(1){
+	display: grid;
+  width: 100%;
+}
+
+#mixturesCatalog .products .product:nth-child(2){
+	display: grid;
+  width: 100%;
+}
+
+#mixturesCatalog .products .product:nth-child(3){
+	order: 4;
+	display: grid;
+  width: 100%;
+}
+
+#mixturesCatalog .products .product:nth-child(4){
+	order: 5;
+	display: grid;
+  width: 100%;
+}
+
+#mixturesCatalog .products .product:nth-child(5){
+	order: 3;
+	display: grid;
+  width: 100%;
+}
+
+#mixturesCatalog .products img{
+	width: 100%;
+  height: auto;
+}
+
+.attachment-post-thumbnail {
+	height: 120vh;
+  top: -89px;
+  position: fixed;
+	z-index: 0;
+}
+
+.product_cat_restaurante  .single-product .content .image .attachment-post-thumbnail {
+	width: auto;
+  height: 43vh;
+  top: 54px;
+}
+
+.product_cat_ropa-accesorios .single-product .content .image .attachment-post-thumbnail {
+	width: auto;
+	max-width: 288px;
+  height: auto;
+  top: 89px;
+}
+
+@media screen and (max-width: 920px) {
+	#mobile-menu-close {
+		display: block;
+		pointer-events: unset;
+		font-size: 15px;
+		position: absolute;
+		top: 16px;
+		right: 16px;
+}
+    .attachment-post-thumbnail {
+			height: 90vh;
+			top: 54px;
+			left: -6.8rem;
+			transform: translateX(0);
+}
+	.product_cat_ropa-accesorios .single-product .content .image .attachment-post-thumbnail {
+	width: auto;
+	max-width: 288px;
+  height: auto;
+			left: -20%;
+			transform: translateX(0);
+}
+	
+	.product_cat_restaurante .single-product .content .image .attachment-post-thumbnail {
+	width: auto;
+	max-width: 288px;
+  height: auto;
+			left: -20%;
+			transform: translateX(0);
+}
+}
+
+@media screen and (max-width: 640px) {
+	.product_cat_ropa-accesorios .single-product .content .image .attachment-post-thumbnail {
+	width: auto;
+	max-width: 288px;
+  height: auto;
+			left: -35%;
+			transform: translateX(0);
+}
+	
+	.product_cat_restaurante .single-product .content .image .attachment-post-thumbnail {
+	width: auto;
+	max-width: 288px;
+  height: auto;
+			left: -35%;
+			transform: translateX(0);
+}
+	
+	.o-positivo .single-product .content .image .attachment-post-thumbnail {
+			left: -140px;
+}
+	
+	.confabulario .single-product .content .image .attachment-post-thumbnail {
+			left: -140px;
+}
+	
+	.noble-cru .single-product .content .image .attachment-post-thumbnail {
+			left: -140px;
+}
+	
+	.noble-cru-magnum .single-product .content .image .attachment-post-thumbnail {
+			left: -140px;
+}
+}

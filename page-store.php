@@ -18,14 +18,14 @@
         <img class="ornament branch-2" src="<?php bloginfo('template_url'); ?>/img/ornaments/branch2.svg">
     </section>
     <section class="category-block">
-      <h1><span>Vino</span> Joven</h1>
-      <div class="catalogs" id="youngWineCatalog"></div>
-      <img class="ornament leaf-2" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf2.svg">
-      <img class="ornament branch-3" src="<?php bloginfo('template_url'); ?>/img/ornaments/branch3.svg">
-    </section>
-    <section class="category-block">
       <h1 class="monovarietals">Mono<span>~</span><span class="second-part">varietales</span></h1>
       <div class="catalogs" id="monovarietalsCatalog"></div>
+      <img class="ornament leaf-7" data-jarallax-element="-69" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf7.svg">
+      <img class="ornament olive-branch4" src="<?php bloginfo('template_url'); ?>/img/ornaments/olive-branch4.svg">
+    </section>
+    <section class="category-block">
+      <h1 class="monovarietals">Restaurante</h1>
+      <div class="catalogs" id="restaurantsCatalog"></div>
       <img class="ornament leaf-7" data-jarallax-element="-69" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf7.svg">
       <img class="ornament olive-branch4" src="<?php bloginfo('template_url'); ?>/img/ornaments/olive-branch4.svg">
     </section>

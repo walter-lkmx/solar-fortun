@@ -21,15 +21,16 @@ body.page-template-page-store, body.page-template-page-storev2 {
         margin-bottom: gratio(7);
         position: relative;
         h1 {
-          @include inline-block(auto, top);
+          @include inline-block(150px, top);
           @include respond-to(small large) {
             margin-bottom: gratio(5);
           }
           border: 1px solid rgba(color(blueberry), 0.8);
           outline: 3px solid rgba(color(blueberry), 1);
           outline-offset: - gratio(2);
-          padding: gratio(3) gratio(4);
+          padding: gratio(3) rem(13px);
           font-size: fgratio(2);
+          text-align: center;
           &.monovarietals {
             span {
               @include respond-to(small large) {
@@ -60,12 +61,12 @@ body.page-template-page-store, body.page-template-page-storev2 {
             width: 100%; 
           }
           font-size: 0;
-          padding-left: gratio(6);
+          padding-left: gratio(5);
           .wine {
             @include respond-to(small large) {
               @include inline-block(50%, top);  
             }
-            @include inline-block(33.33%, middle);
+            @include inline-block(20%, middle);
             font-size: 0;
             margin-bottom: gratio(5);
             position: relative;
@@ -104,8 +105,8 @@ body.page-template-page-store, body.page-template-page-storev2 {
                 .wineWatercolor {
                   position: absolute;
                   width: rem(120px);
-                  height: auto;
-                  bottom: 0;
+                  height: rem(165px);
+                  bottom: - gratio(4);
                   left: rem(-36px);
                   transform: translateY(- gratio(0));
                   &.elixir {
@@ -152,12 +153,12 @@ body.page-template-page-store, body.page-template-page-storev2 {
                   -webkit-hyphens: auto;
                   hyphens: auto;
                 }
-                font-size: fgratio(3);
+                font-size: fgratio(2);
                 margin-bottom: gratio(1);
                 color: color(blueberry);
               }
               .price {
-                font-size: gratio(4);
+                font-size: rem(18px);
                 color: color(red);
                 display: block;
                 margin-bottom: gratio(3);
@@ -197,13 +198,13 @@ body.page-template-page-store, body.page-template-page-storev2 {
               background: color(blueberry);
               outline: 1px solid rgba(white, 1);
               outline-offset: - gratio(2);
-              font-size: fgratio(1);
+              font-size: rem(11px);
               text-shadow: none;
               text-decoration: none;
               opacity: 0;
               position: absolute;
               left: gratio(5);
-              bottom: gratio(6);
+              bottom: gratio(2);
               z-index: 4;
               @include respond-to(small medium) {
                 padding: gratio(2);
@@ -217,6 +218,16 @@ body.page-template-page-store, body.page-template-page-storev2 {
               }
               * {
                 transition: 0.2s ease;
+              }
+            }
+          }
+          .product_cat-restaurante {
+            width: auto;
+            a.button {
+              bottom: gratio(4);
+              left: gratio(7);
+              @include respond-to(small medium) {
+                left: rem(140px);
               }
             }
           }
