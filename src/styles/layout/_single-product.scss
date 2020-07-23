@@ -343,6 +343,19 @@ section.single-product {
               }
               font-size: fgratio(3);
               margin-bottom: gratio(3);
+              &.data-sheet {
+                margin-top: gratio(4);
+              }
+            }
+            h3 {
+              @include respond-to(small large) {
+                font-size: fgratio(1);
+              }
+              font-size: fgratio(2);
+              margin-bottom: gratio(3);
+              &.data-sheet {
+                margin-top: gratio(4);
+              }
             }
             p {
               font-size: fgratio(1);
@@ -355,6 +368,12 @@ section.single-product {
                     text-transform: capitalize;
                   }
                 }
+              }
+              a {
+                display: inline-block;
+                line-height: 1.2;
+                color: color(purple);
+                text-decoration: none;
               }
             }
           }

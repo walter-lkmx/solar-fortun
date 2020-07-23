@@ -6,6 +6,7 @@
   $watercolor = get_post_custom_values($key = 'watercolor');
   $dominant_notes = get_post_custom_values($key = 'dominant_notes');
   $enologist_comments = get_post_custom_values($key = 'enologist_comments');
+  $data_sheet = get_post_custom_values($key = 'data_sheet');
   $intensity = get_post_custom_values($key = 'intensity');
   $seal = get_post_custom_values($key = 'seal');
   $technical_info = get_post_custom_values($key = 'technical_info');
@@ -15,12 +16,13 @@
 <!-- 
   <h1 class="presentation-title"></h1>
  -->
+ 
 <section class="single-product">
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
     <section class="image">
       <img src="<?php bloginfo('template_url'); ?>/<?php echo $seal[0];?>" id="featSeal">
-      <img src="<?php bloginfo('template_url'); ?>/<?php echo $bottle[0];?>" id="featImage">
+      <img src="<?php the_post_thumbnail() ?>" id="featImage">
       <img src="<?php bloginfo('template_url'); ?>/<?php echo $watercolor[0];?>" id="featStain">
     </section>
     <section id="v-scroll" class="product-details">
@@ -35,6 +37,20 @@
         <input id="product-quantity" min="1" type="number" name="quantity" placeholder="1">
         <a id="add-cart-custom"><span>Agregar al carrito</span> <img src="<?php bloginfo('template_url'); ?>/img/cart-white.svg"></a>
       </section>
+      <?php 
+      add_action( 'woocommerce_before_main_content', 'bbloomer_single_product_pages' );
+ 
+function bbloomer_single_product_pages() {
+ 
+if ( is_product_category( 'restaurante' ) ) {
+echo '<p>Hola</p>';
+console.log();
+} else {
+echo 'Something else';
+}
+ 
+}
+      ?>
       <section class="product-specs">
         <section class="metrics">
           <img class="ornament big-grape" src="<?php bloginfo('template_url'); ?>/img/ornaments/grapes2.svg">
@@ -82,6 +98,7 @@
           <img class="ornament leaf-6" data-jarallax-element="-15" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf4.svg">
           <img class="ornament leaf-7" data-jarallax-element="70" src="<?php bloginfo('template_url'); ?>/img/ornaments/leaf2.svg">
         </section>
+        
         
         
         <!-- <section class="general-info">

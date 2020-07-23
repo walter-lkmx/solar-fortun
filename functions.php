@@ -160,3 +160,20 @@ add_theme_support( 'woocommerce', array(
   ) );
 
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
+
+add_filter( 'body_class', 'bbloomer_wc_product_cats_css_body_class' );
+  
+function bbloomer_wc_product_cats_css_body_class( $classes ){
+  if ( is_singular( 'product' ) ) {
+    $current_product = wc_get_product();
+    $custom_terms = get_the_terms( $current_product->get_id(), 'product_cat' );
+    if ( $custom_terms ) {
+      foreach ( $custom_terms as $custom_term ) {
+        $classes[] = 'product_cat_' . $custom_term->slug;
+      }
+    }
+  }
+  return $classes;
+}
+
+
