@@ -1,3 +1,23 @@
+section.alert {
+  background: linear-gradient(to right, rgba(35, 39, 52, 0) 15%, rgba(35, 39, 52, 0.9) 45%, rgba(35, 39, 52, 0.9) 25%);
+  padding: gratio(1);
+  position: relative;
+  @include z-index(first-level);
+  p {
+    font-size: fgratio(1);
+    color: white;
+    text-align: right;
+    .alert_icon {
+      @include inline-block(gratio(4), middle);
+    }
+  }
+  @include respond-to(small large) {
+    background-color: color(blueberry);
+    p {
+      text-align: center;
+    }
+  }
+}
 section.top-bar {
   @include respond-to(small large) {
     position: relative;
