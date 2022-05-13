@@ -25,7 +25,7 @@
         width: 120px;
         height: 120px;
         right: -25px;
-        top: 0px;
+        top: 135px;
       }
     }
   </style>
