@@ -17,6 +17,7 @@
       top: 30px;
       background: url("https://restaurant.opentable.com.mx/badge/ot/DC-2021.png") no-repeat;
       background-size: contain;
+      z-index: 9999;
     }
 
     @media only screen and (max-width: 919px) {
