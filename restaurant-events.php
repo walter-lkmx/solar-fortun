@@ -4,9 +4,14 @@
 <section class="main-container">
   <?php include('ui-layout/top-bar.php'); ?>
   <style>
+    html,body{
+      max-width: 100%;
+      overflow-x: hidden;
+    }
     .diners-choice-insignia-container {
       position: absolute;
       width: 100%;
+      overflow-x: hidden;
     }
 
     .diners-choice-insignia {
