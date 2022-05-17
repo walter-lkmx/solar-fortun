@@ -38,7 +38,7 @@
       </li>
       <li>
         <a href="/restaurante-eventos" title="">
-          <span>Restaurante Valle de Guadalupe</span>
+          <span>Restaurante <br> Valle de Guadalupe</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
@@ -54,7 +54,7 @@
       </li>
       <li>
         <a href="/nosotros" title="">
-          <span>Nuestra Familia / Solar Fortún family</span>
+          <span>Nuestra Familia /<br>Solar Fortún family</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
