@@ -54,7 +54,7 @@
       </li>
       <li>
         <a href="/nosotros" title="">
-          <span>Nuestra Familia /<br>Solar Fortún family</span>
+          <span>Nuestra Familia /<br>Solar Fortún Family</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
