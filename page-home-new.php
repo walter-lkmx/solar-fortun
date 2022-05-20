@@ -48,7 +48,7 @@ function woo_featured_products()
             <?php the_post_thumbnail('medium'); ?>
           </a>
           <br>
-          <h3 class="title"><?php echo $loop->post->post_title; ?></h3><br>
+          <h3 class="featured-title"><?php echo $loop->post->post_title; ?></h3><br>
           <h4 class="featured-price">$ <?php echo $price; ?></h4>
         </div>
       </li>
@@ -505,7 +505,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         color: #8C1835;
       }
 
-      li.featured>.featured-watercolor>h3.title {
+      li.featured>.featured-watercolor>h3.featured-title {
         margin-top: 30px;
         height: 29px;
 
