@@ -51,6 +51,14 @@
       ?>
       </div>
     </section>
+    <section class="category-block">
+    <h1 class="specialProducts">Productos <span class="second-part">especiales</span></h1>
+      <div class="catalogs" id="specialProductsCatalog">
+      <?php
+      echo do_shortcode('[products category="productos-especiales"]');
+      ?>
+      </div>
+    </section>
   </section>
   <section class="sidebar">
   </section>
