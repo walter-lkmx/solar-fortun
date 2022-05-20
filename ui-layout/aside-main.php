@@ -14,7 +14,7 @@
     <ul id="primary-menu">
       <li>
         <a href="/catalogo" title="">
-        <span>Tienda</span>
+        <span>Tienda / Store</span>
         <div class="stain">
           <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
         </div>
@@ -30,7 +30,7 @@
       </li> -->
       <li class="spacer">
         <a href="/noticias" title="">
-          <span>Noticias</span>
+          <span>Noticias / News</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
@@ -38,7 +38,7 @@
       </li>
       <li>
         <a href="/restaurante-eventos" title="">
-          <span>Restaurante y Eventos</span>
+          <span>Restaurante <br> Valle de Guadalupe</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
@@ -54,7 +54,7 @@
       </li>
       <li>
         <a href="/nosotros" title="">
-          <span>Nuestra Familia</span>
+          <span>Nuestra Familia /<br>Solar Fortún Family</span>
           <div class="stain">
             <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
           </div>
