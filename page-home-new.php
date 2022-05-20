@@ -501,15 +501,15 @@ function woo_featured_products()
     <section class="titled-section coming-soon">
       <div class="section-body">
         <div class="left-side">
-          <img src="img/homepage/restaurante-1.png" style="width: 50%;">
-          <img src="img/homepage/restaurante-2.png" style="width: 50%;">
+          <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
+          <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
         </div>
         <div class="right-side">
           <div>
             <h4 class="greyed-out">Próximamente</h4>
           </div>
           <div>
-            <h1>Nuestro restaurante</h1>
+            <h1><a href="restaurante-eventos/" style="text-decoration: none;color:#232734;">Nuestro Restaurante</a></h1>
           </div>
           <div class="our-restaurant">
             <p>Ubicado en El Sauzal, Ensenada.
@@ -537,8 +537,8 @@ function woo_featured_products()
             <a href="restaurante-eventos/"><span>Reserva</span></a>
           </section>
           <div class="dulce-vida-imgs" style="margin-top:15px;">
-            <img src="img/homepage/restaurante-1.png" style="width: 50%;">
-            <img src="img/homepage/restaurante-2.png" style="width: 50%;">
+            <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
+            <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
           </div>
         </div>
       </div>
