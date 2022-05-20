@@ -501,8 +501,8 @@ function woo_featured_products()
     <section class="titled-section coming-soon">
       <div class="section-body">
         <div class="left-side">
-          <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
-          <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
+          <img src="/wp-content/uploads/2022/05/restaurante-3.png" style="width: 50%;">
+          <img src="/wp-content/uploads/2022/05/restaurante-4.png" style="width: 50%;">
         </div>
         <div class="right-side">
           <div>
@@ -537,7 +537,7 @@ function woo_featured_products()
             <a href="restaurante-eventos/"><span>Reserva</span></a>
           </section>
           <div class="dulce-vida-imgs" style="margin-top:15px;">
-            <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
+            <img src="/wp-content/uploads/2022/05/restaurante-1.png" style="width: 50%;">
             <img src="/wp-content/uploads/2022/05/restaurante-2.png" style="width: 50%;">
           </div>
         </div>
