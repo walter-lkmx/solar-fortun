@@ -2,6 +2,41 @@
 <?php get_header(); ?>
 
 <?php
+add_shortcode('show_instagram_posts', 'show_instagram_posts');
+
+function show_instagram_posts()
+{
+  ob_start();
+  $meta_query  = WC()->query->get_meta_query();
+
+  $args = array(
+    'post_type'           => 'page',
+    'post_name' => 'instagram-posts',
+    'meta_query'          => $meta_query,
+  );
+  $ig_loop = new WP_Query($args);
+  $post = $ig_loop->posts[0];
+  //while ($ig_loop->have_posts()) : $ig_loop->the_post();
+?>
+  <ul class="instagram_posts">
+    <?php
+    $ig1 = get_post_meta($post->ID, 'ig_post_1', true);
+    $ig2 = get_post_meta($post->ID, 'ig_post_2', true);
+    $ig3 = get_post_meta($post->ID, 'ig_post_3', true);
+    $ig4 = get_post_meta($post->ID, 'ig_post_4', true);
+    echo "<li class='ig-post'>" . $ig1 . "</li>";
+    echo "<li class='ig-post'>" . $ig3 . "</li>";
+    echo "<li class='ig-post'>" . $ig2 . "</li>";
+    echo "<li class='ig-post'>" . $ig4 . "</li>";
+    ?>
+  </ul>
+<?php
+  //break;
+  //endwhile;
+  wp_reset_query();
+  return ob_get_clean();
+}
+
 
 add_shortcode('woo_featured_products', 'woo_featured_products');
 /**
@@ -224,7 +259,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       @media only screen and (max-width:1089px) {
 
-        
+
 
         .home-card:nth-child(2),
         .home-card:nth-child(3) {
@@ -255,7 +290,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       @media only screen and (max-width:1024px) {
 
-      
+
 
         .home-card:nth-child(2),
         .home-card:nth-child(3) {
@@ -368,7 +403,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         <hr class="card-spacer">
         <div class="card-body"><br>Compra nuestros vinos a domicilio, con env&iacute;os a todo M&eacute;xico
         </div>
-        <div class="card-picture" style='background: url("/wp-content/uploads/2022/05/tienda.png") center center;'></div>
+        <div class="card-picture" style='background: url("<?php bloginfo('template_url') ?>/img/homepage/tienda.png") center center;'></div>
       </div>
       <div class="home-card">
         <div class="card-title">
@@ -377,7 +412,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         <hr class="card-spacer">
         <div class="card-body"><br>Visita nuestro restaurante y disfruta de un asador campestre a cargo de la chef Dulce López. Conoce nuestros maridajes y platillos ganadores a la sombra de nuestros encinos centenarios.
         </div>
-        <div class="card-picture" style='background: url("/wp-content/uploads/2022/05/dulce-vida.png") center center;'></div>
+        <div class="card-picture" style='background: url("<?php bloginfo('template_url') ?>/img/homepage/dulce-vida.png") center center;'></div>
       </div>
       <div class="home-card">
         <div class="card-title">
@@ -386,7 +421,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         <hr class="card-spacer">
         <div class="card-body"><br>Solar Fortún es una vinícola familiar mexicana ubicada en Francisco Zarco, Valle de Guadalupe. El proyecto nace en 2007 con el viñedo y a partir del 2012 iniciamos con la distribución de nuestros vinos.
         </div>
-        <div class="card-picture" style='background: url("/wp-content/uploads/2022/05/vinicola.png") center center;'></div>
+        <div class="card-picture" style='background: url("<?php bloginfo('template_url') ?>/img/homepage/vinicola.png") center center;'></div>
       </div>
     </section>
     <br>
@@ -414,10 +449,20 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       </div>
     </section>
-    <section class="titled-section">
-      <div class="section-body"></div>
-    </section>
     <style>
+      ul.instagram_posts {
+        width: 100%;
+        list-style: none;
+        padding-top: 20px;
+        overflow-x: auto;
+        gap:10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      li.ig-post{
+        display: inline-flex;
+      }
+
       ul.postsbycategory {
         width: 100%;
         list-style: none;
@@ -708,6 +753,17 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         ?>
       </div>
     </section>
+    <section class="titled-section">
+      <h1 class="title hoverable-title">
+        @solarfortun <span style="font-size: 16px;">en Instagram</span>
+      </h1>
+      <span class="section-more"><a href="https://www.instagram.com/solarfortun/">Ir al perfil</a> </span>
+      <div class="section-body" style="max-width:120%;">
+        <?php
+        echo do_shortcode('[show_instagram_posts]');
+        ?>
+      </div>
+    </section>
   </section> <!-- CONTENT END -->
 
 </section>
@@ -762,11 +818,11 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   }
 
   .our-family-card.founder {
-    background: url('wp-content/uploads/2022/05/fundador.png') no-repeat;
+    background: url('<?php bloginfo('template_url') ?>/img/homepage/fundador.png') no-repeat;
   }
 
   .our-family-card.enologist {
-    background: url('wp-content/uploads/2022/05/enologo.png') no-repeat;
+    background: url('<?php bloginfo('template_url') ?>/img/homepage/enologo.png') no-repeat;
   }
 
   .our-family-card .caption {
