@@ -43,7 +43,7 @@ function woo_featured_products()
     ?>
 
       <li class="featured">
-        <div class="featured-watercolor" style="background: url('<?php echo $watercolor ?>') no-repeat center ; background-size: 40%;">
+        <div class="featured-watercolor" style="background: url('/wp-content/themes/solar-v2/<?php echo $watercolor ?>') no-repeat center ; background-size: 40%;">
           <a href="<?php echo get_permalink($loop->post->ID); ?>">
             <?php the_post_thumbnail('medium'); ?>
           </a>
