@@ -224,6 +224,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       @media only screen and (max-width:1089px) {
 
+        
+
         .home-card:nth-child(2),
         .home-card:nth-child(3) {
           margin-left: 8px !important;
@@ -252,6 +254,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       @media only screen and (max-width:1024px) {
+
+      
 
         .home-card:nth-child(2),
         .home-card:nth-child(3) {
@@ -344,6 +348,11 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         li.featured-news:nth-child(2) {
           margin-left: 0 !important;
           margin-top: 20px !important;
+        }
+
+        .titled-section .section-more a {
+          padding-top: 30px;
+          padding-right: 15px;
         }
       }
 
