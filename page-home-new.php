@@ -71,21 +71,31 @@ function woo_featured_products()
 ?>
   <ul class="the-products">
     <?php
-
+    $loop_count = 0;
     while ($loop->have_posts()) : $loop->the_post();
+      if ($loop_count == 4) break;
+      $loop_count++;
       $price = get_post_meta($loop->post->ID, '_price', true);
       $watercolor = get_post_meta($loop->post->ID, 'watercolor', true);
     ?>
 
+
       <li class="featured">
-        <div class="featured-watercolor" style="background: url('<?php echo bloginfo('template_url') . '/' . $watercolor ?>') no-repeat center ; background-size: 40%;">
-          <a href="<?php echo get_permalink($loop->post->ID); ?>">
+        <a href="<?php echo get_permalink($loop->post->ID); ?>">
+          <div class="featured-watercolor" style="
+          background-image:url('<?php echo bloginfo('template_url') . "/" . $watercolor ?>');
+          background-repeat: no-repeat;
+          background-size: 140px;
+          background-position: center;
+          height:355px;
+          ">
+
             <?php the_post_thumbnail('medium'); ?>
-          </a>
-          <br>
+
+          </div>
           <h3 class="featured-title"><?php echo $loop->post->post_title; ?></h3><br>
           <h4 class="featured-price">$ <?php echo $price; ?></h4>
-        </div>
+        </a>
       </li>
 
     <?php
@@ -103,8 +113,11 @@ function wpb_postsbycategory()
 {
   // the query
   $the_query = new WP_Query(array(
-    'category_name' => 'noticia',
-    'posts_per_page' => 2
+    // 'category_name' => ['uncategorized','noticia'],
+    'post_status' => 'publish',
+    'posts_per_page' => 2,
+    'order_by' => 'ID',
+    'order' => 'DESC'
   ));
 
   // The Loop
@@ -158,13 +171,11 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         transform: translateY(-2px);
       }
 
-      .hoverable-title {
-        cursor: pointer;
-      }
+      .hoverable-title {}
 
       .section-title:hover,
-      .hoverable-title:hover {
-        color: #8C1835;
+      .hoverable-title>a:hover {
+        color: #8C1835 !important;
       }
 
       .wonderpluginslider-container,
@@ -187,6 +198,13 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       }
 
+      @media only screen and (min-width:1492) {
+
+        .home-card {
+          width: 100% !important;
+        }
+      }
+
       @media only screen and (max-width:1440px) {
 
         .home-card:nth-child(2),
@@ -202,6 +220,19 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       @media only screen and (max-width:1369px) {
+
+        .right-side,
+        .left-side {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+
+        .right-side {
+          padding-left: 0 !important;
+          padding-top: 0 !important;
+        }
+
+
         .our-family-card .caption {
           height: auto !important;
         }
@@ -224,6 +255,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         .featured-products {
           padding-left: 0 !important;
         }
+
 
       }
 
@@ -248,9 +280,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           margin-left: 9px !important;
         }
 
-        .coming-soon {
-          display: none;
-        }
+
 
         .dulce-vida {
           display: block !important;
@@ -288,9 +318,25 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
       }
 
+      @media only screen and (min-width:1025px) {
+        li.ig-post>iframe {
+          min-width: 25% !important;
+        }
+
+        .card-body {
+          height: 170px !important;
+        }
+      }
+
       @media only screen and (max-width:1024px) {
 
+        .home-card {
+          width: 100% !important;
+        }
 
+        .card-body {
+          height: auto !important;
+        }
 
         .home-card:nth-child(2),
         .home-card:nth-child(3) {
@@ -304,6 +350,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       @media only screen and (max-width:921px) {
+
 
         .wonderpluginslider-container,
         .cards-container,
@@ -392,42 +439,70 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       /*921px max-width*/
+
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding-top: 30px;
+      }
+
+      .home-card>.card-title>h3.hoverable-title {
+        width: 120px;
+        border-bottom: 0.001px solid #d1a3ae66;
+        padding-bottom: 10px;
+      }
+
+      .titled-section>.title>a {
+        text-decoration: none;
+        color: #232734;
+      }
+
+      li.ig-post>iframe {
+        min-width: 25%;
+      }
     </style>
     <?php echo do_shortcode('[wonderplugin_slider id=1]'); ?>
 
     <section class="cards-container">
-      <div class="home-card">
+
+      <div class="home-card" onclick="location.href='catalogo/';">
         <div class="card-title">
-          <h3 class="hoverable-title">Tienda</h3><span class="arrow-right"><a href="catalogo/">&rarr;</a></span>
+          <h3 class="hoverable-title">Tienda</h3><span class="arrow-right"><object data="/img/ArrowRight.svg"> </object></span>
         </div>
-        <hr class="card-spacer">
-        <div class="card-body"><br>Compra nuestros vinos a domicilio, con env&iacute;os a todo M&eacute;xico
+        <div class="card-body">
+
+          <br>Compra nuestros vinos a domicilio, con env&iacute;os a todo M&eacute;xico
         </div>
-        <div class="card-picture" style='background: url("<?php bloginfo('template_url') ?>/img/homepage/tienda.png") center center;'></div>
+        <div class="card-image">
+          <img src="<?php bloginfo('template_url') ?>/img/homepage/tienda.png" style="max-width:100%">
+        </div>
       </div>
-      <div class="home-card">
+      <div class="home-card" onclick="location.href='restaurante-eventos/';">
         <div class="card-title">
-          <h3 class="hoverable-title">Dulce Vida</h3><span class="arrow-right"><a href="restaurante-eventos/">&rarr;</a></span>
+          <h3 class="hoverable-title">Dulce Vida</h3><span class="arrow-right"><object data="/img/ArrowRight.svg"></object></span>
         </div>
-        <hr class="card-spacer">
         <div class="card-body"><br>Visita nuestro restaurante y disfruta de un asador campestre a cargo de la chef Dulce López. Conoce nuestros maridajes y platillos ganadores a la sombra de nuestros encinos centenarios.
         </div>
-        <div class="card-picture" style='background: url("<?php bloginfo('template_url') ?>/img/homepage/dulce-vida.png") center center;'></div>
-      </div>
-      <div class="home-card">
-        <div class="card-title">
-          <h3 class="hoverable-title">Vinícola</h3><span class="arrow-right"><a href="nosotros/">&rarr;</a></span>
+        <div class="card-image">
+          <img src="<?php bloginfo('template_url') ?>/img/homepage/dulce-vida.png" style="max-width:100%">
         </div>
-        <hr class="card-spacer">
+      </div>
+      <div class="home-card" onclick="location.href='nosotros/';">
+        <div class="card-title">
+          <h3 class="hoverable-title">Vinícola</h3><span class="arrow-right"><object data="/img/ArrowRight.svg"></object></span>
+        </div>
         <div class="card-body"><br>Solar Fortún es una vinícola familiar mexicana ubicada en Francisco Zarco, Valle de Guadalupe. El proyecto nace en 2007 con el viñedo y a partir del 2012 iniciamos con la distribución de nuestros vinos.
         </div>
-        <div class="card-picture" style='background: url("<?php bloginfo('template_url') ?>/img/homepage/vinicola.png") center center;'></div>
+        <div class="card-image">
+          <img src="<?php bloginfo('template_url') ?>/img/homepage/vinicola.png" style="max-width:100%">
+        </div>
       </div>
     </section>
     <br>
     <section class="titled-section">
       <h1 class="title hoverable-title">
-        Nuestra Familia
+        <a href="nosotros/">Nuestra Familia</a>
       </h1>
       <span class="section-more"><a href="nosotros/">Ver más</a> </span>
       <div class="section-body" style="max-width:100%;">
@@ -450,18 +525,26 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       </div>
     </section>
     <style>
+      li.new-featured-prods {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       ul.instagram_posts {
         width: 100%;
         list-style: none;
         padding-top: 20px;
         overflow-x: auto;
-        gap:10px;
+        gap: 10px;
         display: flex;
         justify-content: space-between;
       }
-      li.ig-post{
+
+      li.ig-post {
         display: inline-flex;
       }
+
 
       ul.postsbycategory {
         width: 100%;
@@ -532,18 +615,43 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         padding-top: 20px;
       }
 
+      /* one item */
+      li:first-child:nth-last-child(1) {
+        /* -or- li:only-child { */
+        width: 100%;
+      }
+
+      /* two items */
+      li.featured:first-child:nth-last-child(2),
+      li.featured:first-child:nth-last-child(2)~li.featured {
+        width: 50%;
+      }
+
+      /* three items */
+      li.featured:first-child:nth-last-child(3),
+      li.featured:first-child:nth-last-child(3)~li.featured {
+        width: 33.3333%;
+      }
+
+      /* four items */
+      li.featured:first-child:nth-last-child(4),
+      li.featured:first-child:nth-last-child(4)~li.featured {
+        width: 25%;
+      }
+
       li.featured {
         display: inline-block;
-        width: 25%;
         text-align: center;
         transition: background 0.5s;
+        padding-top: 15px;
       }
 
       li.featured:hover {
         background: rgba(253, 250, 247, 0.3) !important;
       }
 
-      li.featured>.featured-watercolor>.featured-price {
+      li.featured>.featured-price,
+      a>h4.featured-price {
         height: 19px;
         margin-top: 10px;
         /* h4 */
@@ -556,11 +664,14 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
         /* tinto */
 
+        text-decoration: none;
         color: #8C1835;
+        padding: 0 0 30px 0;
       }
 
-      li.featured>.featured-watercolor>h3.featured-title {
-        margin-top: 30px;
+      li.featured>.featured-watercolor>h3.featured-title,
+      a>h3.featured-title {
+        /* margin-top: 30px; */
         height: 29px;
 
         /* h3 */
@@ -577,6 +688,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         /* negro */
 
         color: #232734;
+
+        text-decoration: none;
       }
 
       .mobile-br {
@@ -598,11 +711,11 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         float: right;
         display: flex;
         padding-top: 30px;
-        padding-left: 20px;
+        padding-left: 50px;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
       }
 
@@ -674,77 +787,48 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         text-decoration: none;
         text-align: center;
       }
+
+      .coming-soon {
+        display: flex;
+      }
     </style>
     <section class="titled-section">
       <h1 class="title hoverable-title">
-        Vinos<span class="mobile-br"><br></span> Destacados
+        <a href="catalogo/">Vinos<span class="mobile-br"><br></span> Destacados</a>
       </h1>
       <span class="section-more"><a href="catalogo/">Ver catálogo</a> </span>
       <div class="section-body">
         <div class="featured-products">
-          <?php $args = array(
-            'featured' => true,
-          );
-          $products = wc_get_products($args);
-          $json_array = [];
-          foreach ($products as $product) {
-            $json_array[] = $product->get_data();
-          }
-          //var_dump($json_array[0]);
-          ?>
           <?php echo do_shortcode("[woo_featured_products]");
           ?>
         </div>
       </div>
     </section>
-    <section class="titled-section coming-soon">
+    <section class="titled-section ">
       <div class="section-body">
-        <div class="left-side">
-          <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-3.png" style="width: 50%;">
-          <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-4.png" style="width: 50%;">
-        </div>
         <div class="right-side">
           <div>
             <h4 class="greyed-out">Próximamente</h4>
           </div>
           <div>
-            <h1><a class="hoverable-title" href="restaurante-eventos/" style="text-decoration: none;">Nuestro Restaurante</a></h1>
+            <h1 class="hoverable-title">Nuestro <br class="mobile-br"> Restaurante</h1>
           </div>
           <div class="our-restaurant">
             <p>Ubicado en El Sauzal, Ensenada.
               <br>Visítanos en nuestra inauguración el próximo 23 de julio de 2022.
-              <br><br>Reserva tu mesa o degustación.
             </p>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="titled-section dulce-vida">
-      <div class="section-body">
-        <div>
-          <div>
-            <h4 class="greyed-out">Nuestro Restaurante</h4>
-          </div>
-          <div>
-            <h2 class="hoverable-title">Dulce Vida</h2>
-          </div>
-          <p class="our-restaurant">
-            Ven y disfruta de nuestro asador campestre a cargo de la chef Dulce López.
-            Conoce nuestros maridajes y platillos ganadores a la sombra de nuestros encinos centenarios.
-          </p>
-          <section class="reservation-button">
-            <a href="restaurante-eventos/"><span>Reserva</span></a>
-          </section>
-          <div class="dulce-vida-imgs" style="margin-top:15px;">
-            <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-1.png" style="width: 50%;">
-            <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-2.png" style="width: 50%;">
-          </div>
+        <div class="left-side">
+          <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-1.png" style="width: 50%;">
+          <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-2.png" style="width: 50%;">
         </div>
+
       </div>
     </section>
     <section class="titled-section">
       <h1 class="title hoverable-title">
-        Noticias
+        <a href="noticias/">Noticias</a>
       </h1>
       <span class="section-more"><a href="noticias/">Ver todo</a> </span>
       <div class="section-body" style="max-width:100%;">
@@ -755,19 +839,27 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     </section>
     <section class="titled-section">
       <h1 class="title hoverable-title">
-        @solarfortun <span style="font-size: 16px;">en Instagram</span>
+        <a href="https://instagram.com/solarfortun" target="_blank">@solarfortun <span style="font-size: 16px;">en Instagram</span></a>
       </h1>
-      <span class="section-more"><a href="https://www.instagram.com/solarfortun/">Ir al perfil</a> </span>
-      <div class="section-body" style="max-width:120%;">
+      <div class="section-body" style="max-width:100%;">
         <?php
         echo do_shortcode('[show_instagram_posts]');
         ?>
       </div>
     </section>
+    <section class="titled-section" style="height:200px;"></section>
   </section> <!-- CONTENT END -->
 
 </section>
 <style>
+  a.ViewProfileButton {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   .enologist {
     margin-left: 5.5%;
   }
@@ -865,11 +957,11 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   }
 
   .card-spacer {
-    width: 120px;
-    height: 0px;
+    width: 140px;
+    height: 0;
     float: left;
-    /* tinto-40% */
-    border: 0.5px solid #D1A3AE;
+    border: 0.001px solid #d1a3ae66;
+    margin-top: 15px;
   }
 
   .card-title>.arrow-right>a {
@@ -884,15 +976,15 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
   .home-card {
     /* card-v2 */
-
+    cursor: pointer;
     /* Auto layout */
     float: left;
     padding: 24px;
     margin-top: 50px;
     width: 32.33333%;
-    min-height: 545px;
+    /* height: 545px; */
     position: relative;
-
+    display: grid;
     /* cream */
     background: #FDFAF7;
 
@@ -942,7 +1034,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     font-size: 16px;
     line-height: 24px;
     max-width: 100%;
-    /* height: 170px; */
+    height: 170px;
     /* negro */
     white-space: normal;
     color: #232734;
