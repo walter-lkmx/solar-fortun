@@ -47,4 +47,73 @@
       </ul>
     </nav>
   </section>
+  <style>
+      a>.whatsapp-bubble {
+        width: 62px;
+        height: 62px;
+        background-color: #10BA18;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        border-radius: 50%;
+        color: white;
+      }
+
+      a>.whatsapp-bubble>img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+
+      .whatsapp-bubble .hover-text {
+        display: none;
+        width: 79px;
+        height: 16px;
+
+        /* small */
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        /* negro */
+
+        color: #232734;
+
+        /* Inside auto layout */
+        top: 25px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 25px 0 0 -10px;
+        transition: display 1s;
+      }
+
+      .whatsapp-bubble>.hover-text>label {
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px -4px rgb(35 39 52 / 12%), 0px 8px 8px -4px rgb(35 39 52 / 8%);
+      }
+
+      .whatsapp-bubble:hover .hover-text {
+
+        display: block;
+        transform: translateX(-100px);
+        opacity: 1;
+
+      }
+    </style>
+    <a href="https://api.whatsapp.com/send?phone=5216461412048&text=Buen%20d%C3%ADa%2C%20tengo%20una%20pregunta" target="_blank">
+      <div class="whatsapp-bubble">
+        <div class="hover-text">
+          <label>Contáctanos</label>
+        </div>
+        <img src="<?php bloginfo('template_url') ?>/img/whatsapp-icon.svg"/>
+      </div>
+    </a>
 </div>
