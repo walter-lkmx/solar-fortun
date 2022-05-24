@@ -126,9 +126,9 @@ function wpb_postsbycategory()
     while ($the_query->have_posts()) {
       $the_query->the_post();
       if (has_post_thumbnail()) {
-        $string .= '<li class="featured-news">';
+        $string .= '<li class="featured-news"><a href="' . get_the_permalink() . '" rel="bookmark">';
         $string .= get_the_post_thumbnail($post_id, array(160, 236));
-        $string .= '<div class="news-title-container"><a href="' . get_the_permalink() . '" rel="bookmark">' . get_the_title() . '</a></div>';
+        $string .= '<div class="news-title-container">' . get_the_title() . '</div>';
 
         $content = get_the_content();
         $content = str_replace(['<!-- wp:paragraph -->', '<!-- /wp:paragraph -->'], '', $content);
@@ -136,7 +136,7 @@ function wpb_postsbycategory()
 
 
         $string .= '<div class="news-content-container"><p>' . $content . '...</p></div>'; #Post content
-        $string .= '</li>';
+        $string .= '</a></li>';
       } else {
         // if no featured image is found
         $string .= '<li><a href="' . get_the_permalink() . '" rel="bookmark">' . get_the_title() . '</a></li>';
@@ -171,7 +171,9 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         transform: translateY(-2px);
       }
 
-      .hoverable-title {}
+      .hoverable-title {
+        white-space: normal;
+      }
 
       .section-title:hover,
       .hoverable-title>a:hover {
@@ -440,6 +442,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       /*921px max-width*/
 
+
+
       .card-image img {
         width: 100%;
         height: 100%;
@@ -460,6 +464,13 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       li.ig-post>iframe {
         min-width: 25%;
+      }
+
+      @media only screen and(max-width:375px) {
+        .mobile-br {
+          display: block !important;
+          line-height: 0;
+        }
       }
     </style>
     <?php echo do_shortcode('[wonderplugin_slider id=1]'); ?>
@@ -588,11 +599,12 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         color: #232734;
       }
 
-      li.featured-news>div.news-title-container {
+      li.featured-news>a>div.news-title-container {
         padding: 10px;
       }
 
-      li.featured-news>div.news-content-container>p {
+      /* li>a>.featured-news>div.news-content-container>p { */
+      li>a>div.news-content-container>p {
         padding: 10px;
         font-family: 'Poppins';
         font-style: normal;
@@ -811,17 +823,14 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
             <h4 class="greyed-out">Próximamente</h4>
           </div>
           <div>
-            <h1 class="hoverable-title">Nuestro <br class="mobile-br"> Restaurante</h1>
+            <h2 class="hoverable-title" style="white-space: normal ;">Wine Bar frente al mar</h2>
           </div>
           <div class="our-restaurant">
-            <p>Ubicado en El Sauzal, Ensenada.
-              <br>Visítanos en nuestra inauguración el próximo 23 de julio de 2022.
-            </p>
+            <p>A partir de la primavera de 2023 tendremos nuestro Wine Bar frente al mar en nuestra bodega de producción en el área del Sauzal, a la entrada de Ensenada.</p>
           </div>
         </div>
         <div class="left-side">
-          <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-1.png" style="width: 50%;">
-          <img src="<?php bloginfo('template_url'); ?>/img/homepage/restaurante-2.png" style="width: 50%;">
+          <img src="<?php bloginfo('template_url'); ?>/img/homepage/wine-bar.jpg" style="width: 100%;">
         </div>
 
       </div>
@@ -848,6 +857,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       </div>
     </section>
     <section class="titled-section" style="height:200px;"></section>
+
+
   </section> <!-- CONTENT END -->
 
 </section>
@@ -1040,4 +1051,5 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     color: #232734;
   }
 </style>
+
 <?php get_footer(); ?>
