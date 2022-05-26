@@ -479,7 +479,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       <div class="home-card" onclick="location.href='catalogo/';">
         <div class="card-title">
-          <h3 class="hoverable-title">Tienda</h3><span class="arrow-right"><object data="<?php bloginfo('template_url') ?>/img/ArrowRight.svg"> </object></span>
+          <h3 class="hoverable-title">Tienda</h3><span class="arrow-right"><img src="<?php bloginfo('template_url') ?>/img/ArrowRight.svg" /></span>
         </div>
         <div class="card-body">
 
@@ -491,7 +491,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       </div>
       <div class="home-card" onclick="location.href='restaurante-eventos/';">
         <div class="card-title">
-          <h3 class="hoverable-title">Dulce Vida</h3><span class="arrow-right"><object data="<?php bloginfo('template_url') ?>/img/ArrowRight.svg"></object></span>
+          <h3 class="hoverable-title">Dulce Vida</h3><span class="arrow-right"><img src="<?php bloginfo('template_url') ?>/img/ArrowRight.svg" /></span>
         </div>
         <div class="card-body"><br>Visita nuestro restaurante y disfruta de un asador campestre a cargo de la chef Dulce López. Conoce nuestros maridajes y platillos ganadores a la sombra de nuestros encinos centenarios.
         </div>
@@ -501,7 +501,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       </div>
       <div class="home-card" onclick="location.href='nosotros/';">
         <div class="card-title">
-          <h3 class="hoverable-title">Vinícola</h3><span class="arrow-right"><object data="<?php bloginfo('template_url') ?>/img/ArrowRight.svg"></object></span>
+          <h3 class="hoverable-title">Vinícola</h3><span class="arrow-right"><img src="<?php bloginfo('template_url') ?>/img/ArrowRight.svg" /></span>
         </div>
         <div class="card-body"><br>Solar Fortún es una vinícola familiar mexicana ubicada en Francisco Zarco, Valle de Guadalupe. El proyecto nace en 2007 con el viñedo y a partir del 2012 iniciamos con la distribución de nuestros vinos.
         </div>
@@ -623,7 +623,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       ul.the-products {
         width: 100%;
-        list-style: none;
+        list-style: none !important;
         padding-top: 20px;
       }
 
