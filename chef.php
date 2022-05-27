@@ -1,4 +1,4 @@
-<?php /* Template Name: Restaurant/Events */ ?>
+<?php /* Template Name: Chef */ ?>
 <?php get_header(); ?>
 <?php include('ui-layout/aside-main.php'); ?>
 <section class="main-container">
@@ -47,11 +47,12 @@
       </a>
       <div class="content">
         <div class="breadcrumbs">
-          <span class="selected">Restaurante</span>
-          <span> · </span>
-          <a href="/chef" title="">
-            <span>Chef</span>
+          <a href="/restaurante-eventos" title="">
+            <span>Restaurante</span>
           </a>
+          <span> · </span>
+
+          <span class="selected">Chef</span>
         </div>
         <section class="title">
           <h1><?php the_title() ?></h1>
