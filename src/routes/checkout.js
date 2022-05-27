@@ -36,11 +36,18 @@ export default {
       MxShippingDiv.style.border = "1px solid #232734";
       MxShippingDiv.style.display = "flex";
       MxShippingDiv.style.alignItems = "center";
+      MxShippingDiv.style.marginBottom = "20px";
       MxShippingDiv.innerHTML =
-        '<img src="/img/plane.svg" style="padding: 10px;"> <p style="display:inline;font-family: \'Poppins\';font-style: normal;font-weight: 400;font-size: 12px;line-height: 18px;color: #232734;">Sólo envíos dentro de México</p>';
-      var billing_address_form = jQuery("form[name='checkout']")[0];
-      var woocommerce_content = jQuery(".woocommerce")[0];
-      woocommerce_content.insertBefore(MxShippingDiv, billing_address_form);
+        '<img src="/wp-content/themes/solar-v2/img/plane.svg" style="padding: 10px;"> <p style="display:inline;font-family: \'Poppins\';font-style: normal;font-weight: 400;font-size: 12px;line-height: 18px;color: #232734;">Sólo envíos dentro de México</p>';
+
+      let custDets = jQuery("#customer_details");
+      custDets.prepend(MxShippingDiv);
+
+      jQuery("form[name=checkout]").css('margin-top',0);
+
+      // var billing_address_form = jQuery("form[name='checkout']")[0];
+      // var woocommerce_content = jQuery(".woocommerce")[0];
+      // woocommerce_content.insertBefore(MxShippingDiv, billing_address_form);
 
       // all this only to insert an H1
       var wooContainter = document.getElementById("post-22");
@@ -105,6 +112,7 @@ export default {
       wooContainter.insertBefore(h1Title, wooContainter.firstChild);
 
       jQuery(document).ready(function ($) {
+        jQuery("form[name=checkout]").css('margin-top',0);
         var paymentMethod = $(".method > strong").html();
         var paymentClass = document.getElementsByClassName("order_details");
         $(paymentClass).addClass(paymentMethod);
