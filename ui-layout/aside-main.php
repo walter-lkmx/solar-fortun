@@ -37,6 +37,15 @@
         </a>
       </li>
       <li>
+      <li>
+        <a href="/vinicola" title="">
+          <span>Vinícola</span>
+          <div class="stain">
+            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
+          </div>
+        </a>
+      </li>
+      <li>
         <a href="/restaurante-eventos" title="">
           <span>Restaurante <br> Valle de Guadalupe</span>
           <div class="stain">
