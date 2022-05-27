@@ -72,19 +72,15 @@
         width: 79px;
         height: 16px;
 
-        /* small */
 
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
-        /* identical to box height, or 133% */
-        /* negro */
 
         color: #232734;
 
-        /* Inside auto layout */
         top: 25px;
         flex: none;
         order: 0;
