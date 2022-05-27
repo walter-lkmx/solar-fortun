@@ -1,37 +1,38 @@
-import { tween, easing, styler, keyframes } from 'popmotion';
+import { tween, easing, styler, keyframes } from "popmotion";
 
 export default {
   init() {
-
-    var mediaQueries = window.matchMedia("(max-width: 920px)")
+    var mediaQueries = window.matchMedia("(max-width: 921px)");
     function mediaQueriesWatcher(mediaQueries) {
-      if (!mediaQueries.matches) { // If media query matches
-            jQuery(document).ready(function($) {
-              $(function() {
-                $("#h-scroll").niceScroll({
-                  rtlmode: "auto",
-                  horizrailenabled: true,
-                  oneaxismousemode: "auto",
-                  scrollspeed: 10,
-                  hwacceleration: true,
-                  bouncescroll: true,
-                  enablemousewheel: true,
-                  smoothscroll: true,
-                  cursordragontouch: true,
-                  enablekeyboard: true,
-                });
-              });
+      if (!mediaQueries.matches) {
+        // If media query matches
+        jQuery(document).ready(function ($) {
+          $(function () {
+            $("#h-scroll").niceScroll({
+              rtlmode: "auto",
+              horizrailenabled: true,
+              oneaxismousemode: "auto",
+              scrollspeed: 10,
+              hwacceleration: true,
+              bouncescroll: true,
+              enablemousewheel: true,
+              smoothscroll: true,
+              cursordragontouch: true,
+              enablekeyboard: true,
             });
-            console.log('ESTÁS EN ESCRITORIO');
-        } else {
-            console.log('ESTÁS EN MOVIL');
-        }
+          });
+        });
+        // console.log("ESTÁS EN ESCRITORIO");
+      } else {
+        // console.log("ESTÁS EN MOVIL");
       }
-      mediaQueriesWatcher(mediaQueries);
-      mediaQueries.addListener(mediaQueriesWatcher);
+    }
+    mediaQueriesWatcher(mediaQueries);
+    mediaQueries.addListener(mediaQueriesWatcher);
 
     // get path name
-    var cartRedirect = window.location.protocol + "//" + window.location.host + "/" + 'carrito';
+    var cartRedirect =
+      window.location.protocol + "//" + window.location.host + "/" + "carrito";
 
     // if (cartRedirect) {
     //   window.location.replace("https://98788515.ngrok.io");
@@ -39,7 +40,9 @@ export default {
 
     // }
 
-    window.onscroll = function() { headerScroll() };
+    window.onscroll = function () {
+      headerScroll();
+    };
     var header = document.getElementById("header");
     var mainMenu = document.getElementById("main-menu");
     // Get the offset position of the navbar
@@ -59,12 +62,17 @@ export default {
     function setCookie(c_name, value, exdays) {
       var exdate = new Date();
       exdate.setDate(exdate.getDate() + exdays);
-      var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+      var c_value =
+        escape(value) +
+        (exdays == null ? "" : "; expires=" + exdate.toUTCString());
       document.cookie = c_name + "=" + c_value;
-    };
+    }
 
     function getCookie(c_name) {
-      var i, x, y, ARRcookies = document.cookie.split(";");
+      var i,
+        x,
+        y,
+        ARRcookies = document.cookie.split(";");
       for (i = 0; i < ARRcookies.length; i++) {
         x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
         y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
@@ -75,9 +83,8 @@ export default {
       }
     }
 
-
     // initial horizontal scroll
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
       // horizontal scroll
 
       // vertical scroll in single product
@@ -96,100 +103,87 @@ export default {
       // });
       // add/remove class
       $(".product").hover(
-        function() {
+        function () {
           $(this).addClass("enter");
           $(this).removeClass("exit");
         },
-        function() {
+        function () {
           $(this).addClass("exit");
           $(this).removeClass("enter");
         }
       );
-      
+
       // controlling cart widget
       var miniCart = document.getElementById("mini-cart");
       var fallback = document.getElementById("clickFallback");
       var cartItems = document.getElementById("cart-items");
-      var cartItemsCount = $( cartItems ).find( "tr" );
-      if(cartItemsCount <= 1) {
-        console.log(cartItemsCount);
+      var cartItemsCount = $(cartItems).find("tr");
+      if (cartItemsCount <= 1) {
+        // console.log(cartItemsCount);
       } else {
-        console.log('no hay nada en el carrito');
+        // console.log("no hay nada en el carrito");
       }
-      $("#mini-cart-trigger, #carrito").click(
-        function() {
-          miniCart.classList.add("fade-in-top");
-          fallback.classList.add("fade-in-top");
-          miniCart.classList.remove("fade-out-top");
-          fallback.classList.remove("fade-out-top");
-          fallback.style.display = "block";
-          setTimeout(function() {
-            miniCart.style.display = "initial";
-            fallback.style.display = "initial";
-          }, 500);
-        }
-      );
-      $("#clickFallback, #mobile-minicart-close").click(
-        function() {
-          miniCart.classList.add("fade-out-top");
-          fallback.classList.add("fade-out-top");
-          setTimeout(function() {
-            miniCart.style.display = "none";
-            fallback.style.display = "none";
-          }, 1000);
-        }
-      );
+      $("#mini-cart-trigger, #carrito").click(function () {
+        miniCart.classList.add("fade-in-top");
+        fallback.classList.add("fade-in-top");
+        miniCart.classList.remove("fade-out-top");
+        fallback.classList.remove("fade-out-top");
+        fallback.style.display = "block";
+        setTimeout(function () {
+          miniCart.style.display = "initial";
+          fallback.style.display = "initial";
+        }, 500);
+      });
+      $("#clickFallback, #mobile-minicart-close").click(function () {
+        miniCart.classList.add("fade-out-top");
+        fallback.classList.add("fade-out-top");
+        setTimeout(function () {
+          miniCart.style.display = "none";
+          fallback.style.display = "none";
+        }, 1000);
+      });
       $("li#carrito > a").removeAttr("href");
 
-
       // var mobileMenuTrigger = document.getElementsByTagName('mobile-menu-trigger');
-      var mobileMenu = document.getElementById('main-menu');
-      var theBodyMenu = document.getElementsByTagName('body')[0];
-      const menuAnimation = styler(document.querySelector('#main-menu'));
-      const bodyAnimation = styler(document.querySelector('body'));
-      $("#mobile-menu-trigger").click(
-        function() {
-          theBodyMenu.classList.add("OVERFLOW");
-          theBodyMenu.classList.add("disapear-content");
-          keyframes({
-            values: [
-              { x: 0, y: -1024},
-              { x: 0, y: 600},
-              { x: 0, y: 0}
-            ],
-            duration: 500,
-            easings: [easing.backOut, easing.backOut, easing.backOut],
-            loop: 0,
-          }).start(menuAnimation.set);
-        }
-      );
-      $("#mobile-menu-close").click(
-        function() {
-          theBodyMenu.classList.remove("OVERFLOW");
-          mobileMenu.classList.remove("dissapear-content");
-          keyframes({
-            values: [
-              { x: 0, y: 0},
-              { x: 0, y: 100},
-              { x: 0, y: -1024}
-            ],
-            duration: 800,
-            easings: [easing.backOut, easing.backOut, easing.backOut],
-            loop: 0,
-            //times: [0, 0.2, 0.5, 0.6, 1]
-          }).start(menuAnimation.set);
-        }
-      );
+      var mobileMenu = document.getElementById("main-menu");
+      var theBodyMenu = document.getElementsByTagName("body")[0];
+      const menuAnimation = styler(document.querySelector("#main-menu"));
+      const bodyAnimation = styler(document.querySelector("body"));
+      $("#mobile-menu-trigger").click(function () {
+        theBodyMenu.classList.add("OVERFLOW");
+        theBodyMenu.classList.add("disapear-content");
+        keyframes({
+          values: [
+            { x: 0, y: -1024 },
+            { x: 0, y: 600 },
+            { x: 0, y: 0 },
+          ],
+          duration: 500,
+          easings: [easing.backOut, easing.backOut, easing.backOut],
+          loop: 0,
+        }).start(menuAnimation.set);
+      });
+      $("#mobile-menu-close").click(function () {
+        theBodyMenu.classList.remove("OVERFLOW");
+        mobileMenu.classList.remove("dissapear-content");
+        keyframes({
+          values: [
+            { x: 0, y: 0 },
+            { x: 0, y: 100 },
+            { x: 0, y: -1024 },
+          ],
+          duration: 800,
+          easings: [easing.backOut, easing.backOut, easing.backOut],
+          loop: 0,
+          //times: [0, 0.2, 0.5, 0.6, 1]
+        }).start(menuAnimation.set);
+      });
     });
-    
 
     // var theBody = document.getElementsByTagName('body')[0];
     // theBody.classList.add("OVERFLOW");
-    
-
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
-    
   },
 };

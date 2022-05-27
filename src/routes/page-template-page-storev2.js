@@ -1,7 +1,7 @@
 export default {
   init() {
 
-    console.log("estas en vinosV2");
+    // console.log("estas en vinosV2");
 
 
     

@@ -1,7 +1,7 @@
 export default {
   init() {
     
-    console.log('estoy en single post')
+    // console.log('estoy en single post')
     jQuery(document).ready(function($) {
       $("p:has(img)").addClass('paragraph-img');
     });

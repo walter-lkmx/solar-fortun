@@ -1,7 +1,7 @@
 export default {
   init() {
 
-    console.log("estas en vinos");
+    // console.log("estas en vinos");
 
 
     var getTopTier = {
@@ -68,13 +68,13 @@ export default {
 
       // top tier
       $.ajax(getTopTier).done(function (response) {
-        console.log(response);
+        // console.log(response);
         
         var index;
         var a = response;
         var catalogTemplate = "";
         for (index = 0; index < a.length; index++) {
-          console.log(a[index].id + ' ' + a[index].name);
+          // console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
           var wineWatercolor = a[index].meta_data[5].value;
@@ -87,13 +87,13 @@ export default {
       });
       // mixtures
       $.ajax(getMixtures).done(function (response) {
-        console.log(response);
+        // console.log(response);
         
         var index;
         var a = response;
         var catalogTemplate = "";
         for (index = 0; index < a.length; index++) {
-          console.log(a[index].id + ' ' + a[index].name);
+          // console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
           var wineWatercolor = a[index].meta_data[5].value;
@@ -106,13 +106,13 @@ export default {
       });
       // young wine
       $.ajax(getYoungWine).done(function (response) {
-        console.log(response);
+        // console.log(response);
         
         var index;
         var a = response;
         var catalogTemplate = "";
         for (index = 0; index < a.length; index++) {
-          console.log(a[index].id + ' ' + a[index].name);
+          // console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
           var wineWatercolor = a[index].meta_data[5].value;
@@ -126,13 +126,13 @@ export default {
 
       // monovarietals
       $.ajax(getMonovarietals).done(function (response) {
-        console.log(response);
+        // console.log(response);
         
         var index;
         var a = response;
         var catalogTemplate = "";
         for (index = 0; index < a.length; index++) {
-          console.log(a[index].id + ' ' + a[index].name);
+          // console.log(a[index].id + ' ' + a[index].name);
           var wineName = a[index].name;
           var wineBottle = a[index].meta_data[4].value;
           var wineWatercolor = a[index].meta_data[5].value;

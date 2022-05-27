@@ -3,7 +3,7 @@ import { tween, easing, styler, keyframes } from 'popmotion';
 export default {
   init() {
 
-    console.log("estas en single-product");
+    // console.log("estas en single-product");
 
     // JavaScript to be fired on all pages
     function setCookie(c_name, value, exdays) {
@@ -151,7 +151,7 @@ export default {
 
       jQuery(document).ready(function($) {
         var productId = $("#product-id").text();
-        console.log(productId);
+        // console.log(productId);
         // custom add to cart
         var productQuantity = 1;
         $("#product-quantity").keyup(function() {
@@ -160,10 +160,10 @@ export default {
           // .keyup();
         });
         $('#add-cart-custom').click(function(event) {
-          console.log('Productos añadidos: ' + productQuantity)
+          // console.log('Productos añadidos: ' + productQuantity)
           setTimeout(function() {
             $.post('/?add-to-cart=' + productId + '&quantity=' + productQuantity, function(data, status) {
-              console.log('its done');
+              // console.log('its done');
               $("#carrito").load(" #carrito");
               setTimeout(function() {
                 setTimeout(function() {
@@ -180,7 +180,7 @@ export default {
         var intensityValue = $("#intensityValue").text().trim();
         var intensityBarLevel = intensityValue + '0%';
         $("#intensityBarLevel").css("width", intensityBarLevel);
-        console.log(intensityBarLevel);
+        // console.log(intensityBarLevel);
         
         // varietal
         var varietal = $("#varietal").html();
@@ -344,10 +344,10 @@ export default {
         var addCartCustom = document.getElementById("add-cart-custom");
         var toggleBottle = false;
         // if click on product specs while bottle is revealed, hide bottle
-        var mediaQueriesSP = window.matchMedia("(max-width: 920px)")
+        var mediaQueriesSP = window.matchMedia("(max-width: 921px)")
         function mediaQueriesWatcherSP(mediaQueries) {
           if (mediaQueries.matches) {
-            console.log('nelson, esto es escritorio');
+            // console.log('nelson, esto es escritorio');
             specsHideBottle.addEventListener("click", function(){
               if(toggleBottle === true) {
                 keyframes({

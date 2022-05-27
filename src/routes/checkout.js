@@ -23,7 +23,7 @@ export default {
 
     // Checkout view
     if (checkoutBase === "checkout" && checkoutThanks == 0) {
-      console.log("aun no has pagado");
+      // console.log("aun no has pagado");
 
       var disablePrimaryMenu = document.getElementById("primary-menu");
       disablePrimaryMenu.classList.add("disabled");
@@ -102,7 +102,7 @@ export default {
       });
     } else {
       // Thanks view
-      console.log("ya pagaste");
+      // console.log("ya pagaste");
       // all this only to insert an H1
       var wooContainter = document.getElementById("post-122");
       var h1Title = document.createElement("h1");
@@ -117,7 +117,7 @@ export default {
         var paymentClass = document.getElementsByClassName("order_details");
         $(paymentClass).addClass(paymentMethod);
         // svgCanvas.add.classList("fade-out-top");
-        console.log(paymentMethod);
+        // console.log(paymentMethod);
         if (paymentMethod === "OXXO Pay") {
           $(".order_details")
             .siblings("p")
