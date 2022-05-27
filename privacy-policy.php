@@ -13,7 +13,7 @@
           <h1><?php the_title() ?></h1> 
         </section>
         <div class="text">
-        <p>Vinícola Solar Fortún S. de R. L. de C.V.  con domicilio en Carretera Tijuana-Ensenada. #7709, el Sauzal, Ensenada Baja California, 22760, es responsable del tratamiento de sus datos personales, del uso que se le dé a los mismo y de su protección.</p>
+        <p>Vinícola Solar Fortún S. de R. L. de C.V. con domicilio en Carretera Tijuana-Ensenada, #7709, El Sauzal, Ensenada, Baja California, 22760, es responsable del tratamiento de sus datos personales, del uso que se le dé a los mismo y de su protección.</p>
         <p>Recabamos sus datos personales de forma directa cuando usted mismo nos los proporciona por diversos medios, como cuando participa en nuestras promociones o nos da información con objeto de que le prestemos un servicio.</p>
         <p>Sus datos personales serán utilizados sólo para las siguientes finalidades:
           <ul><li>dar cumplimiento a obligaciones contraídas con nuestros clientes;</li>
