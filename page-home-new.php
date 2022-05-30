@@ -7,19 +7,18 @@ add_shortcode('show_instagram_posts', 'show_instagram_posts');
 function show_instagram_posts()
 {
   ob_start();
-  $meta_query  = WC()->query->get_meta_query();
-
   $args = array(
-    'post_type'           => 'page',
-    'post_name' => 'instagram-posts',
-    'meta_query'          => $meta_query,
+    'name'        => 'instagram-posts',
+    'post_type'   => 'page',
+    'post_status' => 'publish',
+    'numberposts' => 1
   );
-  $ig_loop = new WP_Query($args);
-  $post = $ig_loop->posts[0];
-  //while ($ig_loop->have_posts()) : $ig_loop->the_post();
+  $posts = get_posts($args);
+  $post = $posts[0];
 ?>
   <ul class="instagram_posts">
     <?php
+
     $ig1 = get_post_meta($post->ID, 'ig_post_1', true);
     $ig2 = get_post_meta($post->ID, 'ig_post_2', true);
     $ig3 = get_post_meta($post->ID, 'ig_post_3', true);
