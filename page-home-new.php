@@ -297,6 +297,25 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
       }
 
+      /*New our family cards*/
+      @media only screen and (max-width:1182px) {
+
+        .our-family-container {
+          flex-direction: column;
+
+        }
+
+        .card-caption {
+          max-height: 93%;
+        }
+
+        .enologist {
+          margin-left: 0% !important;
+          float: left;
+        }
+      }
+
+
       @media only screen and (max-width:1089px) {
 
 
@@ -345,28 +364,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       }
 
-      /*New our family cards*/
-      @media only screen and (max-width:955px) {
-
-        .our-family-container {
-          flex-direction: column;
-
-        }
-
-        .our-family-card-new {
-          height: 486px !important;
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-
-        .card-caption {
-          align-self: stretch !important;
-        }
-
-      }
-
       @media only screen and (max-width:921px) {
-
 
         .wonderpluginslider-container,
         .cards-container,
@@ -510,9 +508,14 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
     <style>
       .our-family-card-new {
-        width: 468px;
-        height: 684px;
+        height: 100%;
         display: flex;
+      }
+
+      .our-family-card-new img {
+        width: 100%;
+        visibility: hidden;
+        position: relative;
       }
 
       .our-family-container {
@@ -520,8 +523,9 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         width: 100%;
         align-content: flex-start;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 32px;
+        margin-top: 20px;
       }
 
       .card-caption {
@@ -533,8 +537,11 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         color: white;
         border: 1px solid white;
         margin: 15px;
-        align-self: end;
         flex-grow: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
       }
 
       .card-caption-text {
@@ -548,7 +555,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       .our-family-card-new .card-caption>h2 {
-        padding: 15px;
+        padding: 5px 15px;
       }
     </style>
     <section class="titled-section">
@@ -559,6 +566,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       <div class="section-body" style="max-width:100%;">
         <div class="our-family-container">
           <div class="our-family-card-new founder">
+            <img src="<?php bloginfo('template_url') ?>/img/homepage/fundador.png">
             <div class="card-caption">
               <h2>Fundador</h2>
               <div class="card-caption-text">
@@ -569,10 +577,11 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
             </div>
           </div>
           <div class="our-family-card-new enologist">
+            <img src="<?php bloginfo('template_url') ?>/img/homepage/fundador.png">
             <div class="card-caption">
               <h2>Enólogo</h2>
               <div class="card-caption-text">
-                <b>Dr. José Alberto López</b><br>
+                <b>Ing. Santiago López Viana</b><br>
                 El enólogo de la vinícola fue por muchos años atleta de alto rendimiento.
                 Estudió ingeniería en la universidad de Penn State, en los Estados Unidos y posteriormente se preparó como enólogo mediante un diplomado en la Universidad de California-Davis, una de las mejores universidades del mundo en el tema del vino.
               </div>
@@ -974,6 +983,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   .enologist {
     background-size: cover;
     background-position: center;
+    position: relative;
   }
 
   body {

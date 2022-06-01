@@ -21,9 +21,6 @@
             <!-- <h4><?php the_author() ?></h4> -->
             <div class="text">
               <style>
-                p {
-                  text-align: justify !important;
-                }
 
                 p.after_yt_embed {
                   padding: 30px 0 10px 0;
