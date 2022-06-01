@@ -34,7 +34,7 @@
                 }
 
                 .sf_sidebyside {
-                  height: 240px !important;
+                  
                 }
 
                 .sf_sidebyside>img {
@@ -43,6 +43,7 @@
                   float: left;
                   flex: none;
                   flex-grow: 1;
+                  margin-bottom: 20px;;
                 }
 
                 .sf_title-like {
@@ -56,6 +57,7 @@
               </style>
 
               <?php the_content() ?>
+              <section class="titled-section" style="height:200px;"></section>
             </div>
             <section class="meta">
               <div class="date-category">
@@ -75,6 +77,6 @@
 
   </section>
 
-  <section class="titled-section" style="height:200px;"></section>
+
 </section>
 <?php get_footer(); ?>

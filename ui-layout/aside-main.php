@@ -28,7 +28,7 @@
           </div>
         </a>
       </li> -->
-      <li class="spacer">
+      <li>
         <a href="/noticias" title="">
           <span>Noticias / News</span>
           <div class="stain">
@@ -36,7 +36,6 @@
           </div>
         </a>
       </li>
-      <li>
       <li>
         <a href="/vinicola" title="">
           <span>Vinícola</span>
