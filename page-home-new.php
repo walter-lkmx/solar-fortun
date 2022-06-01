@@ -235,9 +235,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
 
 
-        .our-family-card .caption {
-          height: 455px !important;
-        }
+        
 
         .upper-card {
           display: none;
@@ -247,7 +245,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           display: block !important;
           width: 100% !important;
           text-align: center;
-          margin-top: 60px;
+          margin-top: 20px;
         }
 
         li.featured>.featured-watercolor {
@@ -262,21 +260,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       @media screen and (max-width: 1139px) {
-        .our-family-card {
-          min-width: 100% !important;
-          width: 100% !important;
-          height: 490px !important;
-          left: 0;
-          top: 0;
-        }
-
-        .our-family-card .caption {
-          margin-top: 0 !important;
-          margin-left: 0 !important;
-          width: 100% !important;
-          padding: 10px 15px !important;
-          height: 460px !important;
-        }
+       
 
         .enologist {
           margin-left: 0% !important;
@@ -321,21 +305,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           margin-left: 8px !important;
         }
 
-        .our-family-card {
-          min-width: 100% !important;
-          width: 100% !important;
-          height: 490px !important;
-          left: 0;
-          top: 0;
-        }
-
-        .our-family-card .caption {
-          margin-top: 0 !important;
-          margin-left: 0 !important;
-          width: 100% !important;
-          padding: 10px 15px !important;
-          height: 460px !important;
-        }
+      
 
         .enologist {
           margin-left: 0% !important;
@@ -374,6 +344,26 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       }
 
+      /*New our family cards*/
+      @media only screen and (max-width:955px) {
+
+        .our-family-container {
+          flex-direction: column;
+
+        }
+
+        .our-family-card-new {
+          height: 486px !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .card-caption {
+          align-self: stretch !important;
+        }
+
+      }
+
       @media only screen and (max-width:921px) {
 
 
@@ -387,22 +377,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
         .titled-section {
           padding: 20px;
-        }
-
-        .our-family-card {
-          min-width: 100% !important;
-          width: 100% !important;
-          height: 490px !important;
-          left: 0;
-          top: 0;
-        }
-
-        .our-family-card .caption {
-          margin-top: 0 !important;
-          margin-left: 0 !important;
-          width: 100% !important;
-          padding: 10px 15px !important;
-          height: 460px !important;
         }
 
         .enologist {
@@ -428,7 +402,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           display: block !important;
           width: 100% !important;
           text-align: center;
-          margin-top: 60px;
+          margin-top: 20px;
         }
 
         li.featured>.featured-watercolor {
@@ -531,32 +505,80 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       </div>
     </section>
-    <br>
+
+
+    <style>
+      .our-family-card-new {
+        width: 468px;
+        height: 684px;
+        display: flex;
+      }
+
+      .our-family-container {
+        display: inline-flex;
+        width: 100%;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 32px;
+      }
+
+      .card-caption {
+        font-family: 'Botera TFE';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        color: white;
+        border: 1px solid white;
+        margin: 15px;
+        align-self: end;
+        flex-grow: 0;
+      }
+
+      .card-caption-text {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 16px;
+        line-height: 28px;
+        white-space: normal;
+        padding: 15px;
+      }
+
+      .our-family-card-new .card-caption>h2 {
+        padding: 15px;
+      }
+    </style>
     <section class="titled-section">
       <h1 class="title hoverable-title">
         <a href="nosotros/">Nuestra Familia</a>
       </h1>
       <span class="section-more"><a href="nosotros/">Ver más</a> </span>
       <div class="section-body" style="max-width:100%;">
-        <div class="our-family-card founder">
-          <div class="upper-card"></div>
-          <div class="caption">
-            <h2 class="title">Fundador</h2>
-            <div class="body"><b>Dr. José Alberto López</b> <br>
-              <p>Nuestra vinícola presenta orgullosamente a nuestro fundador, Alberto López, físico y astrónomo de profesión pero siempre un amante de corazón de los buenos vinos. <br>Inició el proyecto al plantar sus primeras parras en la cañada de Guadalupe, en el poblado de Francisco Zarco. Las primeras uvas serían cosechadas en el año 2010.</p>
+        <div class="our-family-container">
+          <div class="our-family-card-new founder">
+            <div class="card-caption">
+              <h2>Fundador</h2>
+              <div class="card-caption-text">
+                <b>Dr. José Alberto López</b><br>
+                Nuestra vinícola presenta orgullosamente a nuestro fundador, Alberto López, físico y astrónomo de profesión pero siempre un amante de corazón de los buenos vinos.
+                Inició el proyecto al plantar sus primeras parras en la cañada de Guadalupe, en el poblado de Francisco Zarco. Las primeras uvas serían cosechadas en el año 2010.
+              </div>
+            </div>
+          </div>
+          <div class="our-family-card-new enologist">
+            <div class="card-caption">
+              <h2>Enólogo</h2>
+              <div class="card-caption-text">
+                <b>Dr. José Alberto López</b><br>
+                El enólogo de la vinícola fue por muchos años atleta de alto rendimiento.
+                Estudió ingeniería en la universidad de Penn State, en los Estados Unidos y posteriormente se preparó como enólogo mediante un diplomado en la Universidad de California-Davis, una de las mejores universidades del mundo en el tema del vino.
+              </div>
             </div>
           </div>
         </div>
-        <div class="our-family-card enologist">
-          <div class="upper-card"></div>
-          <div class="caption">
-            <h1 class="title">Enólogo</h1>
-            <div class="body"><b>Ing. Santiago López Viana</b> <br>
-              <p>El enólogo de la vinícola fue por muchos años atleta de alto rendimiento. <br> Estudió ingeniería en la universidad de Penn State, en los Estados Unidos y posteriormente se preparó como enólogo mediante un diplomado en la Universidad de California-Davis, una de las mejores universidades del mundo en el tema del vino.</p>
-            </div>
-          </div>
-        </div>
-
+      </div>
       </div>
     </section>
     <style>
@@ -905,10 +927,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     margin-left: 5.5%;
   }
 
-  .our-family-card.enologist .caption .title {
-    height: 45px !important;
-  }
-
   .titled-section {
     margin-top: 50px;
     width: calc(100% - 200px) !important;
@@ -943,49 +961,18 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     color: #8C1835;
   }
 
-  .our-family-card {
-    margin-top: 20px;
-    max-width: 47.5%;
-    min-width: 47.5%;
-    height: 600px;
-    white-space: normal;
-    display: inline-block;
-    background-size: 100% !important;
-    padding: 15px 15px 40px;
-  }
-
-  .our-family-card.founder {
+  .founder {
     background: url('<?php bloginfo('template_url') ?>/img/homepage/fundador.png') no-repeat;
   }
 
-  .our-family-card.enologist {
+  .enologist {
     background: url('<?php bloginfo('template_url') ?>/img/homepage/enologo.png') no-repeat;
   }
 
-  .our-family-card .caption {
-    bottom: 0;
-    border: 1px solid #fff;
-    height: 350px;
-    padding: 18px;
-    color: #fff;
-    display: grid;
-  }
-
-  .our-family-card .caption .title {
-    /* h1 */
-    font-family: 'Botera TFE';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-  }
-
-  .our-family-card .caption .body {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 16px;
-    line-height: 28px;
+  .founder,
+  .enologist {
+    background-size: cover;
+    background-position: center;
   }
 
   body {
@@ -1081,6 +1068,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     white-space: normal;
     color: #232734;
     margin-bottom: auto;
+    padding-bottom: 10px;
+    ;
   }
 </style>
 
