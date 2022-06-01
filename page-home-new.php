@@ -132,7 +132,8 @@ function wpb_postsbycategory()
 
         $content = get_the_content();
         $content = str_replace(['<!-- wp:paragraph -->', '<!-- /wp:paragraph -->'], '', $content);
-        $content = trim(substr($content, 0, 100));
+        $content = wp_strip_all_tags($content);
+        $content = trim(substr($content, 0, 80));
 
 
         $string .= '<div class="news-content-container"><p>' . $content . '...</p></div>'; #Post content
@@ -235,7 +236,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
 
 
-        
+
 
         .upper-card {
           display: none;
@@ -260,7 +261,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       @media screen and (max-width: 1139px) {
-       
+
 
         .enologist {
           margin-left: 0% !important;
@@ -305,7 +306,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           margin-left: 8px !important;
         }
 
-      
+
 
         .enologist {
           margin-left: 0% !important;
