@@ -58,7 +58,7 @@
               <?php the_post_thumbnail('medium'); ?>
 
             </div>
-            <h3 class="featured-title"><?php echo $loop->post->post_title; ?></h3><br>
+            <h3 class="featured-title"><?php echo $loop->post->post_title; ?></h3>
             <h4 class="featured-price">$ <?php echo $price; ?></h4>
           </a>
         </li>
@@ -94,7 +94,6 @@
                 @media (min-width: 20em) and (max-width: 57.5em) {
                   li.featured {
                     width: 100% !important;
-                    margin-top: 60px;
                   }
 
                   li.featured>.featured-watercolor {
@@ -125,6 +124,10 @@
                   .card-body {
                     height: auto !important;
                   }
+
+                  .section-body {
+                    height: auto !important;
+                  }
                 }
 
                 /*Mobile*/
@@ -137,7 +140,6 @@
                 ul.the-products {
                   width: 100%;
                   list-style: none;
-                  padding-top: 20px;
                   margin: 0 !important;
                 }
 
@@ -147,22 +149,15 @@
                   width: 100%;
                 }
 
-                /* two items */
+                /*more than 1 item */
                 li.featured:first-child:nth-last-child(2),
-                li.featured:first-child:nth-last-child(2)~li.featured {
-                  width: 50%;
-                }
-
-                /* three items */
+                li.featured:first-child:nth-last-child(2)~li.featured,
                 li.featured:first-child:nth-last-child(3),
-                li.featured:first-child:nth-last-child(3)~li.featured {
-                  width: 33.3333%;
-                }
-
-                /* four items */
+                li.featured:first-child:nth-last-child(3)~li.featured,
                 li.featured:first-child:nth-last-child(4),
                 li.featured:first-child:nth-last-child(4)~li.featured {
-                  width: 24%;
+                  width: 49%;
+                  /* 49 due to padding */
                 }
 
                 li.featured {
@@ -179,14 +174,13 @@
                 }
 
                 .featured-products {
-                  transform: scale(0.8);
+                  transform: scale(0.9);
                 }
 
                 li.featured>.featured-price,
                 a>h4.featured-price {
                   height: 19px;
                   margin-top: 10px;
-                  /* h4 */
                   font-family: 'Botera TFE';
                   font-style: normal;
                   font-weight: 400;
@@ -203,24 +197,19 @@
 
                 li.featured>.featured-watercolor>h3.featured-title,
                 a>h3.featured-title {
-                  height: 60px;
-
-                  /* h3 */
-
                   font-family: 'Botera TFE';
                   font-style: normal;
                   font-weight: 400;
                   font-size: 24px;
                   line-height: 29px;
-                  /* identical to box height */
-
                   text-align: center;
-
-                  /* negro */
-
                   color: #232734;
-
                   text-decoration: none;
+                  padding: 0 10px;
+                }
+
+                .section-body {
+                  /* height: 900px; */
                 }
 
                 .titled-section {
@@ -234,7 +223,7 @@
                   font-family: 'Botera TFE';
                   font-style: normal;
                   font-weight: 400;
-                  font-size: 40px;
+                  font-size: 30px;
                   line-height: 48px;
                   position: relative;
                   width: fit-content;
@@ -279,27 +268,22 @@
                   color: #8C1835 !important;
                 }
 
-                .home-card:nth-child(2) {
-                  margin-left: 15px;
-                }
-
                 .home-card {
-                  /* card-v2 */
                   cursor: pointer;
-                  /* Auto layout */
                   float: left;
                   padding: 24px;
-                  margin-top: 30px;
-                  width: 48%;
-                  /* height: 545px; */
+                  margin-top: 50px;
+                  width: 100%;
                   position: relative;
-                  display: grid;
-                  /* cream */
+                  display: flex;
                   background: #FDFAF7;
-
-                  /* shadow/normal */
-                  box-shadow: 0px 4px 6px -4px rgba(35, 39, 52, 0.12), 0px 8px 8px -4px rgba(35, 39, 52, 0.08);
+                  box-shadow: 0px 4px 6px -4px rgb(35 39 52 / 12%), 0px 8px 8px -4px rgb(35 39 52 / 8%);
                   transition: box-shadow 0.5s;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                  align-content: stretch;
+                  justify-content: start;
+                  align-items: stretch;
                 }
 
                 .home-card:hover,
@@ -337,16 +321,21 @@
                   bottom: 2.5%;
                 }
 
+                .home-card-image {
+                  max-width: 100%;
+                  object-fit: cover;
+                }
+
                 .card-body {
                   font-family: 'Poppins';
                   font-style: normal;
                   font-weight: 400;
-                  font-size: 15px;
+                  font-size: 16px;
                   line-height: 24px;
-                  max-width: 100%;
-                  height: 270px;
                   white-space: normal;
                   color: #232734;
+                  margin-bottom: auto;
+                  padding-bottom: 10px;
                 }
 
                 .card-image img {
@@ -384,9 +373,7 @@
 
                     <br>Compra nuestros vinos a domicilio, con env&iacute;os a todo M&eacute;xico
                   </div>
-                  <div class="card-image">
-                    <img src="<?php bloginfo('template_url') ?>/img/homepage/tienda.png" style="max-width:100%">
-                  </div>
+                  <img class="home-card-image" src="<?php bloginfo('template_url') ?>/img/homepage/tienda.png">
                 </div>
                 <div class="home-card" onclick="location.href='restaurante-eventos/';">
                   <div class="card-title">
@@ -394,10 +381,9 @@
                   </div>
                   <div class="card-body"><br>Visita nuestro restaurante y disfruta de un asador campestre a cargo de la chef Dulce López. Conoce nuestros maridajes y platillos ganadores a la sombra de nuestros encinos centenarios.
                   </div>
-                  <div class="card-image">
-                    <img src="<?php bloginfo('template_url') ?>/img/homepage/dulce-vida.png" style="max-width:100%">
-                  </div>
+                  <img class="home-card-image" src="<?php bloginfo('template_url') ?>/img/homepage/dulce-vida.png">
                 </div>
+                <section class="titled-section" style="height:200px;"></section>
               </section>
             </div>
             <section class="meta">
@@ -417,7 +403,5 @@
     <?php endif; ?>
 
   </section>
-
-  <section class="titled-section" style="height:200px;"></section>
 </section>
 <?php get_footer(); ?>
