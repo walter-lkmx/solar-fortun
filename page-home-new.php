@@ -126,7 +126,8 @@ function wpb_postsbycategory()
       $the_query->the_post();
       if (has_post_thumbnail()) {
         $string .= '<li class="featured-news"><a href="' . get_the_permalink() . '" rel="bookmark">';
-        $string .= get_the_post_thumbnail($post_id, array(160, 236));
+        $string .= get_the_post_thumbnail($post_id);
+        // $string .= the_post_thumbnail('medium');
         $string .= '<div class="news-title-container">' . get_the_title() . '</div>';
 
         $content = get_the_content();
@@ -235,7 +236,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
 
         .our-family-card .caption {
-          height: auto !important;
+          height: 455px !important;
         }
 
         .upper-card {
@@ -258,6 +259,29 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
 
 
+      }
+
+      @media screen and (max-width: 1139px) {
+        .our-family-card {
+          min-width: 100% !important;
+          width: 100% !important;
+          height: 490px !important;
+          left: 0;
+          top: 0;
+        }
+
+        .our-family-card .caption {
+          margin-top: 0 !important;
+          margin-left: 0 !important;
+          width: 100% !important;
+          padding: 10px 15px !important;
+          height: 460px !important;
+        }
+
+        .enologist {
+          margin-left: 0% !important;
+          float: left;
+        }
       }
 
       @media screen and (max-width: 1224px) {
@@ -325,7 +349,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
 
         .card-body {
-          height: 170px !important;
+          /* height: 170px !important; */
         }
       }
 
@@ -387,11 +411,12 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
 
         .titled-section .title {
-          font-size: 30px !important;
+          font-size: 32px !important;
         }
 
         .cards-container {
           padding: 0 16px;
+          flex-direction: column;
         }
 
         .home-card:nth-child(2),
@@ -441,13 +466,15 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       /*921px max-width*/
 
-
+      .upper-card {
+        height: 40%;
+      }
 
       .card-image img {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
         padding-top: 30px;
+        margin-top: auto;
+        width: 100%;
       }
 
       .home-card>.card-title>h3.hoverable-title {
@@ -484,9 +511,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
           <br>Compra nuestros vinos a domicilio, con env&iacute;os a todo M&eacute;xico
         </div>
-        <div class="card-image">
-          <img src="<?php bloginfo('template_url') ?>/img/homepage/tienda.png" style="max-width:100%">
-        </div>
+        <img class="home-card-image" src="<?php bloginfo('template_url') ?>/img/homepage/tienda.png">
       </div>
       <div class="home-card" onclick="location.href='restaurante-eventos/';">
         <div class="card-title">
@@ -494,19 +519,16 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         </div>
         <div class="card-body"><br>Visita nuestro restaurante y disfruta de un asador campestre a cargo de la chef Dulce López. Conoce nuestros maridajes y platillos ganadores a la sombra de nuestros encinos centenarios.
         </div>
-        <div class="card-image">
-          <img src="<?php bloginfo('template_url') ?>/img/homepage/dulce-vida.png" style="max-width:100%">
-        </div>
+        <img class="home-card-image" src="<?php bloginfo('template_url') ?>/img/homepage/dulce-vida.png">
       </div>
-      <div class="home-card" onclick="location.href='nosotros/';">
+      <div class="home-card" onclick="location.href='vinicola/';">
         <div class="card-title">
           <h3 class="hoverable-title">Vinícola</h3><span class="arrow-right"><img src="<?php bloginfo('template_url') ?>/img/ArrowRight.svg" /></span>
         </div>
         <div class="card-body"><br>Solar Fortún es una vinícola familiar mexicana ubicada en Francisco Zarco, Valle de Guadalupe. El proyecto nace en 2007 con el viñedo y a partir del 2012 iniciamos con la distribución de nuestros vinos.
         </div>
-        <div class="card-image">
-          <img src="<?php bloginfo('template_url') ?>/img/homepage/vinicola.png" style="max-width:100%">
-        </div>
+        <img class="home-card-image" src="<?php bloginfo('template_url') ?>/img/homepage/vinicola.png">
+
       </div>
     </section>
     <br>
@@ -517,18 +539,21 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       <span class="section-more"><a href="nosotros/">Ver más</a> </span>
       <div class="section-body" style="max-width:100%;">
         <div class="our-family-card founder">
-          <div class="upper-card" style="height:40%;"></div>
-          <br class="clear">
+          <div class="upper-card"></div>
           <div class="caption">
             <h2 class="title">Fundador</h2>
-            <div class="body"><b>Dr. José Alberto López</b> <br> Nuestra vinícola presenta orgullosamente a nuestro fundador, Alberto López, físico y astrónomo de profesión pero siempre un amante de corazón de los buenos vinos. <br><br> Inició el proyecto al plantar sus primeras parras en la cañada de Guadalupe, en el poblado de Francisco Zarco. Las primeras uvas serían cosechadas en el año 2010.</div>
+            <div class="body"><b>Dr. José Alberto López</b> <br>
+              <p>Nuestra vinícola presenta orgullosamente a nuestro fundador, Alberto López, físico y astrónomo de profesión pero siempre un amante de corazón de los buenos vinos. <br>Inició el proyecto al plantar sus primeras parras en la cañada de Guadalupe, en el poblado de Francisco Zarco. Las primeras uvas serían cosechadas en el año 2010.</p>
+            </div>
           </div>
         </div>
         <div class="our-family-card enologist">
-          <div class="upper-card" style="height:40%;"></div>
+          <div class="upper-card"></div>
           <div class="caption">
             <h1 class="title">Enólogo</h1>
-            <div class="body"><b>Ing. Santiago López Viana</b> <br>El enólogo de la vinícola fue por muchos años atleta de alto rendimiento. <br><br> Estudió ingeniería en la universidad de Penn State, en los Estados Unidos y posteriormente se preparó como enólogo mediante un diplomado en la Universidad de California-Davis, una de las mejores universidades del mundo en el tema del vino. </div>
+            <div class="body"><b>Ing. Santiago López Viana</b> <br>
+              <p>El enólogo de la vinícola fue por muchos años atleta de alto rendimiento. <br> Estudió ingeniería en la universidad de Penn State, en los Estados Unidos y posteriormente se preparó como enólogo mediante un diplomado en la Universidad de California-Davis, una de las mejores universidades del mundo en el tema del vino.</p>
+            </div>
           </div>
         </div>
 
@@ -581,11 +606,17 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         margin-left: 4%;
       }
 
+      .attachment-post-thumbnail {
+        top: 0 !important;
+        position: unset !important;
+      }
+
       li.featured-news img {
         float: left;
-        height: 250px !important;
+        height: 236px;
         width: 160px;
         margin-right: 10px;
+        object-fit: cover;
       }
 
       li.featured-news a {
@@ -722,7 +753,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         float: right;
         display: flex;
         padding-top: 30px;
-        padding-left: 50px;
+        padding-left: 32px;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: flex-start;
@@ -745,7 +776,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         color: #232734;
         overflow-wrap: break-word;
         max-width: 100%;
-        padding: 12px;
+        padding: 12px 0 12px 0;
         white-space: normal !important;
       }
 
@@ -822,7 +853,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
             <h4 class="greyed-out">Próximamente</h4>
           </div>
           <div>
-            <h2 class="hoverable-title" style="white-space: normal ;">Wine Bar frente al mar</h2>
+            <h2 class="hoverable-title title" style="white-space: normal ;">Wine Bar frente al mar</h2>
           </div>
           <div class="our-restaurant">
             <p>A partir de la primavera de 2023 tendremos nuestro Wine Bar frente al mar en nuestra bodega de producción en el área del Sauzal, a la entrada de Ensenada.</p>
@@ -874,6 +905,10 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     margin-left: 5.5%;
   }
 
+  .our-family-card.enologist .caption .title {
+    height: 45px !important;
+  }
+
   .titled-section {
     margin-top: 50px;
     width: calc(100% - 200px) !important;
@@ -909,10 +944,10 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   }
 
   .our-family-card {
-    margin-top: 50px;
+    margin-top: 20px;
     max-width: 47.5%;
     min-width: 47.5%;
-    height: 685px;
+    height: 600px;
     white-space: normal;
     display: inline-block;
     background-size: 100% !important;
@@ -930,13 +965,9 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   .our-family-card .caption {
     bottom: 0;
     border: 1px solid #fff;
-    /* width: 372px; */
-    height: 400px;
-    /* float: left; */
+    height: 350px;
     padding: 18px;
     color: #fff;
-    /* margin-top: 55%; */
-    /* margin-left: 9%; */
     display: grid;
   }
 
@@ -953,7 +984,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 100;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 28px;
   }
 
@@ -962,8 +993,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   }
 
   .cards-container {
-    /* column-count: 3; */
-    /* column-gap: 16px; */
+    display: flex;
   }
 
   .card-spacer {
@@ -985,22 +1015,22 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   }
 
   .home-card {
-    /* card-v2 */
     cursor: pointer;
-    /* Auto layout */
     float: left;
     padding: 24px;
     margin-top: 50px;
     width: 32.33333%;
     /* height: 545px; */
     position: relative;
-    display: grid;
-    /* cream */
+    display: flex;
     background: #FDFAF7;
-
-    /* shadow/normal */
-    box-shadow: 0px 4px 6px -4px rgba(35, 39, 52, 0.12), 0px 8px 8px -4px rgba(35, 39, 52, 0.08);
+    box-shadow: 0px 4px 6px -4px rgb(35 39 52 / 12%), 0px 8px 8px -4px rgb(35 39 52 / 8%);
     transition: box-shadow 0.5s;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: start;
+    align-items: stretch;
   }
 
   .home-card:hover,
@@ -1037,17 +1067,20 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     bottom: 2.5%;
   }
 
+  .home-card-image {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
   .card-body {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    max-width: 100%;
-    height: 170px;
-    /* negro */
     white-space: normal;
     color: #232734;
+    margin-bottom: auto;
   }
 </style>
 
