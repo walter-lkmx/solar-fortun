@@ -164,7 +164,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
     <style>
-
       body {
         white-space: normal !important;
       }
@@ -284,6 +283,10 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       @media only screen and (min-width:1025px) {
+        aside.main-menu {
+          transform: none !important;
+        }
+
         li.ig-post>iframe {
           min-width: 25% !important;
         }
@@ -310,6 +313,63 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
         .upper-card {
           display: none;
+        }
+
+        .wonderpluginslider-container,
+        .cards-container,
+        .home-card,
+        .titled-section {
+          /* padding-right: 0; */
+          min-width: 100% !important;
+        }
+
+        .titled-section {
+          padding: 20px;
+        }
+
+
+
+        .titled-section .title {
+          font-size: 32px !important;
+        }
+
+        .cards-container {
+          padding: 0 16px;
+          flex-direction: column;
+        }
+
+        li.featured {
+          display: block !important;
+          width: 100% !important;
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        li.featured>.featured-watercolor {
+          background-size: 40% !important;
+        }
+
+        .featured-products {
+          padding-left: 0 !important;
+        }
+
+        .mobile-br {
+          display: block !important;
+          line-height: 0;
+        }
+
+        li.featured-news {
+          width: 100% !important;
+        }
+
+        li.featured-news img {
+          float: none !important;
+          width: 100% !important;
+        }
+
+        .titled-section .section-more a {
+          padding-top: 30px;
+          padding-right: 15px;
         }
 
       }

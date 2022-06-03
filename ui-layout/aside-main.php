@@ -9,7 +9,19 @@
   </section>
   <style>
     aside.main-menu {
-      overflow-y: scroll;
+      overflow-y: auto;
+    }
+
+    @media (min-width: 20em) and (max-width: 63.9375em) {
+      aside.main-menu {
+        width: 100%!important;
+      }
+    }
+
+    @media (max-width: 20em) {
+      aside.main-menu {
+        transform: none !important;
+      }
     }
   </style>
   <nav>
@@ -81,7 +93,7 @@
           </div>
         </a>
       </li>
-      <li class="spacer">
+      <li>
         <a href="/privacidad" title="">
           <span>Privacidad</span>
           <div class="stain">
