@@ -93,7 +93,7 @@ function woo_featured_products()
 
           </div>
           <h3 class="featured-title"><?php echo $loop->post->post_title; ?></h3><br>
-          <h4 class="featured-price">$ <?php echo $price; ?></h4>
+          <h3 class="featured-price">$ <?php echo $price; ?></h3>
         </a>
       </li>
 
@@ -164,8 +164,16 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
   <?php include('ui-layout/top-bar.php'); ?>
   <section class="content">
     <style>
+
       body {
         white-space: normal !important;
+      }
+
+      section.main-container section.content {
+        max-width: 1207px !important;
+        min-width: 360px !important;
+        display: block;
+        margin: 0 auto;
       }
 
       .section-more>a:hover {
@@ -192,14 +200,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         display: block !important;
       }
 
-      @media only screen and (min-width:1920px) {
 
-        .home-card:nth-child(2),
-        .home-card:nth-child(3) {
-          margin-left: 22px !important;
-        }
-
-      }
 
       @media only screen and (min-width:1492) {
 
@@ -208,21 +209,20 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         }
       }
 
-      @media only screen and (max-width:1440px) {
+      @media only screen and (max-width:1369px) {
 
-        .home-card:nth-child(2),
-        .home-card:nth-child(3) {
-          margin-left: 12px !important;
+        ul.postsbycategory {
+          flex-direction: column;
         }
 
+        li.featured-news {
+          width: 100% !important;
+        }
 
-
-
-
-
-      }
-
-      @media only screen and (max-width:1369px) {
+        li.featured-news img {
+          float: none !important;
+          width: 100% !important;
+        }
 
         .right-side,
         .left-side {
@@ -260,35 +260,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       }
 
-      @media screen and (max-width: 1139px) {
-
-
-        .enologist {
-          margin-left: 0% !important;
-          float: left;
-        }
-      }
-
       @media screen and (max-width: 1224px) {
-
-        li.featured-news {
-          width: 100% !important;
-        }
-
-        li.featured-news img {
-          float: none !important;
-          width: 100% !important;
-        }
-
-        li.featured-news:nth-child(2) {
-          margin-left: 0 !important;
-          margin-top: 20px !important;
-        }
-
-        .home-card:nth-child(2),
-        .home-card:nth-child(3) {
-          margin-left: 9px !important;
-        }
 
 
 
@@ -309,28 +281,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           max-height: 93%;
         }
 
-        .enologist {
-          margin-left: 0% !important;
-          float: left;
-        }
-      }
-
-
-      @media only screen and (max-width:1089px) {
-
-
-
-        .home-card:nth-child(2),
-        .home-card:nth-child(3) {
-          margin-left: 8px !important;
-        }
-
-
-
-        .enologist {
-          margin-left: 0% !important;
-          float: left;
-        }
       }
 
       @media only screen and (min-width:1025px) {
@@ -349,13 +299,13 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           width: 100% !important;
         }
 
-        .card-body {
-          height: auto !important;
+        .cards-container {
+          padding: 0 16px;
+          flex-direction: column;
         }
 
-        .home-card:nth-child(2),
-        .home-card:nth-child(3) {
-          margin-left: 7px !important;
+        .card-body {
+          height: auto !important;
         }
 
         .upper-card {
@@ -378,10 +328,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
           padding: 20px;
         }
 
-        .enologist {
-          margin-left: 0% !important;
-          float: left;
-        }
+
 
         .titled-section .title {
           font-size: 32px !important;
@@ -390,11 +337,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         .cards-container {
           padding: 0 16px;
           flex-direction: column;
-        }
-
-        .home-card:nth-child(2),
-        .home-card:nth-child(3) {
-          margin-left: 0px !important;
         }
 
         li.featured {
@@ -424,11 +366,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         li.featured-news img {
           float: none !important;
           width: 100% !important;
-        }
-
-        li.featured-news:nth-child(2) {
-          margin-left: 0 !important;
-          margin-top: 20px !important;
         }
 
         .titled-section .section-more a {
@@ -617,6 +554,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         width: 100%;
         list-style: none;
         padding-top: 20px;
+        display: flex;
+        gap: 16px;
       }
 
       ul.postsbycategory>.featured-news {
@@ -632,10 +571,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
         background-color: #FDFAF7;
         white-space: normal !important;
         text-align: left !important;
-      }
-
-      li.featured-news:nth-child(2) {
-        margin-left: 4%;
       }
 
       .attachment-post-thumbnail {
@@ -725,7 +660,7 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
       }
 
       li.featured>.featured-price,
-      a>h4.featured-price {
+      a>h3.featured-price {
         height: 19px;
         margin-top: 10px;
         /* h4 */
@@ -933,9 +868,6 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     text-decoration: none;
   }
 
-  .enologist {
-    margin-left: 5.5%;
-  }
 
   .titled-section {
     margin-top: 50px;
@@ -992,6 +924,8 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
   .cards-container {
     display: flex;
+    gap: 32px;
+    margin-top: 32px;
   }
 
   .card-spacer {
@@ -1007,16 +941,10 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
     color: #8C1835 !important;
   }
 
-  .home-card:nth-child(2),
-  .home-card:nth-child(3) {
-    margin-left: 15px;
-  }
-
   .home-card {
     cursor: pointer;
     float: left;
     padding: 24px;
-    margin-top: 50px;
     width: 32.33333%;
     /* height: 545px; */
     position: relative;

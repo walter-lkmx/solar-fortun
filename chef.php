@@ -27,12 +27,24 @@
       z-index: 9999;
     }
 
-    @media only screen and (max-width: 919px) {
+    @media only screen and (max-width: 960px) {
+      .diners-choice-insignia {
+        width: 120px;
+        height: 120px;
+        top: 60px;
+      }
+    }
+
+    @media only screen and (max-width: 920px) {
       .diners-choice-insignia {
         width: 120px;
         height: 120px;
         right: -25px;
         top: 135px;
+      }
+
+      body.page-template section.single .featured-image.oenologist-img img {
+        transform: translate(-50%, -25%);
       }
     }
   </style>
@@ -59,6 +71,7 @@
         </section>
         <div class="text">
           <?php the_content() ?>
+          <section style="height:200px;display:block;"></section>
         </div>
       </div>
     </section>

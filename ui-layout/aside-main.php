@@ -1,12 +1,17 @@
 <aside class="main-menu" id="main-menu">
-  <img class="shadow" src="<?php bloginfo('template_url'); ?>/img/shadow-divider.png"> 
+  <img class="shadow" src="<?php bloginfo('template_url'); ?>/img/shadow-divider.png">
   <!-- <div class="shadow">
     
   </div> -->
   <a id="mobile-menu-close">Cerrar</a>
   <section class="brand">
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/img/solar-logo-black.svg"></a> 
+    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php bloginfo('template_url'); ?>/img/solar-logo-black.svg"></a>
   </section>
+  <style>
+    aside.main-menu {
+      overflow-y: scroll;
+    }
+  </style>
   <nav>
     <ul id="checkout-menu">
       <li><a href="/catalogo"><img src="<?php bloginfo('template_url'); ?>/img/icons8-left_4.svg">Regresar</a></li>
@@ -14,11 +19,11 @@
     <ul id="primary-menu">
       <li>
         <a href="/catalogo" title="">
-        <span>Tienda / Store</span>
-        <div class="stain">
-          <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
-        </div>
-      </a>
+          <span>Tienda / Store</span>
+          <div class="stain">
+            <img src="<?php bloginfo('template_url'); ?>/img/brush.svg">
+          </div>
+        </a>
       </li>
       <!-- <li>
         <a href="" title="">

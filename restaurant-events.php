@@ -27,13 +27,14 @@
       z-index: 9999;
     }
 
-    @media only screen and (max-width: 919px) {
+    @media only screen and (max-width: 1180px) {
       .diners-choice-insignia {
         width: 120px;
         height: 120px;
         right: -25px;
         top: 135px;
       }
+
     }
   </style>
   <section class="page-template" id="v-scroll">
@@ -58,9 +59,11 @@
         </section>
         <div class="text">
           <?php the_content() ?>
+          <section style="height:200px;display:block;"></section>
         </div>
       </div>
     </section>
   </section>
+
 </section>
 <?php get_footer(); ?>
