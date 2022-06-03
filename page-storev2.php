@@ -66,4 +66,11 @@
   <section class="sidebar">
   </section>
 </section>
+<script>
+  jQuery(".ajax_add_to_cart").click(function() {
+    setTimeout(function() {
+      document.location.reload();
+    }, 1500);
+  });
+</script>
 <?php get_footer(); ?>
