@@ -12,9 +12,14 @@
       overflow-y: auto;
     }
 
+    aside.main-menu.sticky+.single-product,
+    aside.main-menu.sticky+section.main-container {
+      left: 0;
+    }
+
     @media (min-width: 20em) and (max-width: 63.9375em) {
       aside.main-menu {
-        width: 100%!important;
+        width: 100% !important;
       }
     }
 
