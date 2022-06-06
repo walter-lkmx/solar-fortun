@@ -282,17 +282,13 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
       }
 
-      @media only screen and (min-width:1025px) {
+      @media only screen and (min-width:1024px) {
         aside.main-menu {
           transform: none !important;
         }
 
         li.ig-post>iframe {
           min-width: 25% !important;
-        }
-
-        .card-body {
-          /* height: 170px !important; */
         }
       }
 
