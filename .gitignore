@@ -1,6 +1,11 @@
 node_modules
 .data
-build
 wp-content
 vendor
 *.log
+.babelrc
+.htaccess
+composer.lock
+.phpintel/
+scripts/build.js
+scripts/start.js

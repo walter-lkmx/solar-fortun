@@ -59,7 +59,7 @@
 
             </div>
             <h3 class="featured-title"><?php echo $loop->post->post_title; ?></h3>
-            <h4 class="featured-price">$ <?php echo $price; ?></h4>
+            <h3 class="featured-price">$ <?php echo $price; ?></h3>
           </a>
         </li>
 
@@ -141,6 +141,9 @@
                   width: 100%;
                   list-style: none;
                   margin: 0 !important;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
                 }
 
                 /* one item */
@@ -178,7 +181,7 @@
                 }
 
                 li.featured>.featured-price,
-                a>h4.featured-price {
+                a>h3.featured-price {
                   height: 19px;
                   margin-top: 10px;
                   font-family: 'Botera TFE';

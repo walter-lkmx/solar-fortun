@@ -49,13 +49,13 @@ export default {
     var sticky = header.offsetTop;
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function headerScroll() {
-      if (window.pageYOffset >= sticky + 1) {
-        header.classList.add("sticky");
-        mainMenu.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-        mainMenu.classList.remove("sticky");
-      }
+      // if (window.pageYOffset >= sticky + 1) {
+      //   header.classList.add("sticky");
+      //   mainMenu.classList.add("sticky");
+      // } else {
+      //   header.classList.remove("sticky");
+      //   mainMenu.classList.remove("sticky");
+      // }
     }
 
     // JavaScript to be fired on all pages

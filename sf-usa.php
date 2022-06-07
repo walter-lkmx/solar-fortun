@@ -15,9 +15,9 @@
         <div class="text">
           <p>Find our wines in the United States through either of our two importers. Also make sure to join our wineclubs in the US through their websites and get new releases and special pricing on all of our wines</p>
           
-          <a href="www.mexicanwine.us" target="_blank">www.mexicanwine.us</a>
+          <a href="https://www.mexicanwine.us" target="_blank">www.mexicanwine.us</a>
           <p><b>patrick@besoimports.com</b></p>
-          <a href="" target="_blank">www.lacompetenciaimports.com</a>
+          <a href="https://www.lacompetenciaimports.com/" target="_blank">www.lacompetenciaimports.com</a>
           <p><b>tomas@lacompetenciaimports.com</b></p>
 
           <h3>Winery Visits</h3>

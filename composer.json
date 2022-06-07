@@ -14,5 +14,10 @@
     "wpackagist-plugin/wp-config-file-editor": "1.6.7",
     "wpackagist-plugin/conekta-payment-gateway": "3.0.4",
     "roots/soil": "3.7.1" 
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
   }
 }

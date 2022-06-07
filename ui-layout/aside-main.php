@@ -17,6 +17,12 @@
       left: 0;
     }
 
+    @media only screen and (min-width:1024px) {
+      aside.main-menu {
+        transform: none !important;
+      }
+    }
+
     @media (min-width: 20em) and (max-width: 63.9375em) {
       aside.main-menu {
         width: 100% !important;
